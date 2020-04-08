@@ -47,10 +47,10 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\BackgroundTile.cs" />
      <Compile Include="Assets\Scripts\LetterControllerTutorial.cs" />
-     <Compile Include="Assets\Scripts\LevelController1.cs" />
-     <Compile Include="Assets\Scripts\LevelControllerTutorial.cs" />
+     <Compile Include="Assets\Scripts\LevelController.cs" />
      <Compile Include="Assets\Scripts\PaintBucket.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Wire.cs" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2019.3.8f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

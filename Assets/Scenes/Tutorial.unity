@@ -10960,10 +10960,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1439798604}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c45d524eab50d41e899949789b99a2ca, type: 3}
+  m_Script: {fileID: 11500000, guid: 58663e755a3ae47a9a9ada5884320c37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crashScreen: {fileID: 1457493578}
   levelComplete: 0
   animator: {fileID: 1457493579}
 --- !u!4 &1439798606
@@ -10992,7 +10991,7 @@ GameObject:
   - component: {fileID: 1457493580}
   - component: {fileID: 1457493579}
   m_Layer: 0
-  m_Name: Crash Screen Tutorial
+  m_Name: Crash Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

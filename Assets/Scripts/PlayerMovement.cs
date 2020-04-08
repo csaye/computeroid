@@ -13,13 +13,13 @@ public class PlayerMovement : MonoBehaviour
 
     public float movementSpeed;
 
-    private LevelController1 levelControllerScript;
+    private LevelController levelControllerScript;
 
     Vector2 movement;
 
     void Start()
     {
-        levelControllerScript = levelController.GetComponent<LevelController1>();
+        levelControllerScript = levelController.GetComponent<LevelController>();
     }
 
     void Update()

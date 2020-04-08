@@ -20,6 +20,8 @@ public class PaintBucket : MonoBehaviour
 
     private GameObject player = null;
 
+    private float maxInteractDistance = 1.5f;
+
     void Start()
     {
         if (player == null) player = GameObject.FindGameObjectWithTag("Player");
@@ -41,7 +43,7 @@ public class PaintBucket : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) {
 
             // Check if player is close enough to the paint bucket
-            if (Vector2.Distance(transform.position, player.transform.position) < 1.5f) {
+            if (Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) {
             
                 // Raycast to mouse position
                 RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition));

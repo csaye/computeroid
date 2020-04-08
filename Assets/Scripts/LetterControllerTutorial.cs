@@ -11,7 +11,7 @@ public class LetterControllerTutorial : MonoBehaviour
 
     public static float corruptLevel;
 
-    private LevelControllerTutorial levelControllerScript;
+    private LevelController levelControllerScript;
 
     private float startY;
 
@@ -21,7 +21,7 @@ public class LetterControllerTutorial : MonoBehaviour
     {
         startY = transform.position.y;
 
-        levelControllerScript = levelController.GetComponent<LevelControllerTutorial>();
+        levelControllerScript = levelController.GetComponent<LevelController>();
     }
 
     void Update()
