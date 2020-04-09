@@ -46,8 +46,13 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\BackgroundTile.cs" />
+     <Compile Include="Assets\Scripts\CrashScreen.cs" />
      <Compile Include="Assets\Scripts\LetterControllerTutorial.cs" />
      <Compile Include="Assets\Scripts\LevelController.cs" />
+     <Compile Include="Assets\Scripts\LevelManager.cs" />
+     <Compile Include="Assets\Scripts\LevelSelect.cs" />
+     <Compile Include="Assets\Scripts\LevelSelector.cs" />
+     <Compile Include="Assets\Scripts\LoadLevel.cs" />
      <Compile Include="Assets\Scripts\MenuButton.cs" />
      <Compile Include="Assets\Scripts\PaintBucket.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />

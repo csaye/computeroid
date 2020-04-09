@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class MenuButton : MonoBehaviour
 {
     
+    public bool startButton;
+
     public string destinationScene;
 
     public Sprite buttonNormal;
@@ -42,6 +44,16 @@ public class MenuButton : MonoBehaviour
     }
 
     void SwitchScene() {
-        SceneManager.LoadScene(destinationScene);
+        if (startButton) {
+            // Take player to tutorial if they have not completed it yet
+            if (LevelManager.tutorialComplete) {
+                SceneManager.LoadScene(destinationScene);
+            } else {
+                LevelManager.tutorialComplete = true;
+                SceneManager.LoadScene("Tutorial");
+            }
+        } else {
+            SceneManager.LoadScene(destinationScene);
+        }
     }
 }
