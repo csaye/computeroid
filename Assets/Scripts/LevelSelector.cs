@@ -42,6 +42,10 @@ public class LevelSelector : MonoBehaviour
         }
         if (currentPos == 2) {
             transform.position = new Vector2(col2, row1);
+            if (Input.GetKeyDown("return")) {
+                levelManagerScript.levelSelected = true;
+                animator.SetBool("LevelSelected", true);
+            }
             if ((Input.GetKeyDown("d") || Input.GetKeyDown("right")) && LevelManager.level >= 3) {
                 currentPos++;
                 return;
@@ -50,6 +54,10 @@ public class LevelSelector : MonoBehaviour
         }
         if (currentPos == 3) {
             transform.position = new Vector2(col3, row1);
+            if (Input.GetKeyDown("return")) {
+                levelManagerScript.levelSelected = true;
+                animator.SetBool("LevelSelected", true);
+            }
             if ((Input.GetKeyDown("d") || Input.GetKeyDown("right")) && LevelManager.level >= 4) {
                 currentPos++;
                 return;
@@ -58,6 +66,10 @@ public class LevelSelector : MonoBehaviour
         }
         if (currentPos == 4) {
             transform.position = new Vector2(col4, row1);
+            if (Input.GetKeyDown("return")) {
+                levelManagerScript.levelSelected = true;
+                animator.SetBool("LevelSelected", true);
+            }
             if ((Input.GetKeyDown("w") || Input.GetKeyDown("up")) && LevelManager.level >= 5) {
                 currentPos++;
                 return;
@@ -66,6 +78,10 @@ public class LevelSelector : MonoBehaviour
         }
         if (currentPos == 5) {
             transform.position = new Vector2(col4, row2);
+            if (Input.GetKeyDown("return")) {
+                levelManagerScript.levelSelected = true;
+                animator.SetBool("LevelSelected", true);
+            }
             if ((Input.GetKeyDown("a") || Input.GetKeyDown("left")) && LevelManager.level >= 6) {
                 currentPos++;
                 return;
@@ -74,6 +90,10 @@ public class LevelSelector : MonoBehaviour
         }
         if (currentPos == 6) {
             transform.position = new Vector2(col3, row2);
+            if (Input.GetKeyDown("return")) {
+                levelManagerScript.levelSelected = true;
+                animator.SetBool("LevelSelected", true);
+            }
             if ((Input.GetKeyDown("a") || Input.GetKeyDown("left")) && LevelManager.level >= 7) {
                 currentPos++;
                 return;
@@ -82,6 +102,10 @@ public class LevelSelector : MonoBehaviour
         }
         if (currentPos == 7) {
             transform.position = new Vector2(col2, row2);
+            if (Input.GetKeyDown("return")) {
+                levelManagerScript.levelSelected = true;
+                animator.SetBool("LevelSelected", true);
+            }
             if ((Input.GetKeyDown("a") || Input.GetKeyDown("left")) && LevelManager.level >= 8) {
                 currentPos++;
                 return;
@@ -90,6 +114,10 @@ public class LevelSelector : MonoBehaviour
         }
         if (currentPos == 8) {
             transform.position = new Vector2(col1, row2);
+            if (Input.GetKeyDown("return")) {
+                levelManagerScript.levelSelected = true;
+                animator.SetBool("LevelSelected", true);
+            }
             if ((Input.GetKeyDown("w") || Input.GetKeyDown("up")) && LevelManager.level >= 9) {
                 currentPos++;
                 return;
@@ -98,6 +126,10 @@ public class LevelSelector : MonoBehaviour
         }
         if (currentPos == 9) {
             transform.position = new Vector2(col1, row3);
+            if (Input.GetKeyDown("return")) {
+                levelManagerScript.levelSelected = true;
+                animator.SetBool("LevelSelected", true);
+            }
             if ((Input.GetKeyDown("d") || Input.GetKeyDown("right")) && LevelManager.level >= 10) {
                 currentPos++;
                 return;
@@ -106,6 +138,10 @@ public class LevelSelector : MonoBehaviour
         }
         if (currentPos == 10) {
             transform.position = new Vector2(col2, row3);
+            if (Input.GetKeyDown("return")) {
+                levelManagerScript.levelSelected = true;
+                animator.SetBool("LevelSelected", true);
+            }
             if ((Input.GetKeyDown("d") || Input.GetKeyDown("right")) && LevelManager.level >= 11) {
                 currentPos++;
                 return;
@@ -114,6 +150,10 @@ public class LevelSelector : MonoBehaviour
         }
         if (currentPos == 11) {
             transform.position = new Vector2(col3, row3);
+            if (Input.GetKeyDown("return")) {
+                levelManagerScript.levelSelected = true;
+                animator.SetBool("LevelSelected", true);
+            }
             if ((Input.GetKeyDown("d") || Input.GetKeyDown("right")) && LevelManager.level >= 12) {
                 currentPos++;
                 return;
@@ -122,6 +162,10 @@ public class LevelSelector : MonoBehaviour
         }
         if (currentPos == 12) {
             transform.position = new Vector2(col4, row3);
+            if (Input.GetKeyDown("return")) {
+                levelManagerScript.levelSelected = true;
+                animator.SetBool("LevelSelected", true);
+            }
             if (Input.GetKeyDown("a") || Input.GetKeyDown("left")) currentPos--;
         }
     }

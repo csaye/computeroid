@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    public static float level;
+    public static float level = 12;
 
     public static bool tutorialComplete = false;
 
