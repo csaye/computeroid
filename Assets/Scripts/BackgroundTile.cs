@@ -17,7 +17,11 @@ public class BackgroundTile : MonoBehaviour
 
     void Update()
     {
-        CheckHighlight();
+        if (!PauseMenu.isPaused) {
+            CheckHighlight();
+        } else {
+            spriteRenderer.sprite = tileNormal;
+        }
     }
 
     // Checks if the mouse is over the tile, and if so, highlights the tile

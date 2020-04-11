@@ -39,8 +39,6 @@ public class LetterControllerTutorial : MonoBehaviour
     }
 
     void CheckCrash() {
-        if (corruptLevel > 2) {
-            levelControllerScript.levelComplete = true;
-        }
+        if (corruptLevel > 2) levelControllerScript.levelComplete = true;
     }
 }

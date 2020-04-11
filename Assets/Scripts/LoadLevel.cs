@@ -30,17 +30,17 @@ public class LoadLevel : MonoBehaviour
     // Loads the corresponding level for the level selected by the selector
     void LoadLevelScene() {
         if (levelSelectorScript.currentPos == 1) SceneManager.LoadScene("Level 1");
-        if (levelSelectorScript.currentPos == 2) SceneManager.LoadScene("Level 1");
-        if (levelSelectorScript.currentPos == 3) SceneManager.LoadScene("Level 1");
-        if (levelSelectorScript.currentPos == 4) SceneManager.LoadScene("Level 1");
-        if (levelSelectorScript.currentPos == 5) SceneManager.LoadScene("Level 1");
-        if (levelSelectorScript.currentPos == 6) SceneManager.LoadScene("Level 1");
-        if (levelSelectorScript.currentPos == 7) SceneManager.LoadScene("Level 1");
-        if (levelSelectorScript.currentPos == 8) SceneManager.LoadScene("Level 1");
-        if (levelSelectorScript.currentPos == 9) SceneManager.LoadScene("Level 1");
-        if (levelSelectorScript.currentPos == 10) SceneManager.LoadScene("Level 1");
-        if (levelSelectorScript.currentPos == 11) SceneManager.LoadScene("Level 1");
-        if (levelSelectorScript.currentPos == 12) SceneManager.LoadScene("Level 1");
+        if (levelSelectorScript.currentPos == 2) SceneManager.LoadScene("Level 2");
+        if (levelSelectorScript.currentPos == 3) SceneManager.LoadScene("Level 3");
+        if (levelSelectorScript.currentPos == 4) SceneManager.LoadScene("Level 4");
+        if (levelSelectorScript.currentPos == 5) SceneManager.LoadScene("Level 5");
+        if (levelSelectorScript.currentPos == 6) SceneManager.LoadScene("Level 6");
+        if (levelSelectorScript.currentPos == 7) SceneManager.LoadScene("Level 7");
+        if (levelSelectorScript.currentPos == 8) SceneManager.LoadScene("Level 8");
+        if (levelSelectorScript.currentPos == 9) SceneManager.LoadScene("Level 9");
+        if (levelSelectorScript.currentPos == 10) SceneManager.LoadScene("Level 10");
+        if (levelSelectorScript.currentPos == 11) SceneManager.LoadScene("Level 11");
+        if (levelSelectorScript.currentPos == 12) SceneManager.LoadScene("Level 12");
     }
 
     void UpdatePosition() {

@@ -7,6 +7,8 @@ public class MenuButton : MonoBehaviour
 {
     
     public bool startButton;
+    public bool resumeButton;
+    public bool levelsButton;
 
     public string destinationScene;
 
@@ -32,7 +34,7 @@ public class MenuButton : MonoBehaviour
         RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition));
         
         // If button hit by raycast, highlight button
-        if (rayHit.collider != null && transform.position == rayHit.collider.gameObject.transform.position) {
+        if (GetComponent<Renderer>().enabled && rayHit.collider != null && transform.position == rayHit.collider.gameObject.transform.position) {
             spriteRenderer.sprite = buttonHighlight;
 
             // If highlighted and mouse button down, activate scene switching
@@ -52,6 +54,11 @@ public class MenuButton : MonoBehaviour
                 LevelManager.tutorialComplete = true;
                 SceneManager.LoadScene("Tutorial");
             }
+        } else if (resumeButton) {
+            PauseMenu.isPaused = false;
+        } else if (levelsButton) {
+            PauseMenu.isPaused = false;
+            SceneManager.LoadScene(destinationScene);
         } else {
             SceneManager.LoadScene(destinationScene);
         }

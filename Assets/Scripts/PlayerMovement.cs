@@ -24,8 +24,14 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (!levelControllerScript.levelComplete) {
+        if (!levelControllerScript.levelComplete && !PauseMenu.isPaused) {
             UpdateMovement();
+        } else {
+
+            // If level complete or paused, stop all animation
+            // animator.SetFloat("Horizontal", 0);
+            // animator.SetFloat("Vertical", 0);
+            animator.SetFloat("Speed", 0);
         }
     }
 
