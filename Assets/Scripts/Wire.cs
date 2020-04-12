@@ -30,8 +30,6 @@ public class Wire : MonoBehaviour
 
     private LevelController levelControllerScript;
 
-    // private bool shorted = false;
-
     private float maxInteractDistance = 1;
     
     void Start()

@@ -29,8 +29,6 @@ public class PlayerMovement : MonoBehaviour
         } else {
 
             // If level complete or paused, stop all animation
-            // animator.SetFloat("Horizontal", 0);
-            // animator.SetFloat("Vertical", 0);
             animator.SetFloat("Speed", 0);
         }
     }
@@ -38,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate() {
         
         // Update player based on player input
-        if (!levelControllerScript.levelComplete) {
+        if (!levelControllerScript.levelComplete && !PauseMenu.isPaused) {
             rb.MovePosition(rb.position + movement.normalized * movementSpeed * Time.fixedDeltaTime);
         }
     }
