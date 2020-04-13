@@ -417,7 +417,7 @@ GameObject:
   - component: {fileID: 49160775}
   m_Layer: 0
   m_Name: Mirror Box
-  m_TagString: Untagged
+  m_TagString: MirrorBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -527,7 +527,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 49160774}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9, y: -6, z: 0}
+  m_LocalPosition: {x: -6.04, y: -4.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1529463030}
@@ -1897,7 +1897,7 @@ GameObject:
   - component: {fileID: 330332988}
   m_Layer: 0
   m_Name: Mirror Box
-  m_TagString: Untagged
+  m_TagString: MirrorBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1960,7 +1960,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330332985}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4, y: 0, z: 0}
+  m_LocalPosition: {x: -5.5, y: -0.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1742949087}
@@ -3790,7 +3790,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 21923d914df504684ad31fe877d99a4d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5071,7 +5071,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 6646d64429df8417db0c6d5ef3104ba4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6225,7 +6225,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 21923d914df504684ad31fe877d99a4d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9517,7 +9517,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 21923d914df504684ad31fe877d99a4d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -13901,7 +13901,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 21923d914df504684ad31fe877d99a4d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -14745,14 +14745,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5267f7e330e34050a420b8f1f79f0ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bottomRight: 0
-  bottomLeft: 0
-  topLeft: 0
-  topRight: 0
-  laser1Prefab: {fileID: 0}
-  laser2Prefab: {fileID: 0}
-  laser3Prefab: {fileID: 0}
-  laser4Prefab: {fileID: 0}
+  bottomRightDefault: 1
+  bottomLeftDefault: 0
+  topLeftDefault: 0
+  topRightDefault: 0
+  laser1Prefab: {fileID: 6139622466914303616, guid: 5df62826028a04f8194638cb623bb1a6,
+    type: 3}
+  laser2Prefab: {fileID: 5502867408082120539, guid: 31133fe8bb0c34c6aa1c30586724721e,
+    type: 3}
+  laser3Prefab: {fileID: 7538451350870369602, guid: 896d5027b2e174543b96a44f15242ae3,
+    type: 3}
+  laser4Prefab: {fileID: 4265467023568352668, guid: dc2bd6b40d5c7478abe17ad94c066d32,
+    type: 3}
 --- !u!1 &1918629368
 GameObject:
   m_ObjectHideFlags: 0
@@ -14808,7 +14812,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 21923d914df504684ad31fe877d99a4d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
