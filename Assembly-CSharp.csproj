@@ -46,9 +46,11 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\BackgroundTile.cs" />
+     <Compile Include="Assets\Scripts\BarrierEmitter.cs" />
      <Compile Include="Assets\Scripts\Charge.cs" />
      <Compile Include="Assets\Scripts\CrashScreen.cs" />
      <Compile Include="Assets\Scripts\LaserEmitter.cs" />
+     <Compile Include="Assets\Scripts\LaserReceiver.cs" />
      <Compile Include="Assets\Scripts\LetterControllerLevel2.cs" />
      <Compile Include="Assets\Scripts\LetterControllerTutorial.cs" />
      <Compile Include="Assets\Scripts\LevelButton.cs" />

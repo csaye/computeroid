@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - MirrorBox
+  - Laser1
+  - Laser2
+  - Laser3
+  - Laser4
+  - Barrier
   layers:
   - Default
   - TransparentFX
