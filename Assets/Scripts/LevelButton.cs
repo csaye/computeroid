@@ -16,18 +16,23 @@ public class LevelButton : MonoBehaviour
 
     private GameObject player = null;
 
+    private Charge chargeScript;
+
     private float maxInteractDistance = 1.5f;
 
     void Start()
     {
         if (player == null) player = GameObject.FindGameObjectWithTag("Player");
 
+        chargeScript = GetComponent<Charge>();
+
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
-        if (!PauseMenu.isPaused) CheckHighlight();
+        // If not paused and button is charged
+        if (!PauseMenu.isPaused && chargeScript.charged) CheckHighlight();
     }
 
     // Checks if the mouse is over the button, and if so, highlights the button

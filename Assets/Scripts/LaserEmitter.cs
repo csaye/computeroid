@@ -20,9 +20,12 @@ public class LaserEmitter : MonoBehaviour
     // The most recent laser instantiated
     private GameObject laser;
 
+    private SpriteRenderer spriteRenderer;
     private SpriteRenderer playerSpriteRenderer;
 
     private Color blue = new Color(0, 0, 1, 1);
+
+    private Charge chargeScript;
 
     // Whether the laser will continue and whether the current laser is the first or second
     private bool willContinue = true, isFirstLaser = true, isSecondLaser = true;
@@ -31,13 +34,16 @@ public class LaserEmitter : MonoBehaviour
     {
         if (player == null) player = GameObject.FindGameObjectWithTag("Player");
 
+        spriteRenderer = GetComponent<SpriteRenderer>();
         playerSpriteRenderer = player.GetComponent<SpriteRenderer>();
+
+        chargeScript = GetComponent<Charge>();
     }
 
     // Each iteration of update begins at the emitter and re-forms the laser path
     void Update()
     {
-        if (!PauseMenu.isPaused) {
+        if (!PauseMenu.isPaused && chargeScript.charged) {
 
             // In beginning of laser emission, output direction set to default
             bottomRight = bottomRightDefault;

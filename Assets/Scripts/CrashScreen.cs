@@ -21,7 +21,7 @@ public class CrashScreen : MonoBehaviour
     void GoLevelSelect() {
         
         // If the current level is one not previously completed, increment level value
-        if (currentLevel >= LevelManager.level) LevelManager.level++;
+        if (currentLevel >= LevelManager.level) LevelManager.level = currentLevel + 1;
         SceneManager.LoadScene("Level Select");
     }
 }

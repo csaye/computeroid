@@ -4,13 +4,8 @@ using UnityEngine;
 
 public class Wire : MonoBehaviour
 {
-
-    public GameObject levelController;
     
     public Animator animator;
-
-    // Whether shorting the wire will crash the level
-    public bool vital = false;
 
     // Whether a wire will disable others on the same x or y values from shorting
     public bool horizontalExclusion = false;
@@ -28,8 +23,6 @@ public class Wire : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private SpriteRenderer playerSpriteRenderer;
 
-    private LevelController levelControllerScript;
-
     private float maxInteractDistance = 1;
     
     void Start()
@@ -38,8 +31,6 @@ public class Wire : MonoBehaviour
 
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerSpriteRenderer = player.GetComponent<SpriteRenderer>();
-
-        levelControllerScript = levelController.GetComponent<LevelController>();
     }
 
     void Update()
@@ -58,7 +49,8 @@ public class Wire : MonoBehaviour
                 RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition));
         
                 // If wire hit by raycast, short out
-                if (!GetComponent<BoxCollider2D>().isTrigger && rayHit.collider != null && transform.position == rayHit.collider.gameObject.transform.position) {
+                if (((GetComponent<BoxCollider2D>() != null && !GetComponent<BoxCollider2D>().isTrigger) || (GetComponent<PolygonCollider2D>() != null && !GetComponent<PolygonCollider2D>().isTrigger))
+                && rayHit.collider != null && transform.position == rayHit.collider.gameObject.transform.position) {
 
                     // If wires free to short, short wire
                     if (!horizontalExclusion && !verticalExclusion) {
@@ -92,9 +84,12 @@ public class Wire : MonoBehaviour
     void ShortWire() {
         playerSpriteRenderer.color = white;
         animator.SetBool("Shorted", true);
-        GetComponent<BoxCollider2D>().isTrigger = true;
+        if (GetComponent<BoxCollider2D>() != null) GetComponent<BoxCollider2D>().enabled = false;
+        if (GetComponent<PolygonCollider2D>() != null) GetComponent<PolygonCollider2D>().enabled = false;
+    }
 
-        // If the wire is vital, end the level
-        if (vital) levelControllerScript.levelComplete = true;
+    // Called by the animator after the wire shorting sequence
+    void WireShorted() {
+        GetComponent<Renderer>().enabled = false;
     }
 }

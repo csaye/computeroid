@@ -13,8 +13,6 @@ public class PaintBucket : MonoBehaviour
     // How much paint is in the paint bucket
     public float paintLevel;
 
-    private Color white;
-
     private SpriteRenderer spriteRenderer;
     private SpriteRenderer playerSpriteRenderer;
 

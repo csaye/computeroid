@@ -380,6 +380,7 @@ GameObject:
   - component: {fileID: 10471042}
   - component: {fileID: 10471041}
   - component: {fileID: 10471045}
+  - component: {fileID: 10471044}
   m_Layer: 0
   m_Name: Wire2
   m_TagString: Untagged
@@ -413,9 +414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002ce5777fea949789d96c9f7fd4ed8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 2019421445}
   animator: {fileID: 10471042}
-  vital: 0
   horizontalExclusion: 0
   verticalExclusion: 1
 --- !u!95 &10471042
@@ -476,8 +475,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6e72651a9c12e49bb80eb88a74840469, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 95a2ca9bf09994732ae2007e99bf0f76, type: 3}
+  m_Color: {r: 0.4, g: 0.4, b: 0.4, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -487,6 +486,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &10471044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10471039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90728ca7e727f42848f5a7ce71a5d195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toCharge1: {fileID: 0}
+  toCharge2: {fileID: 0}
+  toCharge3: {fileID: 0}
+  toCharge4: {fileID: 0}
+  charged: 0
 --- !u!61 &10471045
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1284,6 +1300,7 @@ GameObject:
   - component: {fileID: 122305675}
   - component: {fileID: 122305674}
   - component: {fileID: 122305678}
+  - component: {fileID: 122305677}
   m_Layer: 0
   m_Name: Wire2
   m_TagString: Untagged
@@ -1336,9 +1353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002ce5777fea949789d96c9f7fd4ed8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 2019421445}
   animator: {fileID: 122305674}
-  vital: 0
   horizontalExclusion: 0
   verticalExclusion: 1
 --- !u!212 &122305676
@@ -1380,8 +1395,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6e72651a9c12e49bb80eb88a74840469, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 95a2ca9bf09994732ae2007e99bf0f76, type: 3}
+  m_Color: {r: 0.4, g: 0.4, b: 0.4, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1391,6 +1406,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &122305677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122305672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90728ca7e727f42848f5a7ce71a5d195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toCharge1: {fileID: 0}
+  toCharge2: {fileID: 0}
+  toCharge3: {fileID: 0}
+  toCharge4: {fileID: 0}
+  charged: 0
 --- !u!61 &122305678
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1430,6 +1462,7 @@ GameObject:
   - component: {fileID: 162137884}
   - component: {fileID: 162137883}
   - component: {fileID: 162137887}
+  - component: {fileID: 162137886}
   m_Layer: 0
   m_Name: Wire2
   m_TagString: Untagged
@@ -1463,9 +1496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002ce5777fea949789d96c9f7fd4ed8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 2019421445}
   animator: {fileID: 162137884}
-  vital: 0
   horizontalExclusion: 0
   verticalExclusion: 1
 --- !u!95 &162137884
@@ -1526,8 +1557,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6e72651a9c12e49bb80eb88a74840469, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 95a2ca9bf09994732ae2007e99bf0f76, type: 3}
+  m_Color: {r: 0.4, g: 0.4, b: 0.4, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1537,6 +1568,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &162137886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162137881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90728ca7e727f42848f5a7ce71a5d195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toCharge1: {fileID: 0}
+  toCharge2: {fileID: 0}
+  toCharge3: {fileID: 0}
+  toCharge4: {fileID: 0}
+  charged: 0
 --- !u!61 &162137887
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1576,6 +1624,7 @@ GameObject:
   - component: {fileID: 165980681}
   - component: {fileID: 165980680}
   - component: {fileID: 165980684}
+  - component: {fileID: 165980683}
   m_Layer: 0
   m_Name: Wire2
   m_TagString: Untagged
@@ -1609,9 +1658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002ce5777fea949789d96c9f7fd4ed8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 2019421445}
   animator: {fileID: 165980681}
-  vital: 0
   horizontalExclusion: 0
   verticalExclusion: 1
 --- !u!95 &165980681
@@ -1672,8 +1719,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6e72651a9c12e49bb80eb88a74840469, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 95a2ca9bf09994732ae2007e99bf0f76, type: 3}
+  m_Color: {r: 0.4, g: 0.4, b: 0.4, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1683,6 +1730,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &165980683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165980678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90728ca7e727f42848f5a7ce71a5d195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toCharge1: {fileID: 0}
+  toCharge2: {fileID: 0}
+  toCharge3: {fileID: 0}
+  toCharge4: {fileID: 0}
+  charged: 0
 --- !u!61 &165980684
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2445,6 +2509,7 @@ GameObject:
   - component: {fileID: 265796142}
   - component: {fileID: 265796143}
   - component: {fileID: 265796145}
+  - component: {fileID: 265796144}
   m_Layer: 0
   m_Name: Wire2
   m_TagString: Untagged
@@ -2505,8 +2570,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6e72651a9c12e49bb80eb88a74840469, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 95a2ca9bf09994732ae2007e99bf0f76, type: 3}
+  m_Color: {r: 0.4, g: 0.4, b: 0.4, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2528,9 +2593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002ce5777fea949789d96c9f7fd4ed8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 2019421445}
   animator: {fileID: 265796143}
-  vital: 0
   horizontalExclusion: 0
   verticalExclusion: 1
 --- !u!95 &265796143
@@ -2552,6 +2615,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &265796144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265796139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90728ca7e727f42848f5a7ce71a5d195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toCharge1: {fileID: 0}
+  toCharge2: {fileID: 0}
+  toCharge3: {fileID: 0}
+  toCharge4: {fileID: 0}
+  charged: 0
 --- !u!61 &265796145
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3683,6 +3763,7 @@ GameObject:
   - component: {fileID: 435086357}
   - component: {fileID: 435086356}
   - component: {fileID: 435086360}
+  - component: {fileID: 435086359}
   m_Layer: 0
   m_Name: Wire2
   m_TagString: Untagged
@@ -3735,9 +3816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002ce5777fea949789d96c9f7fd4ed8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 2019421445}
   animator: {fileID: 435086356}
-  vital: 0
   horizontalExclusion: 0
   verticalExclusion: 1
 --- !u!212 &435086358
@@ -3779,8 +3858,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6e72651a9c12e49bb80eb88a74840469, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 95a2ca9bf09994732ae2007e99bf0f76, type: 3}
+  m_Color: {r: 0.4, g: 0.4, b: 0.4, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3790,6 +3869,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &435086359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435086354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90728ca7e727f42848f5a7ce71a5d195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toCharge1: {fileID: 0}
+  toCharge2: {fileID: 0}
+  toCharge3: {fileID: 0}
+  toCharge4: {fileID: 0}
+  charged: 0
 --- !u!61 &435086360
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5410,6 +5506,7 @@ GameObject:
   - component: {fileID: 639801618}
   - component: {fileID: 639801617}
   - component: {fileID: 639801621}
+  - component: {fileID: 639801620}
   m_Layer: 0
   m_Name: Wire2
   m_TagString: Untagged
@@ -5443,9 +5540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002ce5777fea949789d96c9f7fd4ed8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 2019421445}
   animator: {fileID: 639801618}
-  vital: 0
   horizontalExclusion: 0
   verticalExclusion: 1
 --- !u!95 &639801618
@@ -5506,8 +5601,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6e72651a9c12e49bb80eb88a74840469, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 95a2ca9bf09994732ae2007e99bf0f76, type: 3}
+  m_Color: {r: 0.4, g: 0.4, b: 0.4, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5517,6 +5612,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &639801620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639801615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90728ca7e727f42848f5a7ce71a5d195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toCharge1: {fileID: 0}
+  toCharge2: {fileID: 0}
+  toCharge3: {fileID: 0}
+  toCharge4: {fileID: 0}
+  charged: 0
 --- !u!61 &639801621
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6684,6 +6796,7 @@ GameObject:
   - component: {fileID: 882923771}
   - component: {fileID: 882923773}
   - component: {fileID: 882923774}
+  - component: {fileID: 882923775}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -6731,7 +6844,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6e54485c610eb4ee6a15169bb2ad6979, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6798,6 +6911,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &882923775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882923770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90728ca7e727f42848f5a7ce71a5d195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toCharge1: {fileID: 0}
+  toCharge2: {fileID: 0}
+  toCharge3: {fileID: 0}
+  toCharge4: {fileID: 0}
+  charged: 1
 --- !u!1 &907246510
 GameObject:
   m_ObjectHideFlags: 0
@@ -6811,6 +6941,7 @@ GameObject:
   - component: {fileID: 907246513}
   - component: {fileID: 907246514}
   - component: {fileID: 907246516}
+  - component: {fileID: 907246515}
   m_Layer: 0
   m_Name: Wire2
   m_TagString: Untagged
@@ -6871,8 +7002,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6e72651a9c12e49bb80eb88a74840469, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 95a2ca9bf09994732ae2007e99bf0f76, type: 3}
+  m_Color: {r: 0.4, g: 0.4, b: 0.4, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6913,11 +7044,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002ce5777fea949789d96c9f7fd4ed8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 2019421445}
   animator: {fileID: 907246513}
-  vital: 0
   horizontalExclusion: 0
   verticalExclusion: 1
+--- !u!114 &907246515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907246510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90728ca7e727f42848f5a7ce71a5d195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toCharge1: {fileID: 0}
+  toCharge2: {fileID: 0}
+  toCharge3: {fileID: 0}
+  toCharge4: {fileID: 0}
+  charged: 0
 --- !u!61 &907246516
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7649,8 +7795,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d1566c9c2a2e94f2183f360d63a83590, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 885a57c2270dd48789594e625109ac2b, type: 3}
+  m_Color: {r: 0.4, g: 0.4, b: 0.4, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8575,6 +8721,8 @@ GameObject:
   - component: {fileID: 1134758558}
   - component: {fileID: 1134758559}
   - component: {fileID: 1134758560}
+  - component: {fileID: 1134758562}
+  - component: {fileID: 1134758561}
   m_Layer: 0
   m_Name: PowerBox
   m_TagString: Untagged
@@ -8635,8 +8783,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7df7cbf7b471347e6aa0bf0c6d431a57, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 6ae834e8e37ef4dcf978cefc7c1d629d, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8672,6 +8820,35 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1134758561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134758557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90728ca7e727f42848f5a7ce71a5d195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toCharge1: {fileID: 1786998755}
+  toCharge2: {fileID: 0}
+  toCharge3: {fileID: 0}
+  toCharge4: {fileID: 0}
+  charged: 1
+--- !u!114 &1134758562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134758557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2c0b4e004ef947fcafe98541eab74d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1136402683
 GameObject:
   m_ObjectHideFlags: 0
@@ -12123,6 +12300,7 @@ GameObject:
   - component: {fileID: 1534825576}
   - component: {fileID: 1534825575}
   - component: {fileID: 1534825579}
+  - component: {fileID: 1534825578}
   m_Layer: 0
   m_Name: Wire2
   m_TagString: Untagged
@@ -12156,9 +12334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002ce5777fea949789d96c9f7fd4ed8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 2019421445}
   animator: {fileID: 1534825576}
-  vital: 0
   horizontalExclusion: 0
   verticalExclusion: 1
 --- !u!95 &1534825576
@@ -12219,8 +12395,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6e72651a9c12e49bb80eb88a74840469, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 95a2ca9bf09994732ae2007e99bf0f76, type: 3}
+  m_Color: {r: 0.4, g: 0.4, b: 0.4, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -12230,6 +12406,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1534825578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534825573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90728ca7e727f42848f5a7ce71a5d195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toCharge1: {fileID: 0}
+  toCharge2: {fileID: 0}
+  toCharge3: {fileID: 0}
+  toCharge4: {fileID: 0}
+  charged: 0
 --- !u!61 &1534825579
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12538,7 +12731,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.25, y: 0.375}
-    newSize: {x: 1.25, y: 0.375}
+    newSize: {x: 0.2, y: 0.06}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -12586,11 +12779,11 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5821fdeb4032f42a18c7a773e9b50643, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.4, g: 0.4, b: 0.4, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.25, y: 0.375}
+  m_Size: {x: 0.2, y: 0.06}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -13119,6 +13312,7 @@ GameObject:
   - component: {fileID: 1588620973}
   - component: {fileID: 1588620972}
   - component: {fileID: 1588620976}
+  - component: {fileID: 1588620975}
   m_Layer: 0
   m_Name: Wire2
   m_TagString: Untagged
@@ -13171,9 +13365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002ce5777fea949789d96c9f7fd4ed8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 2019421445}
   animator: {fileID: 1588620972}
-  vital: 0
   horizontalExclusion: 0
   verticalExclusion: 1
 --- !u!212 &1588620974
@@ -13215,8 +13407,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6e72651a9c12e49bb80eb88a74840469, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 95a2ca9bf09994732ae2007e99bf0f76, type: 3}
+  m_Color: {r: 0.4, g: 0.4, b: 0.4, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -13226,6 +13418,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1588620975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588620970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90728ca7e727f42848f5a7ce71a5d195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toCharge1: {fileID: 0}
+  toCharge2: {fileID: 0}
+  toCharge3: {fileID: 0}
+  toCharge4: {fileID: 0}
+  charged: 0
 --- !u!61 &1588620976
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13511,6 +13720,7 @@ GameObject:
   - component: {fileID: 1637002979}
   - component: {fileID: 1637002980}
   - component: {fileID: 1637002982}
+  - component: {fileID: 1637002981}
   m_Layer: 0
   m_Name: Wire2
   m_TagString: Untagged
@@ -13571,8 +13781,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6e72651a9c12e49bb80eb88a74840469, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 95a2ca9bf09994732ae2007e99bf0f76, type: 3}
+  m_Color: {r: 0.4, g: 0.4, b: 0.4, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -13613,11 +13823,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002ce5777fea949789d96c9f7fd4ed8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 2019421445}
   animator: {fileID: 1637002979}
-  vital: 0
   horizontalExclusion: 0
   verticalExclusion: 1
+--- !u!114 &1637002981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637002976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90728ca7e727f42848f5a7ce71a5d195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toCharge1: {fileID: 0}
+  toCharge2: {fileID: 0}
+  toCharge3: {fileID: 0}
+  toCharge4: {fileID: 0}
+  charged: 0
 --- !u!61 &1637002982
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13657,6 +13882,7 @@ GameObject:
   - component: {fileID: 1645891975}
   - component: {fileID: 1645891974}
   - component: {fileID: 1645891978}
+  - component: {fileID: 1645891977}
   m_Layer: 0
   m_Name: Wire2
   m_TagString: Untagged
@@ -13709,9 +13935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002ce5777fea949789d96c9f7fd4ed8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 2019421445}
   animator: {fileID: 1645891974}
-  vital: 0
   horizontalExclusion: 0
   verticalExclusion: 1
 --- !u!212 &1645891976
@@ -13753,8 +13977,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6e72651a9c12e49bb80eb88a74840469, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 95a2ca9bf09994732ae2007e99bf0f76, type: 3}
+  m_Color: {r: 0.4, g: 0.4, b: 0.4, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -13764,6 +13988,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1645891977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645891972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90728ca7e727f42848f5a7ce71a5d195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toCharge1: {fileID: 0}
+  toCharge2: {fileID: 0}
+  toCharge3: {fileID: 0}
+  toCharge4: {fileID: 0}
+  charged: 0
 --- !u!61 &1645891978
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14082,6 +14323,7 @@ GameObject:
   - component: {fileID: 1676090895}
   - component: {fileID: 1676090894}
   - component: {fileID: 1676090898}
+  - component: {fileID: 1676090897}
   m_Layer: 0
   m_Name: Wire2
   m_TagString: Untagged
@@ -14115,9 +14357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002ce5777fea949789d96c9f7fd4ed8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 2019421445}
   animator: {fileID: 1676090895}
-  vital: 0
   horizontalExclusion: 0
   verticalExclusion: 1
 --- !u!95 &1676090895
@@ -14178,8 +14418,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6e72651a9c12e49bb80eb88a74840469, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 95a2ca9bf09994732ae2007e99bf0f76, type: 3}
+  m_Color: {r: 0.4, g: 0.4, b: 0.4, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -14189,6 +14429,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1676090897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676090892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90728ca7e727f42848f5a7ce71a5d195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toCharge1: {fileID: 0}
+  toCharge2: {fileID: 0}
+  toCharge3: {fileID: 0}
+  toCharge4: {fileID: 0}
+  charged: 0
 --- !u!61 &1676090898
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14835,6 +15092,7 @@ GameObject:
   - component: {fileID: 1786998759}
   - component: {fileID: 1786998758}
   - component: {fileID: 1786998757}
+  - component: {fileID: 1786998760}
   m_Layer: 0
   m_Name: Wire1
   m_TagString: Untagged
@@ -14887,9 +15145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002ce5777fea949789d96c9f7fd4ed8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 2019421445}
   animator: {fileID: 1786998757}
-  vital: 0
   horizontalExclusion: 0
   verticalExclusion: 0
 --- !u!61 &1786998759
@@ -14918,6 +15174,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.875, y: 0.125}
   m_EdgeRadius: 0
+--- !u!114 &1786998760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786998755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90728ca7e727f42848f5a7ce71a5d195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toCharge1: {fileID: 882923770}
+  toCharge2: {fileID: 0}
+  toCharge3: {fileID: 0}
+  toCharge4: {fileID: 0}
+  charged: 1
 --- !u!212 &1786998761
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14957,8 +15230,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a12f507afdcbb4fcd8994362fa4dd560, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: d7078533c44bb49d2bd5af91b6d9f91f, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -15433,6 +15706,7 @@ GameObject:
   - component: {fileID: 1840582139}
   - component: {fileID: 1840582138}
   - component: {fileID: 1840582142}
+  - component: {fileID: 1840582141}
   m_Layer: 0
   m_Name: Wire2
   m_TagString: Untagged
@@ -15466,9 +15740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002ce5777fea949789d96c9f7fd4ed8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 2019421445}
   animator: {fileID: 1840582139}
-  vital: 0
   horizontalExclusion: 0
   verticalExclusion: 1
 --- !u!95 &1840582139
@@ -15529,8 +15801,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6e72651a9c12e49bb80eb88a74840469, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 95a2ca9bf09994732ae2007e99bf0f76, type: 3}
+  m_Color: {r: 0.4, g: 0.4, b: 0.4, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -15540,6 +15812,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1840582141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840582136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90728ca7e727f42848f5a7ce71a5d195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toCharge1: {fileID: 0}
+  toCharge2: {fileID: 0}
+  toCharge3: {fileID: 0}
+  toCharge4: {fileID: 0}
+  charged: 0
 --- !u!61 &1840582142
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16978,6 +17267,7 @@ GameObject:
   - component: {fileID: 2076296324}
   - component: {fileID: 2076296323}
   - component: {fileID: 2076296327}
+  - component: {fileID: 2076296326}
   m_Layer: 0
   m_Name: Wire2
   m_TagString: Untagged
@@ -17011,9 +17301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002ce5777fea949789d96c9f7fd4ed8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 2019421445}
   animator: {fileID: 2076296324}
-  vital: 0
   horizontalExclusion: 0
   verticalExclusion: 1
 --- !u!95 &2076296324
@@ -17074,8 +17362,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6e72651a9c12e49bb80eb88a74840469, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 95a2ca9bf09994732ae2007e99bf0f76, type: 3}
+  m_Color: {r: 0.4, g: 0.4, b: 0.4, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -17085,6 +17373,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2076296326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076296321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90728ca7e727f42848f5a7ce71a5d195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toCharge1: {fileID: 0}
+  toCharge2: {fileID: 0}
+  toCharge3: {fileID: 0}
+  toCharge4: {fileID: 0}
+  charged: 0
 --- !u!61 &2076296327
 BoxCollider2D:
   m_ObjectHideFlags: 0
