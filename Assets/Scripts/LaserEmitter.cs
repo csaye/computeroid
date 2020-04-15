@@ -30,8 +30,12 @@ public class LaserEmitter : MonoBehaviour
     // Whether the laser will continue and whether the current laser is the first or second
     private bool willContinue = true, isFirstLaser = true, isSecondLaser = true;
 
+    private float renderFramesDefault = 2, renderFrames;
+
     void Start()
     {
+        renderFrames = 0;
+        
         if (player == null) player = GameObject.FindGameObjectWithTag("Player");
 
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -43,7 +47,9 @@ public class LaserEmitter : MonoBehaviour
     // Each iteration of update begins at the emitter and re-forms the laser path
     void Update()
     {
-        if (!PauseMenu.isPaused && chargeScript.charged) {
+        if (!PauseMenu.isPaused && chargeScript.charged && renderFrames <= 0) {
+
+            renderFrames = renderFramesDefault;
 
             // In beginning of laser emission, output direction set to default
             bottomRight = bottomRightDefault;
@@ -77,6 +83,9 @@ public class LaserEmitter : MonoBehaviour
 
             EmitLaser();
         }
+
+        if (renderFrames > 0) renderFrames--;
+        if (renderFrames < 0) renderFrames = 0;
     }
 
     void EmitLaser() {
@@ -104,7 +113,7 @@ public class LaserEmitter : MonoBehaviour
                 // If there are no objects with a box collider within the area, instantiate the laser
                 if (willContinue && !isFirstLaser) {
                     laser = Instantiate(laser1Prefab, center, Quaternion.identity);
-                    Destroy(laser, 1.0f/30.0f);
+                    Destroy(laser, renderFrames/30.0f);
                     currentX++;
                     currentY--;
                     center = new Vector2(currentX, currentY);
@@ -134,7 +143,7 @@ public class LaserEmitter : MonoBehaviour
                 // If there are no objects with a box collider within the area, instantiate the laser
                 if (willContinue && !isFirstLaser) {
                     laser = Instantiate(laser2Prefab, center, Quaternion.identity);
-                    Destroy(laser, 1.0f/30.0f);
+                    Destroy(laser, renderFrames/30.0f);
                     currentX--;
                     currentY--;
                     center = new Vector2(currentX, currentY);
@@ -164,7 +173,7 @@ public class LaserEmitter : MonoBehaviour
                 // If there are no objects with a box collider within the area, instantiate the laser
                 if (willContinue && !isFirstLaser) {
                     laser = Instantiate(laser3Prefab, center, Quaternion.identity);
-                    Destroy(laser, 1.0f/30.0f);
+                    Destroy(laser, renderFrames/30.0f);
                     currentX--;
                     currentY++;
                     center = new Vector2(currentX, currentY);
@@ -194,7 +203,7 @@ public class LaserEmitter : MonoBehaviour
                 // If there are no objects with a box collider within the area, instantiate the laser
                 if (willContinue && !isFirstLaser) {
                     laser = Instantiate(laser4Prefab, center, Quaternion.identity);
-                    Destroy(laser, 1.0f/30.0f);
+                    Destroy(laser, renderFrames/30.0f);
                     currentX++;
                     currentY++;
                     center = new Vector2(currentX, currentY);

@@ -41,7 +41,7 @@ public class Wire : MonoBehaviour
     // Checks if wire is shorted out, and if so, sends signal to short wire
     void CheckShort() {
 
-        // If player left clicks, is colored red, within interaction distance, short out wire
+        // If player left clicks, is colored red, and within interaction distance, short out wire
         if (Input.GetMouseButtonDown(0)) {
             if (playerSpriteRenderer.color == red && Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) {
 

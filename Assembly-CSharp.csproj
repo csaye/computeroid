@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\MenuButton.cs" />
      <Compile Include="Assets\Scripts\NetworkBox.cs" />
      <Compile Include="Assets\Scripts\PaintBucket.cs" />
+     <Compile Include="Assets\Scripts\PaintCleaner.cs" />
      <Compile Include="Assets\Scripts\Paper.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />

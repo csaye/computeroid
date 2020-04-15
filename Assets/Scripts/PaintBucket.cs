@@ -18,6 +18,8 @@ public class PaintBucket : MonoBehaviour
 
     private GameObject player = null;
 
+    private Color white = new Color(1, 1, 1, 1);
+
     private float maxInteractDistance = 1.5f;
 
     void Start()
@@ -38,9 +40,9 @@ public class PaintBucket : MonoBehaviour
         }
     }
 
-    // Check if paint bucket is clicked, and if so, transfer color to player
+    // Check if paint bucket is clicked and player is clean, and if so, transfer color to player
     void CheckClick() {
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(0) && playerSpriteRenderer.color == white) {
 
             // Check if player is close enough to the paint bucket
             if (Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) {
