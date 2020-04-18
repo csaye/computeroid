@@ -8,7 +8,10 @@ public class PaintBucket : MonoBehaviour
     // The color of the paint bucket
     public Color paintColor;
 
-    public Sprite paintLevel0, paintLevel1, paintLevel2, paintLevel3, paintLevel4, paintLevel5;
+    public Sprite paintLevel0, paintLevel1, paintLevel2, paintLevel3, paintLevel4, paintLevel5, paintLevelInfinite;
+
+    // Whether the bucket contains an infinite amount of paint
+    public bool infinite;
 
     // How much paint is in the paint bucket
     public float paintLevel;
@@ -25,6 +28,8 @@ public class PaintBucket : MonoBehaviour
     void Start()
     {
         if (player == null) player = GameObject.FindGameObjectWithTag("Player");
+
+        if (infinite) paintLevel = 1;
         
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerSpriteRenderer = player.GetComponent<SpriteRenderer>();
@@ -52,7 +57,7 @@ public class PaintBucket : MonoBehaviour
         
                 // If bucket hit by raycast, transfer paint
                 if (rayHit.collider != null && paintLevel > 0 && playerSpriteRenderer.color != paintColor && transform.position == rayHit.collider.gameObject.transform.position) {
-                    paintLevel--;
+                    if (!infinite) paintLevel--;
                     playerSpriteRenderer.color = paintColor;
                 }
             }
@@ -61,12 +66,20 @@ public class PaintBucket : MonoBehaviour
 
     // Updates the paint level based on how much paint is left in the bucket
     void UpdatePaintLevel() {
-        if (paintLevel == 0) spriteRenderer.sprite = paintLevel0;
-        if (paintLevel == 1) spriteRenderer.sprite = paintLevel1;
-        if (paintLevel == 2) spriteRenderer.sprite = paintLevel2;
-        if (paintLevel == 3) spriteRenderer.sprite = paintLevel3;
-        if (paintLevel == 4) spriteRenderer.sprite = paintLevel4;
-        if (paintLevel == 5) spriteRenderer.sprite = paintLevel5;
+        
+        // If the paint level is not infinite, update accordingly
+        if (!infinite) {
+            if (paintLevel == 0) spriteRenderer.sprite = paintLevel0;
+            if (paintLevel == 1) spriteRenderer.sprite = paintLevel1;
+            if (paintLevel == 2) spriteRenderer.sprite = paintLevel2;
+            if (paintLevel == 3) spriteRenderer.sprite = paintLevel3;
+            if (paintLevel == 4) spriteRenderer.sprite = paintLevel4;
+            if (paintLevel == 5) spriteRenderer.sprite = paintLevel5;
+
+        // If paint level is infinite, set to infinite paint sprite
+        } else {
+            spriteRenderer.sprite = paintLevelInfinite;
+        }
     }
 
 }
