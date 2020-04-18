@@ -3133,7 +3133,7 @@ Animator:
   m_GameObject: {fileID: 399412313}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c9b267cff127c412d9aaa0771d745280, type: 2}
+  m_Controller: {fileID: 9100000, guid: ad87d80885e5f4392966688a49e77ff4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4994,7 +4994,7 @@ GameObject:
   - component: {fileID: 563096721}
   - component: {fileID: 563096722}
   m_Layer: 0
-  m_Name: LaserReceiver
+  m_Name: Laser Receiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13860,7 +13860,7 @@ Animator:
   m_GameObject: {fileID: 1779294797}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 56e85969ce9b448959a7539b66773ade, type: 2}
+  m_Controller: {fileID: 9100000, guid: e057574e0a288467bb567024020fa385, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -15649,13 +15649,13 @@ MonoBehaviour:
   bottomLeftDefault: 0
   topLeftDefault: 0
   topRightDefault: 0
-  laser1Prefab: {fileID: 6139622466914303616, guid: 5df62826028a04f8194638cb623bb1a6,
+  laser1Prefab: {fileID: 6139622466914303616, guid: 39f633e675e63483ea546a7c5ceb6580,
     type: 3}
-  laser2Prefab: {fileID: 5502867408082120539, guid: 31133fe8bb0c34c6aa1c30586724721e,
+  laser2Prefab: {fileID: 5502867408082120539, guid: 246e28262cfe04009b387bbeaedb68e5,
     type: 3}
-  laser3Prefab: {fileID: 7538451350870369602, guid: 896d5027b2e174543b96a44f15242ae3,
+  laser3Prefab: {fileID: 7538451350870369602, guid: 472e34bee9f564a359dd1aebf77291a7,
     type: 3}
-  laser4Prefab: {fileID: 4265467023568352668, guid: dc2bd6b40d5c7478abe17ad94c066d32,
+  laser4Prefab: {fileID: 4265467023568352668, guid: 82b6c98cdf61f4b1c8dbb9b9aebc061e,
     type: 3}
 --- !u!1 &1918629368
 GameObject:

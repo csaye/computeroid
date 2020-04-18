@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelSelect : MonoBehaviour
 {
@@ -16,9 +17,11 @@ public class LevelSelect : MonoBehaviour
 
     void Update()
     {
-        UpdateBackground();        
+        UpdateBackground();
+        CheckMainMenu();
     }
 
+    // Updates the level select screen based on the current level unlocked
     void UpdateBackground() {
         if (LevelManager.level == 1) spriteRenderer.sprite = levelSelect1;
         if (LevelManager.level == 2) spriteRenderer.sprite = levelSelect2;
@@ -33,5 +36,10 @@ public class LevelSelect : MonoBehaviour
         if (LevelManager.level == 11) spriteRenderer.sprite = levelSelect11;
         if (LevelManager.level == 12) spriteRenderer.sprite = levelSelect12;
         if (LevelManager.level > 12) spriteRenderer.sprite = levelSelectComplete;
+    }
+
+    // Checks if the player presses escape, and if so, takes them to the main menu
+    void CheckMainMenu() {
+        if (Input.GetKeyDown("escape")) SceneManager.LoadScene("Main Menu");
     }
 }

@@ -32,7 +32,15 @@ public class LevelButton : MonoBehaviour
     void Update()
     {
         // If not paused and button is charged
-        if (!PauseMenu.isPaused && chargeScript.charged) CheckHighlight();
+        if (!PauseMenu.isPaused) {
+
+            // If not charged, default button to unpressed
+            if (chargeScript.charged) {
+                CheckHighlight();
+            } else {
+                spriteRenderer.sprite = buttonNormal;
+            }
+        }
     }
 
     // Checks if the mouse is over the button, and if so, highlights the button

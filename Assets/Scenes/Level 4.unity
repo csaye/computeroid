@@ -3212,7 +3212,7 @@ GameObject:
   - component: {fileID: 430063455}
   - component: {fileID: 430063457}
   m_Layer: 0
-  m_Name: PowerBox
+  m_Name: Power Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6689,7 +6689,7 @@ Animator:
   m_GameObject: {fileID: 736582009}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 56e85969ce9b448959a7539b66773ade, type: 2}
+  m_Controller: {fileID: 9100000, guid: e057574e0a288467bb567024020fa385, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -7358,13 +7358,13 @@ MonoBehaviour:
   bottomLeftDefault: 0
   topLeftDefault: 1
   topRightDefault: 0
-  laser1Prefab: {fileID: 6139622466914303616, guid: 5df62826028a04f8194638cb623bb1a6,
+  laser1Prefab: {fileID: 6139622466914303616, guid: 39f633e675e63483ea546a7c5ceb6580,
     type: 3}
-  laser2Prefab: {fileID: 5502867408082120539, guid: 31133fe8bb0c34c6aa1c30586724721e,
+  laser2Prefab: {fileID: 5502867408082120539, guid: 246e28262cfe04009b387bbeaedb68e5,
     type: 3}
-  laser3Prefab: {fileID: 7538451350870369602, guid: 896d5027b2e174543b96a44f15242ae3,
+  laser3Prefab: {fileID: 7538451350870369602, guid: 472e34bee9f564a359dd1aebf77291a7,
     type: 3}
-  laser4Prefab: {fileID: 4265467023568352668, guid: dc2bd6b40d5c7478abe17ad94c066d32,
+  laser4Prefab: {fileID: 4265467023568352668, guid: 82b6c98cdf61f4b1c8dbb9b9aebc061e,
     type: 3}
 --- !u!114 &877397309
 MonoBehaviour:
@@ -8502,13 +8502,13 @@ MonoBehaviour:
   bottomLeftDefault: 0
   topLeftDefault: 0
   topRightDefault: 1
-  laser1Prefab: {fileID: 6139622466914303616, guid: 5df62826028a04f8194638cb623bb1a6,
+  laser1Prefab: {fileID: 6139622466914303616, guid: 39f633e675e63483ea546a7c5ceb6580,
     type: 3}
-  laser2Prefab: {fileID: 5502867408082120539, guid: 31133fe8bb0c34c6aa1c30586724721e,
+  laser2Prefab: {fileID: 5502867408082120539, guid: 246e28262cfe04009b387bbeaedb68e5,
     type: 3}
-  laser3Prefab: {fileID: 7538451350870369602, guid: 896d5027b2e174543b96a44f15242ae3,
+  laser3Prefab: {fileID: 7538451350870369602, guid: 472e34bee9f564a359dd1aebf77291a7,
     type: 3}
-  laser4Prefab: {fileID: 4265467023568352668, guid: dc2bd6b40d5c7478abe17ad94c066d32,
+  laser4Prefab: {fileID: 4265467023568352668, guid: 82b6c98cdf61f4b1c8dbb9b9aebc061e,
     type: 3}
 --- !u!212 &1007257056
 SpriteRenderer:
@@ -10844,7 +10844,7 @@ GameObject:
   - component: {fileID: 1215538145}
   - component: {fileID: 1215538147}
   m_Layer: 0
-  m_Name: PowerBox
+  m_Name: Power Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12840,7 +12840,7 @@ GameObject:
   - component: {fileID: 1494562234}
   - component: {fileID: 1494562238}
   m_Layer: 0
-  m_Name: PaintCleaner
+  m_Name: Paint Cleaner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13681,7 +13681,7 @@ Animator:
   m_GameObject: {fileID: 1575451421}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5969e76fe6df14000b57ab477d9ce407, type: 2}
+  m_Controller: {fileID: 9100000, guid: 590c746310bba4253bac6e29207dbe81, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -13747,7 +13747,7 @@ GameObject:
   - component: {fileID: 1578009151}
   - component: {fileID: 1578009153}
   m_Layer: 0
-  m_Name: PowerBox
+  m_Name: Power Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15403,7 +15403,7 @@ GameObject:
   - component: {fileID: 1770472820}
   - component: {fileID: 1770472819}
   m_Layer: 0
-  m_Name: PaintBucket
+  m_Name: Paint Bucket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17084,7 +17084,7 @@ GameObject:
   - component: {fileID: 2102062765}
   - component: {fileID: 2102062764}
   m_Layer: 0
-  m_Name: PaintBucket
+  m_Name: Paint Bucket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17257,7 +17257,7 @@ Animator:
   m_GameObject: {fileID: 2103122194}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c9b267cff127c412d9aaa0771d745280, type: 2}
+  m_Controller: {fileID: 9100000, guid: ad87d80885e5f4392966688a49e77ff4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
