@@ -10,6 +10,8 @@ public class BackgroundTile : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
+    private bool isTile = false;
+
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -26,17 +28,34 @@ public class BackgroundTile : MonoBehaviour
 
     // Checks if the mouse is over the tile, and if so, highlights the tile
     void CheckHighlight() {
-
-        // Raycast to mouse position
-        RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition));
         
-        // If tile hit by raycast, highlight tile
-        if (rayHit.collider != null && transform.position == rayHit.collider.gameObject.transform.position) {
+        // Reset parameter
+        isTile = false;
+
+        // For each hit overlapped with the mouse position
+        foreach (RaycastHit2D rayHit in (Physics2D.GetRayIntersectionAll(Camera.main.ScreenPointToRay(Input.mousePosition)))) {
+
+            // If found collider, check for tile
+            if (rayHit.collider != null) {
+
+                // If at least one of the colliders has the position of the tile
+                if (transform.position == rayHit.collider.gameObject.transform.position) {
+
+                    // Because tile found, highlight tile
+                    isTile = true;
+                }
+            }
+        }
+
+        // If a tile is found, highlight the tile
+        if (isTile) {
             spriteRenderer.sprite = tileHighlight;
+
+        // If a tile is not found, set it back to normal
         } else {
             spriteRenderer.sprite = tileNormal;
         }
- 
+        
     }
 
 }

@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\LevelSelect.cs" />
      <Compile Include="Assets\Scripts\LevelSelector.cs" />
      <Compile Include="Assets\Scripts\LoadLevel.cs" />
+     <Compile Include="Assets\Scripts\LockBox.cs" />
      <Compile Include="Assets\Scripts\MenuButton.cs" />
      <Compile Include="Assets\Scripts\NetworkBox.cs" />
      <Compile Include="Assets\Scripts\PaintBucket.cs" />
