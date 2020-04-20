@@ -5,6 +5,8 @@ using UnityEngine;
 public class LockBox : MonoBehaviour
 {
 
+    public Animator animator;
+
     private GameObject player = null;
 
     private SpriteRenderer spriteRenderer;
@@ -50,8 +52,8 @@ public class LockBox : MonoBehaviour
 
     // Unlocks the lock, removing the yellow color from the player and opening the lock
     void Unlock() {
+        animator.SetBool("Unlocked", true);
         playerSpriteRenderer.color = white;
         boxCollider.enabled = false;
-        spriteRenderer.enabled = false;
     }
 }

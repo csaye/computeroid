@@ -23,7 +23,7 @@ public class Wire : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private SpriteRenderer playerSpriteRenderer;
 
-    private float maxInteractDistance = 1;
+    private float maxInteractDistance = 1.5f;
     
     void Start()
     {
