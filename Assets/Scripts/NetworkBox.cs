@@ -10,6 +10,8 @@ public class NetworkBox : MonoBehaviour
     private Charge chargeScript;
     private LevelController levelControllerScript;
 
+    private float startDelayFrames = 60;
+
     void Start()
     {
         chargeScript = GetComponent<Charge>();
@@ -19,10 +21,16 @@ public class NetworkBox : MonoBehaviour
 
     void Update()
     {
-        CheckCrash();
+        if (!PauseMenu.isPaused) {
+            if (startDelayFrames <= 0) CheckCrash();
+            if (startDelayFrames > 0) startDelayFrames--;
+            if (startDelayFrames < 0) startDelayFrames = 0;
+        }
     }
     
     void CheckCrash() {
+
+        // If not charged, crash the level
         if (!chargeScript.charged) levelControllerScript.levelComplete = true;
     }
 }

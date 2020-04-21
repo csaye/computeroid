@@ -15,6 +15,9 @@ public class LaserReceiver : MonoBehaviour
     // All receivers wait a few frames to turn off to prevent jittery behavior
     private float waitFrames = 3;
 
+    // The maximum amount of charge power an object can have
+    private float maxCharge = 4;
+
     void Start()
     {
         chargeScript = GetComponent<Charge>();
@@ -44,6 +47,7 @@ public class LaserReceiver : MonoBehaviour
                 if (collider.gameObject.tag == ("Laser3")) {
                     waitFrames = 3;
                     chargeScript.charged = true;
+                    chargeScript.chargePower = maxCharge;
                     return;
                 }
             }
@@ -51,6 +55,7 @@ public class LaserReceiver : MonoBehaviour
             // If wait frame over, turn off receiver
             if (waitFrames <= 0) {
                 chargeScript.charged = false;
+                chargeScript.chargePower = 0;
                 return;
             }
         }
@@ -63,6 +68,7 @@ public class LaserReceiver : MonoBehaviour
                 if (collider.gameObject.tag == ("Laser4")) {
                     waitFrames = 3;
                     chargeScript.charged = true;
+                    chargeScript.chargePower = maxCharge;
                     return;
                 }
             }
@@ -70,6 +76,7 @@ public class LaserReceiver : MonoBehaviour
             // If wait frame over, turn off receiver
             if (waitFrames <= 0) {
                 chargeScript.charged = false;
+                chargeScript.chargePower = 0;
                 return;
             }
         }
@@ -82,6 +89,7 @@ public class LaserReceiver : MonoBehaviour
                 if (collider.gameObject.tag == ("Laser1")) {
                     waitFrames = 3;
                     chargeScript.charged = true;
+                    chargeScript.chargePower = maxCharge;
                     return;
                 }
             }
@@ -89,6 +97,7 @@ public class LaserReceiver : MonoBehaviour
             // If wait frame over, turn off receiver
             if (waitFrames <= 0) {
                 chargeScript.charged = false;
+                chargeScript.chargePower = 0;
                 return;
             }
         }
@@ -101,6 +110,7 @@ public class LaserReceiver : MonoBehaviour
                 if (collider.gameObject.tag == ("Laser2")) {
                     waitFrames = 3;
                     chargeScript.charged = true;
+                    chargeScript.chargePower = maxCharge;
                     return;
                 }
             }
@@ -108,6 +118,7 @@ public class LaserReceiver : MonoBehaviour
             // If wait frame over, turn off receiver
             if (waitFrames <= 0) {
                 chargeScript.charged = false;
+                chargeScript.chargePower = 0;
                 return;
             }
         }

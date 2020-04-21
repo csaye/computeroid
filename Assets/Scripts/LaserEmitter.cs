@@ -113,7 +113,7 @@ public class LaserEmitter : MonoBehaviour
                 // If there are no objects with a box collider within the area, instantiate the laser
                 if (willContinue && !isFirstLaser) {
                     laser = Instantiate(laser1Prefab, center, Quaternion.identity);
-                    Destroy(laser, renderFrames/30.0f);
+                    Destroy(laser, renderFrames/15.0f);
                     currentX++;
                     currentY--;
                     center = new Vector2(currentX, currentY);
@@ -143,7 +143,7 @@ public class LaserEmitter : MonoBehaviour
                 // If there are no objects with a box collider within the area, instantiate the laser
                 if (willContinue && !isFirstLaser) {
                     laser = Instantiate(laser2Prefab, center, Quaternion.identity);
-                    Destroy(laser, renderFrames/30.0f);
+                    Destroy(laser, renderFrames/15.0f);
                     currentX--;
                     currentY--;
                     center = new Vector2(currentX, currentY);
@@ -173,7 +173,7 @@ public class LaserEmitter : MonoBehaviour
                 // If there are no objects with a box collider within the area, instantiate the laser
                 if (willContinue && !isFirstLaser) {
                     laser = Instantiate(laser3Prefab, center, Quaternion.identity);
-                    Destroy(laser, renderFrames/30.0f);
+                    Destroy(laser, renderFrames/15.0f);
                     currentX--;
                     currentY++;
                     center = new Vector2(currentX, currentY);
@@ -203,7 +203,7 @@ public class LaserEmitter : MonoBehaviour
                 // If there are no objects with a box collider within the area, instantiate the laser
                 if (willContinue && !isFirstLaser) {
                     laser = Instantiate(laser4Prefab, center, Quaternion.identity);
-                    Destroy(laser, renderFrames/30.0f);
+                    Destroy(laser, renderFrames/15.0f);
                     currentX++;
                     currentY++;
                     center = new Vector2(currentX, currentY);

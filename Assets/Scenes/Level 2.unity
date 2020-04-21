@@ -788,7 +788,7 @@ GameObject:
   - component: {fileID: 88550734}
   - component: {fileID: 88550732}
   m_Layer: 0
-  m_Name: PaintBucket
+  m_Name: Paint Bucket (Red)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8704,7 +8704,7 @@ GameObject:
   - component: {fileID: 1134758562}
   - component: {fileID: 1134758561}
   m_Layer: 0
-  m_Name: PowerBox
+  m_Name: Power Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

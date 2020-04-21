@@ -69,7 +69,9 @@
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\PowerBox.cs" />
      <Compile Include="Assets\Scripts\PushableBox.cs" />
+     <Compile Include="Assets\Scripts\TeleportPad.cs" />
      <Compile Include="Assets\Scripts\Wire.cs" />
+     <Compile Include="Assets\Scripts\WirePad.cs" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2019.3.8f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

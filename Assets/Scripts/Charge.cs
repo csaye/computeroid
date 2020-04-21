@@ -14,6 +14,9 @@ public class Charge : MonoBehaviour
     // Whether the object is charged
     public bool charged;
 
+    // The level of charge the object currently has
+    public float chargePower;
+
     private Charge toChargeScript1;
     private Charge toChargeScript2;
     private Charge toChargeScript3;
@@ -24,6 +27,9 @@ public class Charge : MonoBehaviour
     private Color black = new Color(0, 0, 0, 1);
     private Color gray = new Color(0.4f, 0.4f, 0.4f, 1);
 
+    // The maximum amount of charge power an object can have
+    private float maxCharge = 4;
+
     void Start()
     {
         if (toCharge1 != null) toChargeScript1 = toCharge1.GetComponent<Charge>();
@@ -32,6 +38,8 @@ public class Charge : MonoBehaviour
         if (toCharge4 != null) toChargeScript4 = toCharge4.GetComponent<Charge>();
 
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        if (charged) chargePower = maxCharge;
     }
 
     void Update()
@@ -39,62 +47,179 @@ public class Charge : MonoBehaviour
 
         // If game not paused
         if (!PauseMenu.isPaused) {
+            UpdateChargePower();
             UpdateCharge();
             UpdateColor();
         }
     }
 
     // If object is charged, charge next object and vice versa
-    void UpdateCharge() {
+    void UpdateChargePower() {
 
         if (toCharge1 != null) {
 
-            // Set the next object to the charge state of the previous
-            if (toCharge1.GetComponent<Renderer>().enabled) {
-                toChargeScript1.charged = charged;
-        
-            // If the renderer of the next object is disabled, set the object to uncharged
-            } else {
-                toChargeScript1.charged = false;
+            if (toCharge1.GetComponent<BoxCollider2D>() != null) {
+
+                // Set the next object to the charge state of the previous
+                if (toCharge1.GetComponent<SpriteRenderer>().enabled && toCharge1.GetComponent<BoxCollider2D>().enabled) {
+                    if (charged) {
+                        toChargeScript1.chargePower = maxCharge;
+                    } else {
+                        toChargeScript1.chargePower--;
+                    }
+            
+                // If the renderer of the next object is disabled, set the object to uncharged
+                } else {
+                    if (toChargeScript1.chargePower > 0) toChargeScript1.chargePower--;
+                    if (toChargeScript1.chargePower < 0) toChargeScript1.chargePower = 0;
+                }
+
+            }
+
+            if (toCharge1.GetComponent<PolygonCollider2D>() != null) {
+
+                // Set the next object to the charge state of the previous
+                if (toCharge1.GetComponent<SpriteRenderer>().enabled && toCharge1.GetComponent<PolygonCollider2D>().enabled) {
+                    if (charged) {
+                        toChargeScript1.chargePower = maxCharge;
+                    } else {
+                        toChargeScript1.chargePower--;
+                    }
+            
+                // If the renderer of the next object is disabled, set the object to uncharged
+                } else {
+                    if (toChargeScript1.chargePower > 0) toChargeScript1.chargePower--;
+                    if (toChargeScript1.chargePower < 0) toChargeScript1.chargePower = 0;
+                }
+
             }
         }
 
         if (toCharge2 != null) {
 
-            // Set the next object to the charge state of the previous
-            if (toCharge2.GetComponent<Renderer>().enabled) {
-                toChargeScript2.charged = charged;
-        
-            // If the renderer of the next object is disabled, set the object to uncharged
-            } else {
-                toChargeScript2.charged = false;
+            if (toCharge2.GetComponent<BoxCollider2D>() != null) {
+
+                // Set the next object to the charge state of the previous
+                if (toCharge2.GetComponent<SpriteRenderer>().enabled && toCharge2.GetComponent<BoxCollider2D>().enabled) {
+                    if (charged) {
+                        toChargeScript2.chargePower = maxCharge;
+                    } else {
+                        toChargeScript2.chargePower--;
+                    }
+            
+                // If the renderer of the next object is disabled, set the object to uncharged
+                } else {
+                    if (toChargeScript2.chargePower > 0) toChargeScript2.chargePower--;
+                    if (toChargeScript2.chargePower < 0) toChargeScript2.chargePower = 0;
+                }
+
+            }
+
+            if (toCharge2.GetComponent<PolygonCollider2D>() != null) {
+
+                // Set the next object to the charge state of the previous
+                if (toCharge2.GetComponent<SpriteRenderer>().enabled && toCharge2.GetComponent<PolygonCollider2D>().enabled) {
+                    if (charged) {
+                        toChargeScript2.chargePower = maxCharge;
+                    } else {
+                        toChargeScript2.chargePower--;
+                    }
+            
+                // If the renderer of the next object is disabled, set the object to uncharged
+                } else {
+                    if (toChargeScript2.chargePower > 0) toChargeScript2.chargePower--;
+                    if (toChargeScript2.chargePower < 0) toChargeScript2.chargePower = 0;
+                }
+
             }
         }
 
         if (toCharge3 != null) {
 
-            // Set the next object to the charge state of the previous
-            if (toCharge3.GetComponent<Renderer>().enabled) {
-                toChargeScript3.charged = charged;
-        
-            // If the renderer of the next object is disabled, set the object to uncharged
-            } else {
-                toChargeScript3.charged = false;
+            if (toCharge3.GetComponent<BoxCollider2D>() != null) {
+
+                // Set the next object to the charge state of the previous
+                if (toCharge3.GetComponent<SpriteRenderer>().enabled && toCharge3.GetComponent<BoxCollider2D>().enabled) {
+                    if (charged) {
+                        toChargeScript3.chargePower = maxCharge;
+                    } else {
+                        toChargeScript3.chargePower--;
+                    }
+            
+                // If the renderer of the next object is disabled, set the object to uncharged
+                } else {
+                    if (toChargeScript3.chargePower > 0) toChargeScript3.chargePower--;
+                    if (toChargeScript3.chargePower < 0) toChargeScript3.chargePower = 0;
+                }
+
+            }
+
+            if (toCharge3.GetComponent<PolygonCollider2D>() != null) {
+
+                // Set the next object to the charge state of the previous
+                if (toCharge3.GetComponent<SpriteRenderer>().enabled && toCharge3.GetComponent<PolygonCollider2D>().enabled) {
+                    if (charged) {
+                        toChargeScript3.chargePower = maxCharge;
+                    } else {
+                        toChargeScript3.chargePower--;
+                    }
+            
+                // If the renderer of the next object is disabled, set the object to uncharged
+                } else {
+                    if (toChargeScript3.chargePower > 0) toChargeScript3.chargePower--;
+                    if (toChargeScript3.chargePower < 0) toChargeScript3.chargePower = 0;
+                }
+
             }
         }
 
         if (toCharge4 != null) {
 
-            // Set the next object to the charge state of the previous
-            if (toCharge4.GetComponent<Renderer>().enabled) {
-                toChargeScript4.charged = charged;
-        
-            // If the renderer of the next object is disabled, set the object to uncharged
-            } else {
-                toChargeScript4.charged = false;
+            if (toCharge4.GetComponent<BoxCollider2D>() != null) {
+
+                // Set the next object to the charge state of the previous
+                if (toCharge4.GetComponent<SpriteRenderer>().enabled && toCharge4.GetComponent<BoxCollider2D>().enabled) {
+                    if (charged) {
+                        toChargeScript4.chargePower = maxCharge;
+                    } else {
+                        toChargeScript4.chargePower--;
+                    }
+            
+                // If the renderer of the next object is disabled, set the object to uncharged
+                } else {
+                    if (toChargeScript4.chargePower > 0) toChargeScript4.chargePower--;
+                    if (toChargeScript4.chargePower < 0) toChargeScript4.chargePower = 0;
+                }
+
+            }
+
+            if (toCharge4.GetComponent<PolygonCollider2D>() != null) {
+
+                // Set the next object to the charge state of the previous
+                if (toCharge4.GetComponent<SpriteRenderer>().enabled && toCharge4.GetComponent<PolygonCollider2D>().enabled) {
+                    if (charged) {
+                        toChargeScript4.chargePower = maxCharge;
+                    } else {
+                        toChargeScript4.chargePower--;
+                    }
+            
+                // If the renderer of the next object is disabled, set the object to uncharged
+                } else {
+                    if (toChargeScript4.chargePower > 0) toChargeScript4.chargePower--;
+                    if (toChargeScript4.chargePower < 0) toChargeScript4.chargePower = 0;
+                }
+
             }
         }
 
+    }
+
+    void UpdateCharge() {
+        if (chargePower > 0) {
+            charged = true;
+        } else {
+            charged = false;
+        }
     }
 
     // Update the color of the object based on its charge

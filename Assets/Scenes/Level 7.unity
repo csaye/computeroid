@@ -1029,7 +1029,7 @@ GameObject:
   - component: {fileID: 138722228}
   - component: {fileID: 138722229}
   m_Layer: 0
-  m_Name: PaintCleaner
+  m_Name: Paint Cleaner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3632,7 +3632,7 @@ GameObject:
   - component: {fileID: 379179178}
   - component: {fileID: 379179177}
   m_Layer: 0
-  m_Name: Paint Bucket
+  m_Name: Paint Bucket (Yellow)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6060,7 +6060,7 @@ GameObject:
   - component: {fileID: 785721849}
   - component: {fileID: 785721848}
   m_Layer: 0
-  m_Name: Paint Bucket
+  m_Name: Paint Bucket (Green)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9622,7 +9622,7 @@ GameObject:
   - component: {fileID: 1094830219}
   - component: {fileID: 1094830221}
   m_Layer: 0
-  m_Name: PushableBox
+  m_Name: Pushable Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10603,7 +10603,7 @@ GameObject:
   - component: {fileID: 1165208887}
   - component: {fileID: 1165208886}
   m_Layer: 0
-  m_Name: Paint Bucket
+  m_Name: Paint Bucket (Yellow)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

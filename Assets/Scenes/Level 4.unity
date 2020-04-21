@@ -15412,7 +15412,7 @@ GameObject:
   - component: {fileID: 1770472820}
   - component: {fileID: 1770472819}
   m_Layer: 0
-  m_Name: Paint Bucket
+  m_Name: Paint Bucket (Blue)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17095,7 +17095,7 @@ GameObject:
   - component: {fileID: 2102062765}
   - component: {fileID: 2102062764}
   m_Layer: 0
-  m_Name: Paint Bucket
+  m_Name: Paint Bucket (Red)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

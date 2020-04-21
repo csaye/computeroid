@@ -11,6 +11,9 @@ public class Wire : MonoBehaviour
     public bool horizontalExclusion = false;
     public bool verticalExclusion = false;
 
+    // Used by the wire pad to reset the wire
+    public bool resetWire = false;
+
     // Storage of excluded wire shortage x and y values
     public static List<float> excludedX = new List<float>();
     public static List<float> excludedY = new List<float>();
@@ -35,7 +38,18 @@ public class Wire : MonoBehaviour
 
     void Update()
     {
+
+        // If game not paused, check for shorting of wire
         if (!PauseMenu.isPaused) CheckShort();
+        
+        // If resetting not triggered, reset animation state
+        if (!resetWire) animator.SetBool("Reset", false);
+
+        // Resets the wire if being used by the wire pad
+        if (resetWire) {
+            resetWire = false;
+            ResetWire();
+        }
     }
 
     // Checks if wire is shorted out, and if so, sends signal to short wire
@@ -88,8 +102,9 @@ public class Wire : MonoBehaviour
         if (GetComponent<PolygonCollider2D>() != null) GetComponent<PolygonCollider2D>().enabled = false;
     }
 
-    // Called by the animator after the wire shorting sequence
-    void WireShorted() {
-        GetComponent<Renderer>().enabled = false;
+    // Resets the wire back to its idle state (used for wire pads)
+    void ResetWire() {
+        animator.SetBool("Shorted", false);
+        animator.SetBool("Reset", true);
     }
 }

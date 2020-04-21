@@ -24,7 +24,7 @@ public class BarrierEmitter : MonoBehaviour
 
         chargeScript = GetComponent<Charge>();
 
-        // Size set to just under full block in order to prevent laser-emitter interference
+        // Size set to just under full block in order to prevent interference
         size = new Vector2(0.499f, 0.499f);
 
         // Update the new center based on the current direction

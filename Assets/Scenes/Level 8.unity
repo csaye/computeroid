@@ -6402,7 +6402,7 @@ GameObject:
   - component: {fileID: 737588831}
   - component: {fileID: 737588830}
   m_Layer: 0
-  m_Name: Paint Bucket
+  m_Name: Paint Bucket (Yellow)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6779,7 +6779,7 @@ GameObject:
   - component: {fileID: 812780788}
   - component: {fileID: 812780787}
   m_Layer: 0
-  m_Name: Paint Bucket
+  m_Name: Paint Bucket (Green)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7519,7 +7519,7 @@ GameObject:
   - component: {fileID: 859162662}
   - component: {fileID: 859162661}
   m_Layer: 0
-  m_Name: Paint Bucket
+  m_Name: Paint Bucket (Blue)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17198,7 +17198,7 @@ GameObject:
   - component: {fileID: 1938021593}
   - component: {fileID: 1938021592}
   m_Layer: 0
-  m_Name: Paint Bucket
+  m_Name: Paint Bucket (Red)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
