@@ -79,7 +79,7 @@ public class WirePad : MonoBehaviour
         wirePrefab.GetComponent<SpriteRenderer>().enabled = true;
     }
 
-    // Checks whether the teleport pad is currently obstructed
+    // Checks whether the wire pad is currently obstructed
     bool Obstructed() {
 
         // Checks each collider in the region of the wire pad for an obstructing object
@@ -101,7 +101,7 @@ public class WirePad : MonoBehaviour
 
         }
 
-        // If no obstruction found in any collider within the region of the pad, return false
+        // If no obstruction found in any collider within the region of the wire pad, return false
         return false;
     }
 
