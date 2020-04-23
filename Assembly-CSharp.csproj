@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\Charge.cs" />
      <Compile Include="Assets\Scripts\CrashScreen.cs" />
      <Compile Include="Assets\Scripts\Credits.cs" />
+     <Compile Include="Assets\Scripts\EscButton.cs" />
      <Compile Include="Assets\Scripts\LaserEmitter.cs" />
      <Compile Include="Assets\Scripts\LaserReceiver.cs" />
      <Compile Include="Assets\Scripts\LetterControllerLevel2.cs" />
@@ -63,6 +64,7 @@
      <Compile Include="Assets\Scripts\LockBox.cs" />
      <Compile Include="Assets\Scripts\MenuButton.cs" />
      <Compile Include="Assets\Scripts\NetworkBox.cs" />
+     <Compile Include="Assets\Scripts\Options.cs" />
      <Compile Include="Assets\Scripts\PaintBucket.cs" />
      <Compile Include="Assets\Scripts\PaintCleaner.cs" />
      <Compile Include="Assets\Scripts\Paper.cs" />
@@ -71,6 +73,7 @@
      <Compile Include="Assets\Scripts\PowerBox.cs" />
      <Compile Include="Assets\Scripts\PowerButton.cs" />
      <Compile Include="Assets\Scripts\PushableBox.cs" />
+     <Compile Include="Assets\Scripts\SoundButton.cs" />
      <Compile Include="Assets\Scripts\TeleportPad.cs" />
      <Compile Include="Assets\Scripts\Wire.cs" />
      <Compile Include="Assets\Scripts\WirePad.cs" />

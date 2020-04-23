@@ -417,6 +417,7 @@ MonoBehaviour:
   animator: {fileID: 10471042}
   horizontalExclusion: 0
   verticalExclusion: 1
+  resetWire: 0
 --- !u!95 &10471042
 Animator:
   serializedVersion: 3
@@ -503,6 +504,7 @@ MonoBehaviour:
   toCharge3: {fileID: 0}
   toCharge4: {fileID: 0}
   charged: 0
+  chargePower: 0
 --- !u!61 &10471045
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1017,7 +1019,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1163417707}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1336,6 +1339,7 @@ MonoBehaviour:
   animator: {fileID: 122305674}
   horizontalExclusion: 0
   verticalExclusion: 1
+  resetWire: 0
 --- !u!212 &122305676
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1403,6 +1407,7 @@ MonoBehaviour:
   toCharge3: {fileID: 0}
   toCharge4: {fileID: 0}
   charged: 0
+  chargePower: 0
 --- !u!61 &122305678
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1479,6 +1484,7 @@ MonoBehaviour:
   animator: {fileID: 162137884}
   horizontalExclusion: 0
   verticalExclusion: 1
+  resetWire: 0
 --- !u!95 &162137884
 Animator:
   serializedVersion: 3
@@ -1565,6 +1571,7 @@ MonoBehaviour:
   toCharge3: {fileID: 0}
   toCharge4: {fileID: 0}
   charged: 0
+  chargePower: 0
 --- !u!61 &162137887
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1641,6 +1648,7 @@ MonoBehaviour:
   animator: {fileID: 165980681}
   horizontalExclusion: 0
   verticalExclusion: 1
+  resetWire: 0
 --- !u!95 &165980681
 Animator:
   serializedVersion: 3
@@ -1727,6 +1735,7 @@ MonoBehaviour:
   toCharge3: {fileID: 0}
   toCharge4: {fileID: 0}
   charged: 0
+  chargePower: 0
 --- !u!61 &165980684
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2576,6 +2585,7 @@ MonoBehaviour:
   animator: {fileID: 265796143}
   horizontalExclusion: 0
   verticalExclusion: 1
+  resetWire: 0
 --- !u!95 &265796143
 Animator:
   serializedVersion: 3
@@ -2612,6 +2622,7 @@ MonoBehaviour:
   toCharge3: {fileID: 0}
   toCharge4: {fileID: 0}
   charged: 0
+  chargePower: 0
 --- !u!61 &265796145
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3799,6 +3810,7 @@ MonoBehaviour:
   animator: {fileID: 435086356}
   horizontalExclusion: 0
   verticalExclusion: 1
+  resetWire: 0
 --- !u!212 &435086358
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3866,6 +3878,7 @@ MonoBehaviour:
   toCharge3: {fileID: 0}
   toCharge4: {fileID: 0}
   charged: 0
+  chargePower: 0
 --- !u!61 &435086360
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5523,6 +5536,7 @@ MonoBehaviour:
   animator: {fileID: 639801618}
   horizontalExclusion: 0
   verticalExclusion: 1
+  resetWire: 0
 --- !u!95 &639801618
 Animator:
   serializedVersion: 3
@@ -5609,6 +5623,7 @@ MonoBehaviour:
   toCharge3: {fileID: 0}
   toCharge4: {fileID: 0}
   charged: 0
+  chargePower: 0
 --- !u!61 &639801621
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6908,6 +6923,7 @@ MonoBehaviour:
   toCharge3: {fileID: 0}
   toCharge4: {fileID: 0}
   charged: 1
+  chargePower: 0
 --- !u!1 &907246510
 GameObject:
   m_ObjectHideFlags: 0
@@ -7027,6 +7043,7 @@ MonoBehaviour:
   animator: {fileID: 907246513}
   horizontalExclusion: 0
   verticalExclusion: 1
+  resetWire: 0
 --- !u!114 &907246515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7044,6 +7061,7 @@ MonoBehaviour:
   toCharge3: {fileID: 0}
   toCharge4: {fileID: 0}
   charged: 0
+  chargePower: 0
 --- !u!61 &907246516
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8817,6 +8835,7 @@ MonoBehaviour:
   toCharge3: {fileID: 0}
   toCharge4: {fileID: 0}
   charged: 1
+  chargePower: 0
 --- !u!114 &1134758562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8942,6 +8961,131 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: b3e94671824274dcca0f1ecf6ff05d9c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &1163417706
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1163417707}
+  - component: {fileID: 1163417710}
+  - component: {fileID: 1163417709}
+  - component: {fileID: 1163417708}
+  m_Layer: 0
+  m_Name: Esc Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1163417707
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163417706}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.5, y: -4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 94017050}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1163417708
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163417706}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &1163417709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163417706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bc3cc724de61400a9698f389eff5fab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  escButtonNormal: {fileID: 21300000, guid: 06668a365771f42db9e9b17ccff63eda, type: 3}
+  escButtonHighlight: {fileID: 21300000, guid: 5746070f3c4d44837ac89887587c33fe, type: 3}
+  toMainMenu: 0
+  toPauseMenu: 1
+--- !u!212 &1163417710
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163417706}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -2
+  m_Sprite: {fileID: 21300000, guid: 06668a365771f42db9e9b17ccff63eda, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -12317,6 +12461,7 @@ MonoBehaviour:
   animator: {fileID: 1534825576}
   horizontalExclusion: 0
   verticalExclusion: 1
+  resetWire: 0
 --- !u!95 &1534825576
 Animator:
   serializedVersion: 3
@@ -12403,6 +12548,7 @@ MonoBehaviour:
   toCharge3: {fileID: 0}
   toCharge4: {fileID: 0}
   charged: 0
+  chargePower: 0
 --- !u!61 &1534825579
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13348,6 +13494,7 @@ MonoBehaviour:
   animator: {fileID: 1588620972}
   horizontalExclusion: 0
   verticalExclusion: 1
+  resetWire: 0
 --- !u!212 &1588620974
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13415,6 +13562,7 @@ MonoBehaviour:
   toCharge3: {fileID: 0}
   toCharge4: {fileID: 0}
   charged: 0
+  chargePower: 0
 --- !u!61 &1588620976
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13806,6 +13954,7 @@ MonoBehaviour:
   animator: {fileID: 1637002979}
   horizontalExclusion: 0
   verticalExclusion: 1
+  resetWire: 0
 --- !u!114 &1637002981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13823,6 +13972,7 @@ MonoBehaviour:
   toCharge3: {fileID: 0}
   toCharge4: {fileID: 0}
   charged: 0
+  chargePower: 0
 --- !u!61 &1637002982
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13918,6 +14068,7 @@ MonoBehaviour:
   animator: {fileID: 1645891974}
   horizontalExclusion: 0
   verticalExclusion: 1
+  resetWire: 0
 --- !u!212 &1645891976
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13985,6 +14136,7 @@ MonoBehaviour:
   toCharge3: {fileID: 0}
   toCharge4: {fileID: 0}
   charged: 0
+  chargePower: 0
 --- !u!61 &1645891978
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14340,6 +14492,7 @@ MonoBehaviour:
   animator: {fileID: 1676090895}
   horizontalExclusion: 0
   verticalExclusion: 1
+  resetWire: 0
 --- !u!95 &1676090895
 Animator:
   serializedVersion: 3
@@ -14426,6 +14579,7 @@ MonoBehaviour:
   toCharge3: {fileID: 0}
   toCharge4: {fileID: 0}
   charged: 0
+  chargePower: 0
 --- !u!61 &1676090898
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15128,6 +15282,7 @@ MonoBehaviour:
   animator: {fileID: 1786998757}
   horizontalExclusion: 0
   verticalExclusion: 0
+  resetWire: 0
 --- !u!61 &1786998759
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15171,6 +15326,7 @@ MonoBehaviour:
   toCharge3: {fileID: 0}
   toCharge4: {fileID: 0}
   charged: 1
+  chargePower: 0
 --- !u!212 &1786998761
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15723,6 +15879,7 @@ MonoBehaviour:
   animator: {fileID: 1840582139}
   horizontalExclusion: 0
   verticalExclusion: 1
+  resetWire: 0
 --- !u!95 &1840582139
 Animator:
   serializedVersion: 3
@@ -15809,6 +15966,7 @@ MonoBehaviour:
   toCharge3: {fileID: 0}
   toCharge4: {fileID: 0}
   charged: 0
+  chargePower: 0
 --- !u!61 &1840582142
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17284,6 +17442,7 @@ MonoBehaviour:
   animator: {fileID: 2076296324}
   horizontalExclusion: 0
   verticalExclusion: 1
+  resetWire: 0
 --- !u!95 &2076296324
 Animator:
   serializedVersion: 3
@@ -17370,6 +17529,7 @@ MonoBehaviour:
   toCharge3: {fileID: 0}
   toCharge4: {fileID: 0}
   charged: 0
+  chargePower: 0
 --- !u!61 &2076296327
 BoxCollider2D:
   m_ObjectHideFlags: 0

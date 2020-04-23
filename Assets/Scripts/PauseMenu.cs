@@ -23,8 +23,13 @@ public class PauseMenu : MonoBehaviour
         // If level not completed, check for pause
         if (!levelControllerScript.levelComplete) CheckPause();
         
-        if (!isPaused || levelControllerScript.levelComplete) DeactivatePauseMenu();
-        if (isPaused) ActivatePauseMenu();
+        if (levelControllerScript.levelComplete) {
+            isPaused = false;
+            DeactivatePauseMenu();
+        }
+
+        if (!isPaused) DeactivatePauseMenu();
+        if (isPaused && !levelControllerScript.levelComplete) ActivatePauseMenu();
     }
 
     void CheckPause() {

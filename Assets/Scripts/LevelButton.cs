@@ -40,6 +40,9 @@ public class LevelButton : MonoBehaviour
             } else {
                 spriteRenderer.sprite = buttonNormal;
             }
+            
+        } else {
+            spriteRenderer.sprite = buttonNormal;
         }
     }
 
