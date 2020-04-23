@@ -311,6 +311,8 @@ MonoBehaviour:
   escButtonNormal: {fileID: 21300000, guid: 06668a365771f42db9e9b17ccff63eda, type: 3}
   escButtonHighlight: {fileID: 21300000, guid: 5746070f3c4d44837ac89887587c33fe, type: 3}
   toMainMenu: 0
+  toPauseMenu: 0
+  quitGame: 1
 --- !u!212 &1433813363
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -789,6 +791,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1879364089}
   - component: {fileID: 1879364088}
+  - component: {fileID: 1879364090}
   m_Layer: 0
   m_Name: MainMenu
   m_TagString: Untagged
@@ -862,3 +865,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1879364090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879364087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79e51f7ea405446d3a14d36e0fa83049, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

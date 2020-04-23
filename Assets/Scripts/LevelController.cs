@@ -9,17 +9,32 @@ public class LevelController : MonoBehaviour
 
     public Animator animator;
 
+    private bool fullResolution;
+
     void Start()
     {
-
+        fullResolution = Screen.fullScreen;
     }
 
     void Update()
     {
+        UpdateResolution();
         if (levelComplete) Crash();
     }
 
     void Crash() {
         animator.SetBool("LevelComplete", true);
+    }
+
+    void UpdateResolution() {
+        
+        if (!Screen.fullScreen && fullResolution) {
+            fullResolution = false;
+            Screen.SetResolution(1024, 576, false);
+        }
+
+        if (Screen.fullScreen) {
+            fullResolution = true;
+        }
     }
 }
