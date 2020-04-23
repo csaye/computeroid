@@ -16,6 +16,9 @@ public class LoadLevel : MonoBehaviour
     private float startX, startY;
     private float centerFactor;
 
+    // The higher the center speed, the quicker the paper goes to the middle of the screen
+    private float centerSpeed = 0.03125f;
+
     void Start()
     {
         levelSelectorScript = levelSelector.GetComponent<LevelSelector>();
@@ -59,9 +62,9 @@ public class LoadLevel : MonoBehaviour
     // Slides the loading screen to the center as it expands to fill the screen
     void SlideToCenter() {
         if (centerFactor >= 0) {
-            if (centerFactor > 0) centerFactor = centerFactor - 0.025f;
+            if (centerFactor > 0) centerFactor = centerFactor - centerSpeed;
             transform.position = new Vector2(centerFactor * startX, centerFactor * startY);
-            if (centerFactor <= 0.025) transform.position = new Vector2(0, 0);
+            if (centerFactor <= centerSpeed) transform.position = new Vector2(0, 0);
         }
     }
 }

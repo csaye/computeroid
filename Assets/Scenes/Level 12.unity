@@ -1200,6 +1200,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 12
+  background: {fileID: 1404100427}
+  monitorFinalOff: {fileID: 21300000, guid: f83aecd4109994376a50f4509f3d242c, type: 3}
 --- !u!95 &87658678
 Animator:
   serializedVersion: 3
@@ -4210,6 +4212,7 @@ MonoBehaviour:
   escButtonHighlight: {fileID: 21300000, guid: 06668a365771f42db9e9b17ccff63eda, type: 3}
   toMainMenu: 0
   toPauseMenu: 1
+  quitGame: 0
 --- !u!212 &422671154
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5518,7 +5521,7 @@ PrefabInstance:
     - target: {fileID: 4364935452497187595, guid: 1d1e6be815b9446229563c4e02699032,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.98
+      value: 0.95
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1e6be815b9446229563c4e02699032, type: 3}
@@ -7419,7 +7422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startButton: 0
   resumeButton: 0
-  levelsButton: 0
+  levelsButton: 1
   destinationScene: Level Select
   buttonNormal: {fileID: 21300000, guid: 05a318bb0d090447685847b744637a37, type: 3}
   buttonHighlight: {fileID: 21300000, guid: ade533a66b4c74866a0b7485e470be0a, type: 3}
@@ -8377,7 +8380,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.98, y: 1}
   m_EdgeRadius: 0
 --- !u!61 &904275628
 BoxCollider2D:
@@ -8793,6 +8796,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 2746967562043498834, guid: c3d73d2e2da644d61b814f373e990bdd,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.98
       objectReference: {fileID: 0}
     - target: {fileID: 2746967562043498835, guid: c3d73d2e2da644d61b814f373e990bdd,
         type: 3}
@@ -9754,6 +9762,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 856267545}
     m_Modifications:
+    - target: {fileID: 3141539161633944384, guid: b8217a9271b154341861553cd8d874ed,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.98
+      objectReference: {fileID: 0}
     - target: {fileID: 3141539161633944385, guid: b8217a9271b154341861553cd8d874ed,
         type: 3}
       propertyPath: m_Name
@@ -16611,6 +16624,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 856267545}
     m_Modifications:
+    - target: {fileID: 3141539161633944384, guid: b8217a9271b154341861553cd8d874ed,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.98
+      objectReference: {fileID: 0}
     - target: {fileID: 3141539161633944385, guid: b8217a9271b154341861553cd8d874ed,
         type: 3}
       propertyPath: m_Name
@@ -16906,12 +16924,22 @@ PrefabInstance:
     - target: {fileID: 8519150677753920315, guid: 34bd969063edb457493d2f066bfeb3db,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.98
+      value: 0.95
       objectReference: {fileID: 0}
     - target: {fileID: 8519150677753920315, guid: 34bd969063edb457493d2f066bfeb3db,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.95
+      value: 0.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 8519150677753920315, guid: 34bd969063edb457493d2f066bfeb3db,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8519150677753920315, guid: 34bd969063edb457493d2f066bfeb3db,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34bd969063edb457493d2f066bfeb3db, type: 3}
@@ -19213,6 +19241,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 856267545}
     m_Modifications:
+    - target: {fileID: 3141539161633944384, guid: b8217a9271b154341861553cd8d874ed,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.98
+      objectReference: {fileID: 0}
     - target: {fileID: 3141539161633944385, guid: b8217a9271b154341861553cd8d874ed,
         type: 3}
       propertyPath: m_Name

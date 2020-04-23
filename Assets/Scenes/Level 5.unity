@@ -196,6 +196,7 @@ MonoBehaviour:
   escButtonHighlight: {fileID: 21300000, guid: 5746070f3c4d44837ac89887587c33fe, type: 3}
   toMainMenu: 0
   toPauseMenu: 1
+  quitGame: 0
 --- !u!212 &7489079
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1770,7 +1771,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startButton: 0
   resumeButton: 0
-  levelsButton: 0
+  levelsButton: 1
   destinationScene: Level Select
   buttonNormal: {fileID: 21300000, guid: 05a318bb0d090447685847b744637a37, type: 3}
   buttonHighlight: {fileID: 21300000, guid: ade533a66b4c74866a0b7485e470be0a, type: 3}
@@ -10274,7 +10275,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.99}
+  m_Size: {x: 1, y: 0.98}
   m_EdgeRadius: 0
 --- !u!61 &1254464806
 BoxCollider2D:
@@ -10300,7 +10301,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.99}
+  m_Size: {x: 1, y: 0.98}
   m_EdgeRadius: 0
 --- !u!60 &1254464807
 PolygonCollider2D:
@@ -10330,12 +10331,12 @@ PolygonCollider2D:
     - - {x: -2, y: 0.5}
       - {x: -2, y: -0.5}
       - {x: 0, y: -0.5}
-      - {x: 0, y: -1.5}
-      - {x: 1, y: -1.5}
+      - {x: 0, y: -1.48}
+      - {x: 1, y: -1.48}
       - {x: 1, y: -0.5}
       - {x: 3, y: -0.5}
-      - {x: 3, y: -1.5}
-      - {x: 4, y: -1.5}
+      - {x: 3, y: -1.48}
+      - {x: 4, y: -1.48}
       - {x: 4, y: -0.5}
       - {x: 6, y: -0.5}
       - {x: 6, y: 1.5}
@@ -10398,7 +10399,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.99, y: 0.99}
+  m_Size: {x: 0.98, y: 0.98}
   m_EdgeRadius: 0
 --- !u!1 &1304873975
 GameObject:

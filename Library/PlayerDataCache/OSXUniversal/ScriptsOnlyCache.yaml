@@ -47,8 +47,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -1265,7 +1267,7 @@ ScriptsOnlyBuild:
     className: EscButton
   - hash:
       serializedVersion: 2
-      Hash: c7a371c35c59be5df47e0caf8561fae1
+      Hash: c1dd01cb2a60f02fb23b05257916701c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CrashScreen
@@ -1828,4 +1830,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Level 11.unity
   - Assets/Scenes/Level 12.unity
   - Assets/Scenes/Credits.unity
-  playerPath: /Users/coopersaye/Desktop/ComputeroidPreAlpha.app
+  playerPath: /Users/coopersaye/Desktop/Computeroid.app

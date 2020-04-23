@@ -2934,7 +2934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startButton: 0
   resumeButton: 0
-  levelsButton: 0
+  levelsButton: 1
   destinationScene: Level Select
   buttonNormal: {fileID: 21300000, guid: 05a318bb0d090447685847b744637a37, type: 3}
   buttonHighlight: {fileID: 21300000, guid: ade533a66b4c74866a0b7485e470be0a, type: 3}
@@ -5864,6 +5864,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 11
+  background: {fileID: 0}
+  monitorFinalOff: {fileID: 0}
 --- !u!95 &807698879
 Animator:
   serializedVersion: 3
@@ -14712,6 +14714,7 @@ MonoBehaviour:
   escButtonHighlight: {fileID: 21300000, guid: 5746070f3c4d44837ac89887587c33fe, type: 3}
   toMainMenu: 0
   toPauseMenu: 1
+  quitGame: 0
 --- !u!212 &1802221504
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15000,6 +15003,16 @@ PrefabInstance:
         type: 3}
       propertyPath: charged
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3868109822238688759, guid: 36dbe73503d3343e8898ab8d1dbf0b32,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 3868109822238688759, guid: 36dbe73503d3343e8898ab8d1dbf0b32,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 3868109822238688760, guid: 36dbe73503d3343e8898ab8d1dbf0b32,
         type: 3}

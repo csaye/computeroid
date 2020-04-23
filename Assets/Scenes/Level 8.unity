@@ -12277,7 +12277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startButton: 0
   resumeButton: 0
-  levelsButton: 0
+  levelsButton: 1
   destinationScene: Level Select
   buttonNormal: {fileID: 21300000, guid: 05a318bb0d090447685847b744637a37, type: 3}
   buttonHighlight: {fileID: 21300000, guid: ade533a66b4c74866a0b7485e470be0a, type: 3}
@@ -17412,6 +17412,7 @@ MonoBehaviour:
   escButtonHighlight: {fileID: 21300000, guid: 5746070f3c4d44837ac89887587c33fe, type: 3}
   toMainMenu: 0
   toPauseMenu: 1
+  quitGame: 0
 --- !u!212 &1941964629
 SpriteRenderer:
   m_ObjectHideFlags: 0

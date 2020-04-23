@@ -17,6 +17,9 @@ public class LevelSelect : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         fullResolution = Screen.fullScreen;
+
+        if (fullResolution) Screen.SetResolution(1024, 576, true);
+        if (!fullResolution) Screen.SetResolution(1024, 576, false);
     }
 
     void Update()

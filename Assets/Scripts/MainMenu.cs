@@ -13,11 +13,15 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetInt("Screenmanager Resolution Height", 576);
 
         fullResolution = Screen.fullScreen;
+
+        if (fullResolution) Screen.SetResolution(1024, 576, true);
+        if (!fullResolution) Screen.SetResolution(1024, 576, false);
     }
 
     void Update()
     {
         UpdateResolution();
+        CheckQuit();
     }
 
     void OnApplicationQuit() {
@@ -36,5 +40,9 @@ public class MainMenu : MonoBehaviour
         if (Screen.fullScreen) {
             fullResolution = true;
         }
+    }
+
+    void CheckQuit() {
+        if (Input.GetKeyDown("escape")) Application.Quit();
     }
 }
