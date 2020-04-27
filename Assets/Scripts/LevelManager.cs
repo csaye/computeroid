@@ -5,7 +5,7 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     public static float level;
-    public static float currentLevel = 1;
+    public static float currentLevel;
 
     public static bool tutorialComplete = false;
 

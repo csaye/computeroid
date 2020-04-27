@@ -11,7 +11,11 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator animator;
 
-    public float movementSpeed;
+    // How quickly the player moves while walking normally
+    public float walkSpeed = 2;
+
+    // How quickly the player moves while sprinting
+    public float sprintSpeed = 3;
 
     private LevelController levelControllerScript;
 
@@ -37,7 +41,18 @@ public class PlayerMovement : MonoBehaviour
         
         // Update player based on player input
         if (!levelControllerScript.levelComplete && !PauseMenu.isPaused) {
-            rb.MovePosition(rb.position + movement.normalized * movementSpeed * Time.fixedDeltaTime);
+
+            // If sprinting
+            if (Input.GetKey("left shift") || Input.GetKey("right shift")) {
+
+                // Sprint
+                rb.MovePosition(rb.position + movement.normalized * sprintSpeed * Time.fixedDeltaTime);
+            
+            } else {
+
+                // Walk
+                rb.MovePosition(rb.position + movement.normalized * walkSpeed * Time.fixedDeltaTime);
+            }
         }
     }
 
@@ -53,6 +68,8 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("Horizontal", movement.x);
             animator.SetFloat("Vertical", movement.y);
         }
+
+        // Set the speed of the character in order to determine whether to move or not
         animator.SetFloat("Speed", movement.sqrMagnitude);
     }
 

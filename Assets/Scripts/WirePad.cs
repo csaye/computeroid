@@ -76,6 +76,7 @@ public class WirePad : MonoBehaviour
 
         if (wirePrefab.GetComponent<BoxCollider2D>() != null) wirePrefab.GetComponent<BoxCollider2D>().enabled = true;
         if (wirePrefab.GetComponent<PolygonCollider2D>() != null) wirePrefab.GetComponent<PolygonCollider2D>().enabled = true;
+        if (wirePrefab.GetComponent<CircleCollider2D>() != null) wirePrefab.GetComponent<CircleCollider2D>().enabled = true;
         wirePrefab.GetComponent<SpriteRenderer>().enabled = true;
     }
 
@@ -97,6 +98,13 @@ public class WirePad : MonoBehaviour
 
                 // If object found, set parameter
                 if (!collider.GetComponent<PolygonCollider2D>().isTrigger) return true;
+            }
+
+            // If hit object has circle collider
+            if (collider.GetComponent<CircleCollider2D>() != null) {
+
+                // If object found, set parameter
+                if (!collider.GetComponent<CircleCollider2D>().isTrigger) return true;
             }
 
         }

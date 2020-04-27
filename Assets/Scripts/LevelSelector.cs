@@ -13,6 +13,11 @@ public class LevelSelector : MonoBehaviour
 
     private LevelManager levelManagerScript;
 
+    private SpriteRenderer spriteRenderer;
+
+    private Color black = new Color(0, 0, 0, 1);
+    private Color gray = new Color (0.5f, 0.5f, 0.5f, 1);
+
     // Level selector positioning in scene
     private float row1 = -1.93762f, row2 = 0.0623729f, row3 = 2.062382f;
     private float col1 = -5.25012f, col2 = -1.750118f, col3 = 1.749884f, col4 = 5.249887f;
@@ -20,6 +25,8 @@ public class LevelSelector : MonoBehaviour
     void Start()
     {
         levelManagerScript = levelManager.GetComponent<LevelManager>();
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
         // Set level selector position to the last level played
         if (LevelManager.currentLevel == 1) currentPos = 1;
@@ -38,7 +45,10 @@ public class LevelSelector : MonoBehaviour
 
     void Update()
     {
-        if (!levelManagerScript.levelSelected) UpdatePosition();
+        if (!levelManagerScript.levelSelected) {
+            UpdatePosition();
+            UpdateColor();
+        }
     }
 
     // Updates the position of the level selector based on player input and levels unlocked
@@ -193,6 +203,19 @@ public class LevelSelector : MonoBehaviour
                 animator.SetBool("LevelSelected", true);
             }
             if (Input.GetKeyDown("a") || Input.GetKeyDown("left")) currentPos--;
+        }
+    }
+
+    // Updates the color of the level selector based on whether the selected level is completed or not
+    void UpdateColor() {
+        
+        // If the current level selected is one not completed, set selector color to gray
+        if (currentPos == LevelManager.level) {
+            spriteRenderer.color = gray;
+        
+        // If the current level has already been completed, set selector color to black
+        } else {
+            spriteRenderer.color = black;
         }
     }
 }
