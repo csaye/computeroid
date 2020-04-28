@@ -5486,7 +5486,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &670621226
+--- !u!1 &649092624
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5494,12 +5494,12 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 670621232}
-  - component: {fileID: 670621231}
-  - component: {fileID: 670621230}
-  - component: {fileID: 670621229}
-  - component: {fileID: 670621228}
-  - component: {fileID: 670621227}
+  - component: {fileID: 649092630}
+  - component: {fileID: 649092629}
+  - component: {fileID: 649092628}
+  - component: {fileID: 649092627}
+  - component: {fileID: 649092626}
+  - component: {fileID: 649092625}
   m_Layer: 0
   m_Name: Computeroid
   m_TagString: Player
@@ -5507,13 +5507,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!58 &670621227
-CircleCollider2D:
+--- !u!60 &649092625
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 670621226}
+  m_GameObject: {fileID: 649092624}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -5521,16 +5521,33 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.49
---- !u!95 &670621228
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.275, y: -0.375}
+      - {x: 0.275, y: 0.375}
+      - {x: 0.175, y: 0.475}
+      - {x: -0.175, y: 0.475}
+      - {x: -0.275, y: 0.375}
+      - {x: -0.275, y: -0.375}
+      - {x: -0.175, y: -0.475}
+      - {x: 0.175, y: -0.475}
+--- !u!95 &649092626
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 670621226}
+  m_GameObject: {fileID: 649092624}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: ad87d80885e5f4392966688a49e77ff4, type: 2}
@@ -5542,31 +5559,31 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &670621229
+--- !u!114 &649092627
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 670621226}
+  m_GameObject: {fileID: 649092624}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7e5255b99cf145608d25e5c63cd3df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   levelController: {fileID: 1250280034}
-  rb: {fileID: 670621230}
-  animator: {fileID: 670621228}
+  rb: {fileID: 649092628}
+  animator: {fileID: 649092626}
   walkSpeed: 2
   sprintSpeed: 3
---- !u!50 &670621230
+--- !u!50 &649092628
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 670621226}
+  m_GameObject: {fileID: 649092624}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -5580,13 +5597,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!212 &670621231
+--- !u!212 &649092629
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 670621226}
+  m_GameObject: {fileID: 649092624}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -5630,13 +5647,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &670621232
+--- !u!4 &649092630
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 670621226}
+  m_GameObject: {fileID: 649092624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.5, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -13145,6 +13162,7 @@ MonoBehaviour:
   escButtonHighlight: {fileID: 21300000, guid: 5746070f3c4d44837ac89887587c33fe, type: 3}
   toMainMenu: 0
   toPauseMenu: 1
+  toControlsMenu: 0
   quitGame: 0
 --- !u!212 &1587855621
 SpriteRenderer:

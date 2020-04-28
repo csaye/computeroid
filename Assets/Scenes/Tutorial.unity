@@ -263,8 +263,8 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!58 &8222027
-CircleCollider2D:
+--- !u!60 &8222027
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -277,8 +277,25 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.49
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.275, y: -0.375}
+      - {x: 0.275, y: 0.375}
+      - {x: 0.175, y: 0.475}
+      - {x: -0.175, y: 0.475}
+      - {x: -0.275, y: 0.375}
+      - {x: -0.275, y: -0.375}
+      - {x: -0.175, y: -0.475}
+      - {x: 0.175, y: -0.475}
 --- !u!1 &8744188
 GameObject:
   m_ObjectHideFlags: 0
