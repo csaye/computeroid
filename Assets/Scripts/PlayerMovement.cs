@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (!levelControllerScript.levelComplete && !PauseMenu.isPaused) {
+        if (!levelControllerScript.levelComplete && !PauseMenu.isPaused && !ControlsMenu.isPaused) {
             UpdateMovement();
         } else {
 

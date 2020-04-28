@@ -9,7 +9,7 @@ public class EscButton : MonoBehaviour
     public Sprite escButtonNormal;
     public Sprite escButtonHighlight;
 
-    public bool toMainMenu, toPauseMenu, quitGame;
+    public bool toMainMenu, toPauseMenu, toControlsMenu, quitGame;
 
     private SpriteRenderer spriteRenderer;
 
@@ -70,6 +70,7 @@ public class EscButton : MonoBehaviour
 
         if (toMainMenu) SceneManager.LoadScene("Main Menu");
         if (toPauseMenu) PauseMenu.isPaused = true;
+        if (toControlsMenu) ControlsMenu.isPaused = true;
         if (quitGame) Application.Quit();
     }
 }

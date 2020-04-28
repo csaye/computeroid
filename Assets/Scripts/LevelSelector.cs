@@ -55,7 +55,7 @@ public class LevelSelector : MonoBehaviour
     void UpdatePosition() {
         if (currentPos == 1) {
             transform.position = new Vector2(col1, row1);
-            if (Input.GetKeyDown("return") || Input.GetMouseButtonDown(0)) {
+            if (Input.GetKeyDown("return") || overFolder(currentPos)) {
                 LevelManager.currentLevel = 1;
                 levelManagerScript.levelSelected = true;
                 animator.SetBool("LevelSelected", true);
@@ -67,7 +67,7 @@ public class LevelSelector : MonoBehaviour
         }
         if (currentPos == 2) {
             transform.position = new Vector2(col2, row1);
-            if (Input.GetKeyDown("return") || Input.GetMouseButtonDown(0)) {
+            if (Input.GetKeyDown("return") || overFolder(currentPos)) {
                 LevelManager.currentLevel = 2;
                 levelManagerScript.levelSelected = true;
                 animator.SetBool("LevelSelected", true);
@@ -80,7 +80,7 @@ public class LevelSelector : MonoBehaviour
         }
         if (currentPos == 3) {
             transform.position = new Vector2(col3, row1);
-            if (Input.GetKeyDown("return") || Input.GetMouseButtonDown(0)) {
+            if (Input.GetKeyDown("return") || overFolder(currentPos)) {
                 LevelManager.currentLevel = 3;
                 levelManagerScript.levelSelected = true;
                 animator.SetBool("LevelSelected", true);
@@ -93,7 +93,7 @@ public class LevelSelector : MonoBehaviour
         }
         if (currentPos == 4) {
             transform.position = new Vector2(col4, row1);
-            if (Input.GetKeyDown("return") || Input.GetMouseButtonDown(0)) {
+            if (Input.GetKeyDown("return") || overFolder(currentPos)) {
                 LevelManager.currentLevel = 4;
                 levelManagerScript.levelSelected = true;
                 animator.SetBool("LevelSelected", true);
@@ -106,7 +106,7 @@ public class LevelSelector : MonoBehaviour
         }
         if (currentPos == 5) {
             transform.position = new Vector2(col4, row2);
-            if (Input.GetKeyDown("return") || Input.GetMouseButtonDown(0)) {
+            if (Input.GetKeyDown("return") || overFolder(currentPos)) {
                 LevelManager.currentLevel = 5;
                 levelManagerScript.levelSelected = true;
                 animator.SetBool("LevelSelected", true);
@@ -119,7 +119,7 @@ public class LevelSelector : MonoBehaviour
         }
         if (currentPos == 6) {
             transform.position = new Vector2(col3, row2);
-            if (Input.GetKeyDown("return") || Input.GetMouseButtonDown(0)) {
+            if (Input.GetKeyDown("return") || overFolder(currentPos)) {
                 LevelManager.currentLevel = 6;
                 levelManagerScript.levelSelected = true;
                 animator.SetBool("LevelSelected", true);
@@ -132,7 +132,7 @@ public class LevelSelector : MonoBehaviour
         }
         if (currentPos == 7) {
             transform.position = new Vector2(col2, row2);
-            if (Input.GetKeyDown("return") || Input.GetMouseButtonDown(0)) {
+            if (Input.GetKeyDown("return") || overFolder(currentPos)) {
                 LevelManager.currentLevel = 7;
                 levelManagerScript.levelSelected = true;
                 animator.SetBool("LevelSelected", true);
@@ -145,7 +145,7 @@ public class LevelSelector : MonoBehaviour
         }
         if (currentPos == 8) {
             transform.position = new Vector2(col1, row2);
-            if (Input.GetKeyDown("return") || Input.GetMouseButtonDown(0)) {
+            if (Input.GetKeyDown("return") || overFolder(currentPos)) {
                 LevelManager.currentLevel = 8;
                 levelManagerScript.levelSelected = true;
                 animator.SetBool("LevelSelected", true);
@@ -158,7 +158,7 @@ public class LevelSelector : MonoBehaviour
         }
         if (currentPos == 9) {
             transform.position = new Vector2(col1, row3);
-            if (Input.GetKeyDown("return") || Input.GetMouseButtonDown(0)) {
+            if (Input.GetKeyDown("return") || overFolder(currentPos)) {
                 LevelManager.currentLevel = 9;
                 levelManagerScript.levelSelected = true;
                 animator.SetBool("LevelSelected", true);
@@ -171,7 +171,7 @@ public class LevelSelector : MonoBehaviour
         }
         if (currentPos == 10) {
             transform.position = new Vector2(col2, row3);
-            if (Input.GetKeyDown("return") || Input.GetMouseButtonDown(0)) {
+            if (Input.GetKeyDown("return") || overFolder(currentPos)) {
                 LevelManager.currentLevel = 10;
                 levelManagerScript.levelSelected = true;
                 animator.SetBool("LevelSelected", true);
@@ -184,7 +184,7 @@ public class LevelSelector : MonoBehaviour
         }
         if (currentPos == 11) {
             transform.position = new Vector2(col3, row3);
-            if (Input.GetKeyDown("return") || Input.GetMouseButtonDown(0)) {
+            if (Input.GetKeyDown("return") || overFolder(currentPos)) {
                 LevelManager.currentLevel = 11;
                 levelManagerScript.levelSelected = true;
                 animator.SetBool("LevelSelected", true);
@@ -197,7 +197,7 @@ public class LevelSelector : MonoBehaviour
         }
         if (currentPos == 12) {
             transform.position = new Vector2(col4, row3);
-            if (Input.GetKeyDown("return") || Input.GetMouseButtonDown(0)) {
+            if (Input.GetKeyDown("return") || overFolder(currentPos)) {
                 LevelManager.currentLevel = 12;
                 levelManagerScript.levelSelected = true;
                 animator.SetBool("LevelSelected", true);
@@ -217,5 +217,32 @@ public class LevelSelector : MonoBehaviour
         } else {
             spriteRenderer.color = black;
         }
+    }
+
+    bool overFolder(float currentFolder) {
+        
+        // If left mouse button pressed
+        if (Input.GetMouseButtonDown(0)) {
+
+            // For each hit overlapped with the mouse position
+            foreach (RaycastHit2D rayHit in (Physics2D.GetRayIntersectionAll(Camera.main.ScreenPointToRay(Input.mousePosition)))) {
+
+                // If found collider, check for folder
+                if (rayHit.collider != null) {
+
+                    // If hit collider belongs to a folder
+                    if (rayHit.collider.gameObject.GetComponent<FolderSelect>() != null) {
+
+                        // If folder number is same as one overlapped by level selector, return true
+                        if (rayHit.collider.gameObject.GetComponent<FolderSelect>().folderNumber == currentFolder) {
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
+        
+        // If mouse position and folder do not meet requirements, return false
+        return false;
     }
 }

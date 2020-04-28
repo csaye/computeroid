@@ -48,9 +48,11 @@
      <Compile Include="Assets\Scripts\BackgroundTile.cs" />
      <Compile Include="Assets\Scripts\BarrierEmitter.cs" />
      <Compile Include="Assets\Scripts\Charge.cs" />
+     <Compile Include="Assets\Scripts\ControlsMenu.cs" />
      <Compile Include="Assets\Scripts\CrashScreen.cs" />
      <Compile Include="Assets\Scripts\Credits.cs" />
      <Compile Include="Assets\Scripts\EscButton.cs" />
+     <Compile Include="Assets\Scripts\FolderSelect.cs" />
      <Compile Include="Assets\Scripts\LaserEmitter.cs" />
      <Compile Include="Assets\Scripts\LaserReceiver.cs" />
      <Compile Include="Assets\Scripts\LetterControllerLevel2.cs" />
