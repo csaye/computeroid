@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\Credits.cs" />
      <Compile Include="Assets\Scripts\EscButton.cs" />
      <Compile Include="Assets\Scripts\FolderSelect.cs" />
+     <Compile Include="Assets\Scripts\HelpMenu.cs" />
      <Compile Include="Assets\Scripts\LaserEmitter.cs" />
      <Compile Include="Assets\Scripts\LaserReceiver.cs" />
      <Compile Include="Assets\Scripts\LetterControllerLevel2.cs" />
