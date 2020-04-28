@@ -56,6 +56,7 @@ public class MenuButton : MonoBehaviour
             }
         } else if (resumeButton) {
             PauseMenu.isPaused = false;
+            ControlsMenu.isPaused = false;
         } else if (levelsButton) {
             PauseMenu.isPaused = false;
             SceneManager.LoadScene(destinationScene);

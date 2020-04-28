@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate() {
         
         // Update player based on player input
-        if (!levelControllerScript.levelComplete && !PauseMenu.isPaused) {
+        if (!levelControllerScript.levelComplete && !PauseMenu.isPaused && !ControlsMenu.isPaused) {
 
             // If sprinting
             if (Input.GetKey("left shift") || Input.GetKey("right shift")) {

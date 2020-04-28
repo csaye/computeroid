@@ -6,7 +6,7 @@ public class ControlsMenu : MonoBehaviour
 {
 
     public GameObject levelController;
-    public GameObject resumeButton;
+    public GameObject xButton;
 
     public static bool isPaused = false;
 
@@ -14,6 +14,7 @@ public class ControlsMenu : MonoBehaviour
 
     void Start()
     {
+        isPaused = true;
         levelControllerScript = levelController.GetComponent<LevelController>();
     }
 
@@ -37,13 +38,13 @@ public class ControlsMenu : MonoBehaviour
     
     void DeactivateControlsMenu() {
         GetComponent<SpriteRenderer>().enabled = false;
-        resumeButton.GetComponent<SpriteRenderer>().enabled = false;
-        resumeButton.GetComponent<BoxCollider2D>().enabled = false;
+        xButton.GetComponent<SpriteRenderer>().enabled = false;
+        xButton.GetComponent<BoxCollider2D>().enabled = false;
     }
 
     void ActivateControlsMenu() {
         GetComponent<SpriteRenderer>().enabled = true;
-        resumeButton.GetComponent<SpriteRenderer>().enabled = true;
-        resumeButton.GetComponent<BoxCollider2D>().enabled = true;
+        xButton.GetComponent<SpriteRenderer>().enabled = true;
+        xButton.GetComponent<BoxCollider2D>().enabled = true;
     }
 }

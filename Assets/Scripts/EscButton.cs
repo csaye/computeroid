@@ -23,7 +23,7 @@ public class EscButton : MonoBehaviour
     void Update()
     {
         // If game not paused, check highlight
-        if (!PauseMenu.isPaused) {
+        if (!PauseMenu.isPaused && !ControlsMenu.isPaused) {
             CheckHighlight();
         } else {
             spriteRenderer.sprite = escButtonNormal;
