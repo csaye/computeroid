@@ -39,6 +39,9 @@ public class LaserEmitter : MonoBehaviour
     {
         renderFrames = 0;
         
+        // Size set to just under full block in order to prevent laser-emitter interference
+            size = new Vector2(0.499f, 0.499f);
+
         if (player == null) player = GameObject.FindGameObjectWithTag("Player");
 
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -81,17 +84,14 @@ public class LaserEmitter : MonoBehaviour
             // Set new laser center to updated position
             center = new Vector2(currentX, currentY);
 
-            // Size set to just under full block in order to prevent laser-emitter interference
-            size = new Vector2(0.499f, 0.499f);
-
-            EmitLaser();
+            PrepEmit();
         }
 
         if (renderFrames > 0) renderFrames--;
         if (renderFrames < 0) renderFrames = 0;
     }
 
-    void EmitLaser() {
+    void PrepEmit() {
 
         // Reset all values to default at beginning of laser emission
         willContinue = true;
@@ -101,125 +101,10 @@ public class LaserEmitter : MonoBehaviour
         // Continues to instantiate laser while not obstructed
         while (willContinue) {
 
-            // If laser traveling to the bottom right
-            if (bottomRight) {
-
-                // If first or second laser, do not instantiate no matter what if there is a collider
-                if (isFirstLaser || isSecondLaser) {
-                    foreach (Collider2D collider in (Physics2D.OverlapBoxAll(center, size, 0))) {
-                        if (!collider.isTrigger) {
-                            willContinue = false;
-                        }
-                    }
-                }
-
-                // If there are no objects with a box collider within the area, instantiate the laser
-                if (willContinue && !isFirstLaser) {
-                    laser = Instantiate(laser1Prefab, center, Quaternion.identity);
-                    Destroy(laser, renderFrames/frameCount);
-                    currentX++;
-                    currentY--;
-                    center = new Vector2(currentX, currentY);
-                }
-
-                // If the collider hits something, continuation will be based off of whether it is a reflective object
-                foreach (Collider2D collider in (Physics2D.OverlapBoxAll(center, size, 0))) {
-                    if (!collider.isTrigger && !isFirstLaser) {
-                        willContinue = checkReflect();
-                    }
-                }
-                
-            }
-
-            // If laser traveling to the bottom left
-            if (bottomLeft) {
-
-                // If first or second laser, do not instantiate no matter what if there is a collider
-                if (isFirstLaser || isSecondLaser) {
-                    foreach (Collider2D collider in (Physics2D.OverlapBoxAll(center, size, 0))) {
-                        if (!collider.isTrigger) {
-                            willContinue = false;
-                        }
-                    }
-                }
-
-                // If there are no objects with a box collider within the area, instantiate the laser
-                if (willContinue && !isFirstLaser) {
-                    laser = Instantiate(laser2Prefab, center, Quaternion.identity);
-                    Destroy(laser, renderFrames/frameCount);
-                    currentX--;
-                    currentY--;
-                    center = new Vector2(currentX, currentY);
-                }
-
-                // If the collider hits something, continuation will be based off of whether it is a reflective object
-                foreach (Collider2D collider in (Physics2D.OverlapBoxAll(center, size, 0))) {
-                    if (!collider.isTrigger && !isFirstLaser) {
-                        willContinue = checkReflect();
-                    }
-                }
-
-            }
-
-            // If laser traveling to the top left
-            if (topLeft) {
-
-                // If first or second laser, do not instantiate no matter what if there is a collider
-                if (isFirstLaser || isSecondLaser) {
-                    foreach (Collider2D collider in (Physics2D.OverlapBoxAll(center, size, 0))) {
-                        if (!collider.isTrigger) {
-                            willContinue = false;
-                        }
-                    }
-                }
-
-                // If there are no objects with a box collider within the area, instantiate the laser
-                if (willContinue && !isFirstLaser) {
-                    laser = Instantiate(laser3Prefab, center, Quaternion.identity);
-                    Destroy(laser, renderFrames/frameCount);
-                    currentX--;
-                    currentY++;
-                    center = new Vector2(currentX, currentY);
-                }
-
-                // If the collider hits something, continuation will be based off of whether it is a reflective object
-                foreach (Collider2D collider in (Physics2D.OverlapBoxAll(center, size, 0))) {
-                    if (!collider.isTrigger && !isFirstLaser) {
-                        willContinue = checkReflect();
-                    }
-                }
-
-            }
-
-            // If laser traveling to the top right
-            if (topRight) {
-
-                // If first or second laser, do not instantiate no matter what if there is a collider
-                if (isFirstLaser || isSecondLaser) {
-                    foreach (Collider2D collider in (Physics2D.OverlapBoxAll(center, size, 0))) {
-                        if (!collider.isTrigger) {
-                            willContinue = false;
-                        }
-                    }
-                }
-
-                // If there are no objects with a box collider within the area, instantiate the laser
-                if (willContinue && !isFirstLaser) {
-                    laser = Instantiate(laser4Prefab, center, Quaternion.identity);
-                    Destroy(laser, renderFrames/frameCount);
-                    currentX++;
-                    currentY++;
-                    center = new Vector2(currentX, currentY);
-                }
-
-                // If the collider hits something, continuation will be based off of whether it is a reflective object
-                foreach (Collider2D collider in (Physics2D.OverlapBoxAll(center, size, 0))) {
-                    if (!collider.isTrigger && !isFirstLaser) {
-                        willContinue = checkReflect();
-                    }
-                }
-
-            }
+            if (bottomRight) EmitLaser(laser1Prefab, 1, -1);
+            if (bottomLeft) EmitLaser(laser2Prefab, -1, -1);
+            if (topLeft) EmitLaser(laser3Prefab, -1, 1);
+            if (topRight) EmitLaser(laser4Prefab, 1, 1);
 
             // If second time passing through while loop, disable second laser
             if (!isFirstLaser) isSecondLaser = false;
@@ -230,8 +115,36 @@ public class LaserEmitter : MonoBehaviour
         }
     }
 
+    void EmitLaser(GameObject prefab, float xChange, float yChange) {
+
+        // If first or second laser, do not instantiate no matter what if there is a collider
+        if (willContinue && (isFirstLaser || isSecondLaser)) {
+            foreach (Collider2D collider in (Physics2D.OverlapBoxAll(center, size, 0))) {
+                if (!collider.isTrigger) {
+                    willContinue = false;
+                }
+            }
+        }
+
+        // If there are no objects with a box collider within the area, instantiate the laser
+        if (willContinue && !isFirstLaser) {
+            laser = Instantiate(prefab, center, Quaternion.identity);
+            Destroy(laser, renderFrames/frameCount);
+            currentX = currentX + xChange;
+            currentY = currentY + yChange;
+            center = new Vector2(currentX, currentY);
+        }
+
+        // If the collider hits something, continuation will be based off of whether it is a reflective object
+        if (willContinue && !isFirstLaser) {
+            foreach (Collider2D collider in (Physics2D.OverlapBoxAll(center, size, 0))) {
+                if (!collider.isTrigger) willContinue = prepReflect();
+            }
+        }
+    }
+
     // If the hit object is one which can be reflected off of, reflect; otherwise, end laser
-    bool checkReflect() {
+    bool prepReflect() {
 
         if (laser == null) return false;
 
@@ -245,91 +158,46 @@ public class LaserEmitter : MonoBehaviour
 
                 // If reflecting, checks for orientation, updates orientation, moves 1 unit in correct orientation, and laser continues to travel
 
-                // If reflecting coming from the bottom right direction
-                if (bottomRight) {
-                    
-                    // If the difference in the x orientation is greater, laser will reflect to the bottom left
-                    if (Mathf.Abs(laser.transform.position.x - collider.gameObject.transform.position.x) > Mathf.Abs(laser.transform.position.y - collider.gameObject.transform.position.y)) {
-                        currentX--;
-                        center = new Vector2(currentX, currentY);
-                        bottomLeft = true;
-
-                    // If the difference in the y orientation is greater, laser will reflect to the top right
-                    } else {
-                        currentY++;
-                        center = new Vector2(currentX, currentY);
-                        topRight = true;
-                    }
-
-                    bottomRight = false;
-                    return true;
-                }
-
-                // If reflecting coming from the bottom left direction
-                if (bottomLeft) {
-
-                    // If the difference in the x orientation is greater, laser will reflect to the bottom right
-                    if (Mathf.Abs(laser.transform.position.x - collider.gameObject.transform.position.x) > Mathf.Abs(laser.transform.position.y - collider.gameObject.transform.position.y)) {
-                        currentX++;
-                        center = new Vector2(currentX, currentY);
-                        bottomRight = true;
-
-                    // If the difference in the y orientation is greater, laser will reflect to the top left
-                    } else {
-                        currentY++;
-                        center = new Vector2(currentX, currentY);
-                        topLeft = true;
-                    }
-
-                    bottomLeft = false;
-                    return true;
-                }
-
-                // If reflecting coming from the top left direction
-                if (topLeft) {
-
-                    // If the difference in the x orientation is greater, laser will reflect to the top right
-                    if (Mathf.Abs(laser.transform.position.x - collider.gameObject.transform.position.x) > Mathf.Abs(laser.transform.position.y - collider.gameObject.transform.position.y)) {
-                        currentX++;
-                        center = new Vector2(currentX, currentY);
-                        topRight = true;
-
-                    // If the difference in the y orientation is greater, laser will reflect to the bottom left
-                    } else {
-                        currentY--;
-                        center = new Vector2(currentX, currentY);
-                        bottomLeft = true;
-                    }
-
-                    topLeft = false;
-                    return true;
-                }
-
-                // If reflecting coming from the top right direction
-                if (topRight) {
-
-                    // If the difference in the x orientation is greater, laser will reflect to the top left
-                    if (Mathf.Abs(laser.transform.position.x - collider.gameObject.transform.position.x) > Mathf.Abs(laser.transform.position.y - collider.gameObject.transform.position.y)) {
-                        currentX--;
-                        center = new Vector2(currentX, currentY);
-                        topLeft = true;
-
-                    // If the difference in the y orientation is greater, laser will reflect to the bottom right
-                    } else {
-                        currentY--;
-                        center = new Vector2(currentX, currentY);
-                        bottomRight = true;
-                    }
-
-                    topRight = false;
-                    return true;
-                }
-
+                if (bottomRight) return reflectLaser(collider, "bottomRight", "bottomLeft", "topRight", -1, 1);
+                if (bottomLeft) return reflectLaser(collider, "bottomLeft", "bottomRight", "topLeft", 1, 1);
+                if (topLeft) return reflectLaser(collider, "topLeft", "topRight", "bottomLeft", 1, -1);
+                if (topRight) return reflectLaser(collider, "topRight", "topLeft", "bottomRight", -1, -1);
             }
 
         }
 
         // If the collider is not the player colored blue or the mirror block, end laser
         return false;
+    }
+
+    bool reflectLaser(Collider2D collider, string initialDirection, string xDirection, string yDirection, float xChange, float yChange) {
+
+        // If the difference in the x orientation is greater, laser will reflect to the x direction
+        if (Mathf.Abs(laser.transform.position.x - collider.gameObject.transform.position.x) > Mathf.Abs(laser.transform.position.y - collider.gameObject.transform.position.y)) {
+            currentX = currentX + xChange;
+            center = new Vector2(currentX, currentY);
+            
+            if (xDirection == "bottomRight") bottomRight = true;
+            if (xDirection == "bottomLeft") bottomLeft = true;
+            if (xDirection == "topLeft") topLeft = true;
+            if (xDirection == "topRight") topRight = true;
+
+        // If the difference in the y orientation is greater, laser will reflect to the y direction
+        } else {
+            currentY = currentY + yChange;
+            center = new Vector2(currentX, currentY);
+            
+            if (yDirection == "bottomRight") bottomRight = true;
+            if (yDirection == "bottomLeft") bottomLeft = true;
+            if (yDirection == "topLeft") topLeft = true;
+            if (yDirection == "topRight") topRight = true;
+        }
+
+        if (initialDirection == "bottomRight") bottomRight = false;
+        if (initialDirection == "bottomLeft") bottomLeft = false;
+        if (initialDirection == "topLeft") topLeft = false;
+        if (initialDirection == "topRight") topRight = false;
+
+        return true;
     }
 }
