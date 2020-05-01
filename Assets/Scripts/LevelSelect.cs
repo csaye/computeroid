@@ -16,6 +16,8 @@ public class LevelSelect : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
 
+        if (!MainMenu.fromMainMenu) MusicManager.updateMusic = true;
+
         fullResolution = Screen.fullScreen;
 
         if (fullResolution) Screen.SetResolution(1024, 576, true);

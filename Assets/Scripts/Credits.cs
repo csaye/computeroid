@@ -10,6 +10,8 @@ public class Credits : MonoBehaviour
 
     void Start()
     {
+        MusicManager.updateMusic = true;
+
         fullResolution = Screen.fullScreen;
 
         if (fullResolution) Screen.SetResolution(1024, 576, true);

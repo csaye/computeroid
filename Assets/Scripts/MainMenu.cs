@@ -5,10 +5,14 @@ using UnityEngine;
 public class MainMenu : MonoBehaviour
 {
 
+    public static bool fromMainMenu = true;
+
     private bool fullResolution;
 
     void Start()
     {
+        fromMainMenu = true;
+
         PlayerPrefs.SetInt("Screenmanager Resolution Width", 1024);
         PlayerPrefs.SetInt("Screenmanager Resolution Height", 576);
 
