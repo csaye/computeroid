@@ -19,8 +19,8 @@ public class LevelSelector : MonoBehaviour
     private Color gray = new Color (0.5f, 0.5f, 0.5f, 1);
 
     // Level selector positioning in scene
-    private float row1 = -1.93762f, row2 = 0.0623729f, row3 = 2.062382f;
-    private float col1 = -5.25012f, col2 = -1.750118f, col3 = 1.749884f, col4 = 5.249887f;
+    private float row1 = -1.9375f, row2 = 0.0625f, row3 = 2.0625f;
+    private float col1 = -5.25f, col2 = -1.75f, col3 = 1.75f, col4 = 5.25f;
 
     void Start()
     {

@@ -10,6 +10,8 @@ public class MusicManager : MonoBehaviour
 
     public static bool updateMusic = false;
 
+    public static float volume = 0.5f;
+
     public AudioClip theme, early, middle, later;
 
     private AudioSource audioSource;
@@ -36,6 +38,12 @@ public class MusicManager : MonoBehaviour
             updateMusic = false;
             UpdateMusic();
         }
+
+        UpdateVolume();
+    }
+
+    void UpdateVolume() {
+        audioSource.volume = volume;
     }
 
     public void UpdateMusic() {
