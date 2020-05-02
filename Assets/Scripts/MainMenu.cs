@@ -25,7 +25,7 @@ public class MainMenu : MonoBehaviour
     void Update()
     {
         UpdateResolution();
-        CheckQuit();
+        if (!FadeManager.fading) CheckQuit();
     }
 
     void OnApplicationQuit() {

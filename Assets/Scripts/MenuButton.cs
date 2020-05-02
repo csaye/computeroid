@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MenuButton : MonoBehaviour
 {
@@ -27,7 +26,15 @@ public class MenuButton : MonoBehaviour
 
     void Update()
     {
-        if (GetComponent<Renderer>().enabled) CheckHighlight();
+        if (GetComponent<Renderer>().enabled) {
+
+            // If fading to new scene, disable button
+            if (FadeManager.fading) {
+                spriteRenderer.sprite = buttonNormal;
+            } else {
+                CheckHighlight();
+            }
+        }
     }
 
     // Checks if the mouse is over the button, and if so, highlights the button
@@ -71,11 +78,15 @@ public class MenuButton : MonoBehaviour
 
             // Take player to tutorial if they have not completed it yet
             if (LevelManager.tutorialComplete) {
-                SceneManager.LoadScene(destinationScene);
+
+                FadeManager.nextScene = destinationScene;
+                FadeManager.fading = true;
 
             } else {
                 LevelManager.tutorialComplete = true;
-                SceneManager.LoadScene("Tutorial");
+
+                FadeManager.nextScene = "Tutorial";
+                FadeManager.fading = true;
             }
 
         } else if (resumeButton) {
@@ -86,13 +97,17 @@ public class MenuButton : MonoBehaviour
 
         } else if (levelsButton) {
             PauseMenu.isPaused = false;
-            SceneManager.LoadScene(destinationScene);
+
+            FadeManager.nextScene = destinationScene;
+            FadeManager.fading = true;
 
         } else if (iButton) {
             PauseMenu.helpMenuActive = !PauseMenu.helpMenuActive;
 
         } else {
-            SceneManager.LoadScene(destinationScene);
+
+            FadeManager.nextScene = destinationScene;
+            FadeManager.fading = true;
         }
     }
 }

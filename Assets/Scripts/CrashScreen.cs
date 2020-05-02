@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class CrashScreen : MonoBehaviour
 {
@@ -28,14 +27,18 @@ public class CrashScreen : MonoBehaviour
         
         // If the current level is one not previously completed, increment level value
         if (currentLevel >= LevelManager.level) LevelManager.level = currentLevel + 1;
-        SceneManager.LoadScene("Level Select");
+        
+        FadeManager.nextScene = "Level Select";
+        FadeManager.fading = true;
     }
 
     void GoCredits() {
 
         // If the current level is one not previously completed, increment level value
         if (currentLevel >= LevelManager.level) LevelManager.level = currentLevel + 1;
-        SceneManager.LoadScene("Credits");
+        
+        FadeManager.nextScene = "Credits";
+        FadeManager.fading = true;
     }
 
     void MonitorOff() {

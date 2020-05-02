@@ -32,7 +32,7 @@ public class PowerButton : MonoBehaviour
     void Update()
     {
         // If game not paused, check highlight
-        if (!PauseMenu.isPaused) {
+        if (!PauseMenu.isPaused && !FadeManager.fading) {
             CheckHighlight();
         } else {
             spriteRenderer.sprite = powerButtonNormal;

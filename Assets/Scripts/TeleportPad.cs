@@ -28,7 +28,7 @@ public class TeleportPad : MonoBehaviour
 
     void Update()
     {
-        if (!PauseMenu.isPaused) {
+        if (!PauseMenu.isPaused && !FadeManager.fading) {
             CheckTeleport();
         }
     }

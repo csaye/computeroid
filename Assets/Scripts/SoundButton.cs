@@ -24,7 +24,7 @@ public class SoundButton : MonoBehaviour
 
     void Update()
     {
-        CheckHighlight();
+        if (!FadeManager.fading) CheckHighlight();
     }
 
     // Checks if the mouse is over the button, and if so, highlights the button

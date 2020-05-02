@@ -23,7 +23,7 @@ public class FolderSelect : MonoBehaviour
     {
 
         // If left mouse button clicked, check for folder
-        if (Input.GetMouseButtonDown(0)) CheckFolder();
+        if (Input.GetMouseButtonDown(0) && !FadeManager.fading) CheckFolder();
     }
 
     // Checks if the mouse is over the folder

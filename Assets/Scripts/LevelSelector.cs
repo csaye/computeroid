@@ -45,7 +45,7 @@ public class LevelSelector : MonoBehaviour
 
     void Update()
     {
-        if (!levelManagerScript.levelSelected) {
+        if (!levelManagerScript.levelSelected && !FadeManager.fading) {
             UpdatePosition();
             UpdateColor();
         }

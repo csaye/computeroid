@@ -28,7 +28,7 @@ public class PaintCleaner : MonoBehaviour
     {
 
         // If game not paused and paint cleaner charged
-        if (!PauseMenu.isPaused && chargeScript.charged) CheckClean();
+        if (!PauseMenu.isPaused && !FadeManager.fading && chargeScript.charged) CheckClean();
     }
 
     // Cleans the player of any paint they might have

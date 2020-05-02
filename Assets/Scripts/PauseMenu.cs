@@ -22,7 +22,7 @@ public class PauseMenu : MonoBehaviour
     {
 
         // If level not completed, check for pause
-        if (!levelControllerScript.levelComplete) CheckPause();
+        if (!levelControllerScript.levelComplete && !FadeManager.fading) CheckPause();
         
         if (levelControllerScript.levelComplete) {
             isPaused = false;

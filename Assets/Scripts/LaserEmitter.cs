@@ -53,7 +53,7 @@ public class LaserEmitter : MonoBehaviour
     // Each iteration of update begins at the emitter and re-forms the laser path
     void Update()
     {
-        if (!PauseMenu.isPaused && chargeScript.charged && renderFrames <= 0) {
+        if (!PauseMenu.isPaused && !FadeManager.fading && chargeScript.charged && renderFrames <= 0) {
 
             renderFrames = renderFramesDefault;
 

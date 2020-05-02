@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (!levelControllerScript.levelComplete && !PauseMenu.isPaused && !ControlsMenu.isPaused) {
+        if (!levelControllerScript.levelComplete && !PauseMenu.isPaused && !ControlsMenu.isPaused && !FadeManager.fading) {
             UpdateMovement();
         } else {
 
@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate() {
         
         // Update player based on player input
-        if (!levelControllerScript.levelComplete && !PauseMenu.isPaused && !ControlsMenu.isPaused) {
+        if (!levelControllerScript.levelComplete && !PauseMenu.isPaused && !ControlsMenu.isPaused && !FadeManager.fading) {
 
             // If sprinting
             if (Input.GetKey("left shift") || Input.GetKey("right shift")) {

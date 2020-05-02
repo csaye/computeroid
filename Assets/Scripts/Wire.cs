@@ -40,7 +40,7 @@ public class Wire : MonoBehaviour
     {
 
         // If game not paused, check for shorting of wire
-        if (!PauseMenu.isPaused) CheckShort();
+        if (!PauseMenu.isPaused && !FadeManager.fading) CheckShort();
         
         // If resetting not triggered, reset animation state
         if (!resetWire) animator.SetBool("Reset", false);

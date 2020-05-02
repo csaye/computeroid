@@ -22,7 +22,7 @@ public class PushableBox : MonoBehaviour
 
     void Update()
     {
-        if (!PauseMenu.isPaused) {
+        if (!PauseMenu.isPaused && !FadeManager.fading) {
             UpdatePushable();
         }
     }

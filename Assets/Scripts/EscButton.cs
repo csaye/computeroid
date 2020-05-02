@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class EscButton : MonoBehaviour
 {
@@ -11,20 +10,38 @@ public class EscButton : MonoBehaviour
 
     public bool toMainMenu, toPauseMenu, toControlsMenu, quitGame;
 
+    public GameObject levelManager;
+
     private SpriteRenderer spriteRenderer;
 
     private bool isButton = false;
 
+    private LevelManager levelManagerScript;
+
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        if (levelManager != null) levelManagerScript = levelManager.GetComponent<LevelManager>();
     }
 
     void Update()
     {
         // If game not paused, check highlight
-        if (!PauseMenu.isPaused && !ControlsMenu.isPaused) {
-            CheckHighlight();
+        if (!PauseMenu.isPaused && !FadeManager.fading && !ControlsMenu.isPaused) {
+            if (levelManager != null) {
+                
+                // Only if level select button
+                if (!levelManagerScript.levelSelected) {
+                    CheckHighlight();
+                } else {
+                    spriteRenderer.sprite = escButtonNormal;
+                }
+
+            } else {
+                CheckHighlight();
+            }
+            
         } else {
             spriteRenderer.sprite = escButtonNormal;
         }
@@ -68,7 +85,11 @@ public class EscButton : MonoBehaviour
     // Activate esc button function
     void ActivateButton() {
 
-        if (toMainMenu) SceneManager.LoadScene("Main Menu");
+        if (toMainMenu) {
+            FadeManager.nextScene = "Main Menu";
+            FadeManager.fading = true;
+        }
+        
         if (toPauseMenu) PauseMenu.isPaused = true;
         if (toControlsMenu) ControlsMenu.isPaused = true;
         if (quitGame) Application.Quit();

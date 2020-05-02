@@ -39,7 +39,7 @@ public class PaintBucket : MonoBehaviour
 
     void Update()
     {
-        if (!PauseMenu.isPaused) {
+        if (!PauseMenu.isPaused && !FadeManager.fading) {
             CheckClick();
             UpdatePaintLevel();
         }

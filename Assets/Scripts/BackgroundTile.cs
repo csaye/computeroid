@@ -19,7 +19,7 @@ public class BackgroundTile : MonoBehaviour
 
     void Update()
     {
-        if (!PauseMenu.isPaused && !ControlsMenu.isPaused) {
+        if (!PauseMenu.isPaused && !ControlsMenu.isPaused && !FadeManager.fading) {
             CheckHighlight();
         } else {
             spriteRenderer.sprite = tileNormal;
