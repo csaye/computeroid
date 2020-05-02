@@ -46,7 +46,7 @@ public class MusicManager : MonoBehaviour
         audioSource.volume = volume;
     }
 
-    public void UpdateMusic() {
+    void UpdateMusic() {
 
         if (SceneManager.GetActiveScene().name == "Main Menu") {
             audioSource.clip = theme;

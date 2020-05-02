@@ -9,13 +9,20 @@ public class OptionsThumb : MonoBehaviour
 
     private float xExtent = 1.8125f;
     private float xOffset;
+    private float revertedX;
 
     private bool isThumb = false, isSlider = false; 
     private bool activated = false;
 
     void Start()
     {
-        
+        // Set the initial position of the slider to the initial volume setting
+
+        // The 0 to 1 range volume reverted to the x-position of the slider
+        if (soundSlider) revertedX = SoundManager.volume * (2 * xExtent) - xExtent;
+        if (musicSlider) revertedX = MusicManager.volume * (2 * xExtent) - xExtent;
+
+        transform.localPosition = new Vector2(revertedX, transform.localPosition.y);
     }
 
     void Update()
@@ -33,8 +40,8 @@ public class OptionsThumb : MonoBehaviour
         // The x-position of the slider converted into a 0 to 1 range
         float convertedX = (transform.localPosition.x + xExtent) / (2 * xExtent);
 
+        if (soundSlider) SoundManager.volume = convertedX;
         if (musicSlider) MusicManager.volume = convertedX;
-        // if (soundSlider) SoundManager.volume = convertedX;
     }
 
     // Checks if the mouse is clicked over the slider and held down and moves thumb accordingly

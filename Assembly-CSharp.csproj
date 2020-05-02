@@ -81,6 +81,7 @@
      <Compile Include="Assets\Scripts\PowerButton.cs" />
      <Compile Include="Assets\Scripts\PushableBox.cs" />
      <Compile Include="Assets\Scripts\SoundButton.cs" />
+     <Compile Include="Assets\Scripts\SoundManager.cs" />
      <Compile Include="Assets\Scripts\TeleportPad.cs" />
      <Compile Include="Assets\Scripts\Wire.cs" />
      <Compile Include="Assets\Scripts\WirePad.cs" />
