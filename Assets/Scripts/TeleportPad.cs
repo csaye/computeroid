@@ -5,9 +5,11 @@ using UnityEngine;
 public class TeleportPad : MonoBehaviour
 {
 
+    public Sprite teleportPadNormal, teleportPadHighlight;
+
     private GameObject player = null;
 
-    private SpriteRenderer playerSpriteRenderer;
+    private SpriteRenderer spriteRenderer, playerSpriteRenderer;
 
     private Color purple = new Color(0.5f, 0, 1, 1);
     private Color white = new Color(1, 1, 1, 1);
@@ -23,6 +25,7 @@ public class TeleportPad : MonoBehaviour
         // Size set to just under full block in order to prevent interference
         size = new Vector2(0.499f, 0.499f);
 
+        spriteRenderer = GetComponent<SpriteRenderer>();
         playerSpriteRenderer = player.GetComponent<SpriteRenderer>();
     }
 
@@ -31,6 +34,8 @@ public class TeleportPad : MonoBehaviour
         if (!PauseMenu.isPaused && !FadeManager.fading) {
             CheckTeleport();
         }
+
+        CheckHighlight();
     }
 
     void CheckTeleport() {
@@ -83,5 +88,22 @@ public class TeleportPad : MonoBehaviour
 
         // If no obstruction found in any collider within the region of the teleport pad, return false
         return false;
+    }
+
+    // If the player is colored purple, highlight the teleport pad
+    void CheckHighlight() {
+
+        // If player is colored purple
+        if (playerSpriteRenderer.color == purple) {
+
+            // Set the sprite to highlight
+            spriteRenderer.sprite = teleportPadHighlight;
+
+        // If player is not colored purple
+        } else {
+
+            // Set the sprite to normal
+            spriteRenderer.sprite = teleportPadNormal;
+        }
     }
 }

@@ -1935,7 +1935,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 201937298}
-  skipFadeEnd: 0
   fadeStartWhite: 1
 --- !u!212 &201937300
 SpriteRenderer:
@@ -4972,6 +4971,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Teleport Pad
       objectReference: {fileID: 0}
+    - target: {fileID: 99345278014201828, guid: 943bd1f209c78487c88cca77a1392b4e,
+        type: 3}
+      propertyPath: teleportPadNormal
+      value: 
+      objectReference: {fileID: 21300000, guid: f23e897c2bea147dfbc384e181bc7ae8,
+        type: 3}
+    - target: {fileID: 99345278014201828, guid: 943bd1f209c78487c88cca77a1392b4e,
+        type: 3}
+      propertyPath: teleportPadHighlight
+      value: 
+      objectReference: {fileID: 21300000, guid: 1e5afab1401604853960b919f921e44f,
+        type: 3}
     - target: {fileID: 99345278014201831, guid: 943bd1f209c78487c88cca77a1392b4e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5992,8 +6003,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 11
-  background: {fileID: 0}
-  monitorFinalOff: {fileID: 0}
 --- !u!95 &807698879
 Animator:
   serializedVersion: 3
@@ -8724,6 +8733,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Teleport Pad
       objectReference: {fileID: 0}
+    - target: {fileID: 99345278014201828, guid: 943bd1f209c78487c88cca77a1392b4e,
+        type: 3}
+      propertyPath: teleportPadNormal
+      value: 
+      objectReference: {fileID: 21300000, guid: f23e897c2bea147dfbc384e181bc7ae8,
+        type: 3}
+    - target: {fileID: 99345278014201828, guid: 943bd1f209c78487c88cca77a1392b4e,
+        type: 3}
+      propertyPath: teleportPadHighlight
+      value: 
+      objectReference: {fileID: 21300000, guid: 1e5afab1401604853960b919f921e44f,
+        type: 3}
     - target: {fileID: 99345278014201831, guid: 943bd1f209c78487c88cca77a1392b4e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11836,6 +11857,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Teleport Pad
       objectReference: {fileID: 0}
+    - target: {fileID: 99345278014201828, guid: 943bd1f209c78487c88cca77a1392b4e,
+        type: 3}
+      propertyPath: teleportPadNormal
+      value: 
+      objectReference: {fileID: 21300000, guid: f23e897c2bea147dfbc384e181bc7ae8,
+        type: 3}
+    - target: {fileID: 99345278014201828, guid: 943bd1f209c78487c88cca77a1392b4e,
+        type: 3}
+      propertyPath: teleportPadHighlight
+      value: 
+      objectReference: {fileID: 21300000, guid: 1e5afab1401604853960b919f921e44f,
+        type: 3}
     - target: {fileID: 99345278014201831, guid: 943bd1f209c78487c88cca77a1392b4e,
         type: 3}
       propertyPath: m_LocalPosition.x

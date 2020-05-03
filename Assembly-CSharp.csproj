@@ -45,7 +45,6 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\ResolutionManager.cs" />
      <Compile Include="Assets\Scripts\BackgroundTile.cs" />
      <Compile Include="Assets\Scripts\BarrierEmitter.cs" />
      <Compile Include="Assets\Scripts\Charge.cs" />
@@ -82,6 +81,7 @@
      <Compile Include="Assets\Scripts\PowerBox.cs" />
      <Compile Include="Assets\Scripts\PowerButton.cs" />
      <Compile Include="Assets\Scripts\PushableBox.cs" />
+     <Compile Include="Assets\Scripts\ResolutionManager.cs" />
      <Compile Include="Assets\Scripts\SoundButton.cs" />
      <Compile Include="Assets\Scripts\SoundManager.cs" />
      <Compile Include="Assets\Scripts\TeleportPad.cs" />
