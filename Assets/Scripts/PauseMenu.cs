@@ -5,33 +5,30 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
     
-    public GameObject levelController;
     public GameObject resumeButton, levelsButton, iButton, helpMenu;
 
     public static bool isPaused = false;
     public static bool helpMenuActive = false;
 
-    private LevelController levelControllerScript;
-
     void Start()
     {
-        levelControllerScript = levelController.GetComponent<LevelController>();
+
     }
 
     void Update()
     {
 
         // If level not completed, check for pause
-        if (!levelControllerScript.levelComplete && !FadeManager.fading) CheckPause();
+        if (!LevelController.levelComplete && !FadeManager.fading) CheckPause();
         
-        if (levelControllerScript.levelComplete) {
+        if (LevelController.levelComplete) {
             isPaused = false;
             DeactivatePauseMenu();
         }
 
         if (!isPaused) DeactivatePauseMenu();
-        if (isPaused && !levelControllerScript.levelComplete) ActivatePauseMenu();
-        if (!levelControllerScript.levelComplete) UpdateHelpMenu();
+        if (isPaused && !LevelController.levelComplete) ActivatePauseMenu();
+        if (!LevelController.levelComplete) UpdateHelpMenu();
     }
 
     void CheckPause() {

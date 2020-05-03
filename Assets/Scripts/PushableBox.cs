@@ -17,14 +17,12 @@ public class PushableBox : MonoBehaviour
         if (player == null) player = GameObject.FindGameObjectWithTag("Player");
 
         playerSpriteRenderer = player.GetComponent<SpriteRenderer>();
-        rigidBody = GetComponent<Rigidbody2D>();
+        if (GetComponent<Rigidbody2D>() != null) rigidBody = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        if (!PauseMenu.isPaused && !FadeManager.fading) {
-            UpdatePushable();
-        }
+        if (!PauseMenu.isPaused && !FadeManager.fading && !LevelController.levelComplete) UpdatePushable();
     }
 
     void UpdatePushable() {

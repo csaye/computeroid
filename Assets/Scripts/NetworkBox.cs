@@ -5,18 +5,13 @@ using UnityEngine;
 public class NetworkBox : MonoBehaviour
 {
 
-    public GameObject levelController;
-
     private Charge chargeScript;
-    private LevelController levelControllerScript;
 
     private float startDelayFrames = 60;
 
     void Start()
     {
         chargeScript = GetComponent<Charge>();
-
-        levelControllerScript = levelController.GetComponent<LevelController>();
     }
 
     void Update()
@@ -31,6 +26,6 @@ public class NetworkBox : MonoBehaviour
     void CheckCrash() {
 
         // If not charged, crash the level
-        if (!chargeScript.charged) levelControllerScript.levelComplete = true;
+        if (!chargeScript.charged) LevelController.levelComplete = true;
     }
 }

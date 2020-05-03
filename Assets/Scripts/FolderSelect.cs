@@ -33,7 +33,7 @@ public class FolderSelect : MonoBehaviour
         isFolder = false;
 
         // For each hit overlapped with the mouse position
-        foreach (RaycastHit2D rayHit in (Physics2D.GetRayIntersectionAll(Camera.main.ScreenPointToRay(Input.mousePosition)))) {
+        foreach (RaycastHit2D rayHit in (Physics2D.GetRayIntersectionAll(Camera.main.ScreenPointToRay(InputEx.mousePosition)))) {
 
             // If found collider, check for folder
             if (rayHit.collider != null) {

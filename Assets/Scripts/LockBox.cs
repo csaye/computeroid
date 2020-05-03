@@ -32,7 +32,7 @@ public class LockBox : MonoBehaviour
     void Update()
     {
         // If not paused and button is charged
-        if (!PauseMenu.isPaused && !FadeManager.fading) CheckUnlock();
+        if (!PauseMenu.isPaused && !FadeManager.fading && !LevelController.levelComplete) CheckUnlock();
     }
 
     void CheckUnlock() {
@@ -41,7 +41,7 @@ public class LockBox : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && playerSpriteRenderer.color == yellow && Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) {
 
             // Raycast to mouse position
-            RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition));
+            RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(InputEx.mousePosition));
             
             // If lock box hit by raycast, unlock lock
             if (rayHit.collider != null && transform.position == rayHit.collider.gameObject.transform.position) {

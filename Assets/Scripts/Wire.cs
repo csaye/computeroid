@@ -40,7 +40,7 @@ public class Wire : MonoBehaviour
     {
 
         // If game not paused, check for shorting of wire
-        if (!PauseMenu.isPaused && !FadeManager.fading) CheckShort();
+        if (!PauseMenu.isPaused && !FadeManager.fading && !LevelController.levelComplete) CheckShort();
         
         // If resetting not triggered, reset animation state
         if (!resetWire) animator.SetBool("Reset", false);
@@ -60,7 +60,7 @@ public class Wire : MonoBehaviour
             if (playerSpriteRenderer.color == red && Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) {
 
                 // Raycast to mouse position
-                RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition));
+                RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(InputEx.mousePosition));
         
                 // If wire hit by raycast, short out
                 if (((GetComponent<BoxCollider2D>() != null && !GetComponent<BoxCollider2D>().isTrigger) || (GetComponent<PolygonCollider2D>() != null && !GetComponent<PolygonCollider2D>().isTrigger))

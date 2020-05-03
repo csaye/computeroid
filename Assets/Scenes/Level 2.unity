@@ -4551,7 +4551,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b1b1e1307ad43af84b9d50103360f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 2019421445}
   resumeButton: {fileID: 1651376894}
   levelsButton: {fileID: 1352703540}
   iButton: {fileID: 551270533}
@@ -4778,6 +4777,12 @@ MonoBehaviour:
   resumeButton: 0
   levelsButton: 0
   iButton: 1
+  optionsX: 0
+  optionsReset: 0
+  optionsCheckExit: 0
+  optionsXExit: 0
+  optionsCheckReset: 0
+  optionsXReset: 0
   destinationScene: 
   buttonNormal: {fileID: 21300000, guid: 2b4016bb3fcd14d19a1ea7908afea3e4, type: 3}
   buttonHighlight: {fileID: 21300000, guid: 8edabdfef2d75453fa5a00b75d194c65, type: 3}
@@ -5298,7 +5303,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 603042611}
-  skipFadeEnd: 0
   fadeStartWhite: 1
 --- !u!212 &603042613
 SpriteRenderer:
@@ -7839,6 +7843,7 @@ GameObject:
   - component: {fileID: 995687462}
   - component: {fileID: 995687465}
   - component: {fileID: 995687464}
+  - component: {fileID: 995687466}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -7957,6 +7962,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.875, y: 0.875}
   m_EdgeRadius: 0
+--- !u!114 &995687466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995687461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1016594560
 GameObject:
   m_ObjectHideFlags: 0
@@ -10566,6 +10583,7 @@ GameObject:
   - component: {fileID: 1342370169}
   - component: {fileID: 1342370168}
   - component: {fileID: 1342370170}
+  - component: {fileID: 1342370171}
   m_Layer: 0
   m_Name: 0
   m_TagString: Untagged
@@ -10696,9 +10714,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b473212d98db4488a8843857106d6785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 2019421445}
   animator: {fileID: 1773408558}
   targetPoint: {x: 2.5, y: 1}
+--- !u!114 &1342370171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342370165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1345004290
 GameObject:
   m_ObjectHideFlags: 0
@@ -11020,6 +11049,12 @@ MonoBehaviour:
   resumeButton: 0
   levelsButton: 1
   iButton: 0
+  optionsX: 0
+  optionsReset: 0
+  optionsCheckExit: 0
+  optionsXExit: 0
+  optionsCheckReset: 0
+  optionsXReset: 0
   destinationScene: Level Select
   buttonNormal: {fileID: 21300000, guid: 05a318bb0d090447685847b744637a37, type: 3}
   buttonHighlight: {fileID: 21300000, guid: ade533a66b4c74866a0b7485e470be0a, type: 3}
@@ -14295,6 +14330,12 @@ MonoBehaviour:
   resumeButton: 1
   levelsButton: 0
   iButton: 0
+  optionsX: 0
+  optionsReset: 0
+  optionsCheckExit: 0
+  optionsXExit: 0
+  optionsCheckReset: 0
+  optionsXReset: 0
   destinationScene: 
   buttonNormal: {fileID: 21300000, guid: 0ab87bde1157f4955a0676b20490998d, type: 3}
   buttonHighlight: {fileID: 21300000, guid: f720e7d51b02447ff9b19205d37a8632, type: 3}
@@ -15315,8 +15356,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 2
-  background: {fileID: 0}
-  monitorFinalOff: {fileID: 0}
 --- !u!95 &1773408558
 Animator:
   serializedVersion: 3
@@ -16265,7 +16304,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7e5255b99cf145608d25e5c63cd3df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 2019421445}
   rb: {fileID: 1858729545}
   animator: {fileID: 1858729543}
   walkSpeed: 2
@@ -17524,7 +17562,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58663e755a3ae47a9a9ada5884320c37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelComplete: 0
   animator: {fileID: 1773408558}
 --- !u!4 &2019421447
 Transform:

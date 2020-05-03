@@ -1641,7 +1641,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 168915797}
-  skipFadeEnd: 0
   fadeStartWhite: 1
 --- !u!212 &168915799
 SpriteRenderer:
@@ -4028,7 +4027,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7e5255b99cf145608d25e5c63cd3df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 1707060450}
   rb: {fileID: 455897913}
   animator: {fileID: 455897911}
   walkSpeed: 2
@@ -6860,8 +6858,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 4
-  background: {fileID: 0}
-  monitorFinalOff: {fileID: 0}
 --- !u!95 &736582011
 Animator:
   serializedVersion: 3
@@ -7240,6 +7236,12 @@ MonoBehaviour:
   resumeButton: 0
   levelsButton: 0
   iButton: 1
+  optionsX: 0
+  optionsReset: 0
+  optionsCheckExit: 0
+  optionsXExit: 0
+  optionsCheckReset: 0
+  optionsXReset: 0
   destinationScene: 
   buttonNormal: {fileID: 21300000, guid: 2b4016bb3fcd14d19a1ea7908afea3e4, type: 3}
   buttonHighlight: {fileID: 21300000, guid: 8edabdfef2d75453fa5a00b75d194c65, type: 3}
@@ -8038,6 +8040,12 @@ MonoBehaviour:
   resumeButton: 0
   levelsButton: 1
   iButton: 0
+  optionsX: 0
+  optionsReset: 0
+  optionsCheckExit: 0
+  optionsXExit: 0
+  optionsCheckReset: 0
+  optionsXReset: 0
   destinationScene: Level Select
   buttonNormal: {fileID: 21300000, guid: 05a318bb0d090447685847b744637a37, type: 3}
   buttonHighlight: {fileID: 21300000, guid: ade533a66b4c74866a0b7485e470be0a, type: 3}
@@ -9774,6 +9782,7 @@ GameObject:
   - component: {fileID: 1119098492}
   - component: {fileID: 1119098495}
   - component: {fileID: 1119098494}
+  - component: {fileID: 1119098496}
   m_Layer: 0
   m_Name: MirrorBox
   m_TagString: MirrorBox
@@ -9892,6 +9901,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.98, y: 0.98}
   m_EdgeRadius: 0
+--- !u!114 &1119098496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119098491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1125464829
 GameObject:
   m_ObjectHideFlags: 0
@@ -13500,6 +13521,12 @@ MonoBehaviour:
   resumeButton: 1
   levelsButton: 0
   iButton: 0
+  optionsX: 0
+  optionsReset: 0
+  optionsCheckExit: 0
+  optionsXExit: 0
+  optionsCheckReset: 0
+  optionsXReset: 0
   destinationScene: 
   buttonNormal: {fileID: 21300000, guid: 0ab87bde1157f4955a0676b20490998d, type: 3}
   buttonHighlight: {fileID: 21300000, guid: f720e7d51b02447ff9b19205d37a8632, type: 3}
@@ -15245,7 +15272,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58663e755a3ae47a9a9ada5884320c37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelComplete: 0
   animator: {fileID: 736582011}
 --- !u!4 &1707060452
 Transform:
@@ -17709,7 +17735,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b1b1e1307ad43af84b9d50103360f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 1707060450}
   resumeButton: {fileID: 1555003435}
   levelsButton: {fileID: 935103845}
   iButton: {fileID: 829960881}

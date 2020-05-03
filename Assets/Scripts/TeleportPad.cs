@@ -31,7 +31,7 @@ public class TeleportPad : MonoBehaviour
 
     void Update()
     {
-        if (!PauseMenu.isPaused && !FadeManager.fading) {
+        if (!PauseMenu.isPaused && !FadeManager.fading && !LevelController.levelComplete) {
             CheckTeleport();
         }
 
@@ -47,7 +47,7 @@ public class TeleportPad : MonoBehaviour
             if (playerSpriteRenderer.color == purple) {
 
                 // Raycast to mouse position
-                RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition));
+                RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(InputEx.mousePosition));
 
                 // If hit collider in the position of the teleport pad, teleport
                 if (rayHit.collider != null && transform.position == rayHit.collider.gameObject.transform.position) {

@@ -32,7 +32,7 @@ public class LevelButton : MonoBehaviour
     void Update()
     {
         // If not paused and button is charged
-        if (!PauseMenu.isPaused && !FadeManager.fading) {
+        if (!PauseMenu.isPaused && !FadeManager.fading && !LevelController.levelComplete) {
 
             // If not charged, default button to unpressed
             if (chargeScript.charged) {
@@ -50,7 +50,7 @@ public class LevelButton : MonoBehaviour
     void CheckHighlight() {
 
         // Raycast to mouse position
-        RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition));
+        RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(InputEx.mousePosition));
         
         // If button hit by raycast, highlight button
         if (rayHit.collider != null && transform.position == rayHit.collider.gameObject.transform.position) {

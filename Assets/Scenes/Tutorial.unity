@@ -218,7 +218,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7e5255b99cf145608d25e5c63cd3df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 1439798604}
   rb: {fileID: 8222025}
   animator: {fileID: 8222026}
   walkSpeed: 2
@@ -1662,6 +1661,7 @@ GameObject:
   - component: {fileID: 118139268}
   - component: {fileID: 118139267}
   - component: {fileID: 118139269}
+  - component: {fileID: 118139270}
   m_Layer: 0
   m_Name: P
   m_TagString: Untagged
@@ -1792,8 +1792,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7647a72b121a4b3bac3c47dade0927c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 1439798604}
   animator: {fileID: 1457493579}
+--- !u!114 &118139270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118139264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &128694488
 GameObject:
   m_ObjectHideFlags: 0
@@ -4383,6 +4394,7 @@ GameObject:
   - component: {fileID: 429620902}
   - component: {fileID: 429620901}
   - component: {fileID: 429620903}
+  - component: {fileID: 429620904}
   m_Layer: 0
   m_Name: (
   m_TagString: Untagged
@@ -4513,8 +4525,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7647a72b121a4b3bac3c47dade0927c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 1439798604}
   animator: {fileID: 1457493579}
+--- !u!114 &429620904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429620898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &436792945
 GameObject:
   m_ObjectHideFlags: 0
@@ -5758,6 +5781,7 @@ GameObject:
   - component: {fileID: 613235205}
   - component: {fileID: 613235204}
   - component: {fileID: 613235206}
+  - component: {fileID: 613235207}
   m_Layer: 0
   m_Name: I
   m_TagString: Untagged
@@ -5888,8 +5912,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7647a72b121a4b3bac3c47dade0927c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 1439798604}
   animator: {fileID: 1457493579}
+--- !u!114 &613235207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613235201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &645941527
 GameObject:
   m_ObjectHideFlags: 0
@@ -7507,6 +7542,7 @@ GameObject:
   - component: {fileID: 822116147}
   - component: {fileID: 822116146}
   - component: {fileID: 822116148}
+  - component: {fileID: 822116149}
   m_Layer: 0
   m_Name: N
   m_TagString: Untagged
@@ -7637,8 +7673,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7647a72b121a4b3bac3c47dade0927c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 1439798604}
   animator: {fileID: 1457493579}
+--- !u!114 &822116149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822116143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &834584668
 GameObject:
   m_ObjectHideFlags: 0
@@ -8305,6 +8352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 915768501}
+  fadeStartWhite: 0
 --- !u!212 &915768503
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8751,6 +8799,7 @@ GameObject:
   - component: {fileID: 1065862526}
   - component: {fileID: 1065862525}
   - component: {fileID: 1065862527}
+  - component: {fileID: 1065862528}
   m_Layer: 0
   m_Name: ;
   m_TagString: Untagged
@@ -8881,8 +8930,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7647a72b121a4b3bac3c47dade0927c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 1439798604}
   animator: {fileID: 1457493579}
+--- !u!114 &1065862528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065862522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1078516459
 GameObject:
   m_ObjectHideFlags: 0
@@ -10781,6 +10841,7 @@ GameObject:
   - component: {fileID: 1422038194}
   - component: {fileID: 1422038193}
   - component: {fileID: 1422038195}
+  - component: {fileID: 1422038196}
   m_Layer: 0
   m_Name: I
   m_TagString: Untagged
@@ -10911,8 +10972,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7647a72b121a4b3bac3c47dade0927c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 1439798604}
   animator: {fileID: 1457493579}
+--- !u!114 &1422038196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422038190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1435297625
 GameObject:
   m_ObjectHideFlags: 0
@@ -11065,7 +11137,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58663e755a3ae47a9a9ada5884320c37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelComplete: 0
   animator: {fileID: 1457493579}
 --- !u!4 &1439798606
 Transform:
@@ -11197,8 +11268,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 0
-  background: {fileID: 0}
-  monitorFinalOff: {fileID: 0}
 --- !u!1 &1493338130
 GameObject:
   m_ObjectHideFlags: 0
@@ -11859,7 +11928,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f07a02572d777458d8a3f96ceb8cf88f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 1439798604}
   xButton: {fileID: 1755662532}
 --- !u!212 &1568785057
 SpriteRenderer:
@@ -13031,6 +13099,7 @@ GameObject:
   - component: {fileID: 1736153462}
   - component: {fileID: 1736153461}
   - component: {fileID: 1736153463}
+  - component: {fileID: 1736153464}
   m_Layer: 0
   m_Name: )
   m_TagString: Untagged
@@ -13161,8 +13230,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7647a72b121a4b3bac3c47dade0927c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 1439798604}
   animator: {fileID: 1457493579}
+--- !u!114 &1736153464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736153458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1755662532
 GameObject:
   m_ObjectHideFlags: 0
@@ -13262,6 +13342,12 @@ MonoBehaviour:
   resumeButton: 1
   levelsButton: 0
   iButton: 0
+  optionsX: 0
+  optionsReset: 0
+  optionsCheckExit: 0
+  optionsXExit: 0
+  optionsCheckReset: 0
+  optionsXReset: 0
   destinationScene: 
   buttonNormal: {fileID: 21300000, guid: c3b9f4093b07c48d3bb2d8fe2dee7bfc, type: 3}
   buttonHighlight: {fileID: 21300000, guid: 632b694e7b7954d17b683402c33279c6, type: 3}
@@ -13664,6 +13750,7 @@ GameObject:
   - component: {fileID: 1974787119}
   - component: {fileID: 1974787118}
   - component: {fileID: 1974787120}
+  - component: {fileID: 1974787121}
   m_Layer: 0
   m_Name: H
   m_TagString: Untagged
@@ -13794,8 +13881,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7647a72b121a4b3bac3c47dade0927c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 1439798604}
   animator: {fileID: 1457493579}
+--- !u!114 &1974787121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974787115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1982508935
 GameObject:
   m_ObjectHideFlags: 0
@@ -13932,6 +14030,7 @@ GameObject:
   - component: {fileID: 1983449419}
   - component: {fileID: 1983449418}
   - component: {fileID: 1983449420}
+  - component: {fileID: 1983449421}
   m_Layer: 0
   m_Name: R
   m_TagString: Untagged
@@ -14062,8 +14161,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7647a72b121a4b3bac3c47dade0927c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 1439798604}
   animator: {fileID: 1457493579}
+--- !u!114 &1983449421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983449415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2028161334
 GameObject:
   m_ObjectHideFlags: 0
@@ -14633,6 +14743,7 @@ MonoBehaviour:
   toPauseMenu: 0
   toControlsMenu: 1
   quitGame: 0
+  levelManager: {fileID: 0}
 --- !u!212 &2145312851
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14696,6 +14807,7 @@ GameObject:
   - component: {fileID: 2146645751}
   - component: {fileID: 2146645750}
   - component: {fileID: 2146645752}
+  - component: {fileID: 2146645753}
   m_Layer: 0
   m_Name: T
   m_TagString: Untagged
@@ -14826,5 +14938,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7647a72b121a4b3bac3c47dade0927c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 1439798604}
   animator: {fileID: 1457493579}
+--- !u!114 &2146645753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146645747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

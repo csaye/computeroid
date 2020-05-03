@@ -19,7 +19,7 @@ public class BackgroundTile : MonoBehaviour
 
     void Update()
     {
-        if (!PauseMenu.isPaused && !ControlsMenu.isPaused && !FadeManager.fading) {
+        if (!PauseMenu.isPaused && !ControlsMenu.isPaused && !FadeManager.fading && !LevelController.levelComplete) {
             CheckHighlight();
         } else {
             spriteRenderer.sprite = tileNormal;
@@ -33,7 +33,7 @@ public class BackgroundTile : MonoBehaviour
         isTile = false;
 
         // For each hit overlapped with the mouse position
-        foreach (RaycastHit2D rayHit in (Physics2D.GetRayIntersectionAll(Camera.main.ScreenPointToRay(Input.mousePosition)))) {
+        foreach (RaycastHit2D rayHit in (Physics2D.GetRayIntersectionAll(Camera.main.ScreenPointToRay(InputEx.mousePosition)))) {
 
             // If found collider, check for tile
             if (rayHit.collider != null) {

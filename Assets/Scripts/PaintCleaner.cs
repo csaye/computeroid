@@ -28,7 +28,7 @@ public class PaintCleaner : MonoBehaviour
     {
 
         // If game not paused and paint cleaner charged
-        if (!PauseMenu.isPaused && !FadeManager.fading && chargeScript.charged) CheckClean();
+        if (!PauseMenu.isPaused && !FadeManager.fading && chargeScript.charged && !LevelController.levelComplete) CheckClean();
     }
 
     // Cleans the player of any paint they might have
@@ -39,7 +39,7 @@ public class PaintCleaner : MonoBehaviour
             if (playerSpriteRenderer.color != white && Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) {
 
                 // Raycast to mouse position
-                RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition));
+                RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(InputEx.mousePosition));
         
                 // If paint cleaner hit by raycast, change player color to white
                 if (rayHit.collider != null && transform.position == rayHit.collider.gameObject.transform.position) {

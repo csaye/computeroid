@@ -541,7 +541,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 74607963}
-  skipFadeEnd: 0
   fadeStartWhite: 1
 --- !u!212 &74607965
 SpriteRenderer:
@@ -2752,6 +2751,7 @@ GameObject:
   - component: {fileID: 401328605}
   - component: {fileID: 401328608}
   - component: {fileID: 401328607}
+  - component: {fileID: 401328609}
   m_Layer: 0
   m_Name: V
   m_TagString: Untagged
@@ -2870,6 +2870,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &401328609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401328604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &406326734
 GameObject:
   m_ObjectHideFlags: 0
@@ -4642,7 +4654,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0e240d9f46b6459992a540eb280c48e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 1250280034}
 --- !u!61 &555652459
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4699,6 +4710,7 @@ GameObject:
   - component: {fileID: 569255114}
   - component: {fileID: 569255117}
   - component: {fileID: 569255116}
+  - component: {fileID: 569255118}
   m_Layer: 0
   m_Name: L
   m_TagString: Untagged
@@ -4817,6 +4829,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &569255118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569255113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &579379434
 GameObject:
   m_ObjectHideFlags: 0
@@ -4952,6 +4976,7 @@ GameObject:
   - component: {fileID: 614600989}
   - component: {fileID: 614600992}
   - component: {fileID: 614600991}
+  - component: {fileID: 614600993}
   m_Layer: 0
   m_Name: O
   m_TagString: Untagged
@@ -5070,6 +5095,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &614600993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614600988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &623821451
 GameObject:
   m_ObjectHideFlags: 0
@@ -5688,7 +5725,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7e5255b99cf145608d25e5c63cd3df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 1250280034}
   rb: {fileID: 649092628}
   animator: {fileID: 649092626}
   walkSpeed: 2
@@ -6222,6 +6258,12 @@ MonoBehaviour:
   resumeButton: 1
   levelsButton: 0
   iButton: 0
+  optionsX: 0
+  optionsReset: 0
+  optionsCheckExit: 0
+  optionsXExit: 0
+  optionsCheckReset: 0
+  optionsXReset: 0
   destinationScene: 
   buttonNormal: {fileID: 21300000, guid: 0ab87bde1157f4955a0676b20490998d, type: 3}
   buttonHighlight: {fileID: 21300000, guid: f720e7d51b02447ff9b19205d37a8632, type: 3}
@@ -6977,7 +7019,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b1b1e1307ad43af84b9d50103360f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 1250280034}
   resumeButton: {fileID: 722704304}
   levelsButton: {fileID: 1403922982}
   iButton: {fileID: 1916276646}
@@ -7430,6 +7471,7 @@ GameObject:
   - component: {fileID: 879697600}
   - component: {fileID: 879697603}
   - component: {fileID: 879697602}
+  - component: {fileID: 879697604}
   m_Layer: 0
   m_Name: C
   m_TagString: Untagged
@@ -7548,6 +7590,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &879697604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879697599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &888756158
 GameObject:
   m_ObjectHideFlags: 0
@@ -9204,6 +9258,7 @@ GameObject:
   - component: {fileID: 1009545687}
   - component: {fileID: 1009545690}
   - component: {fileID: 1009545689}
+  - component: {fileID: 1009545691}
   m_Layer: 0
   m_Name: M
   m_TagString: Untagged
@@ -9322,6 +9377,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1009545691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009545686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1022965556
 GameObject:
   m_ObjectHideFlags: 0
@@ -10436,7 +10503,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58663e755a3ae47a9a9ada5884320c37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelComplete: 0
   animator: {fileID: 2114785578}
 --- !u!4 &1250280036
 Transform:
@@ -11080,6 +11146,7 @@ GameObject:
   - component: {fileID: 1355286283}
   - component: {fileID: 1355286286}
   - component: {fileID: 1355286285}
+  - component: {fileID: 1355286287}
   m_Layer: 0
   m_Name: K
   m_TagString: Untagged
@@ -11198,6 +11265,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1355286287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355286282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1360342884
 GameObject:
   m_ObjectHideFlags: 0
@@ -11396,6 +11475,12 @@ MonoBehaviour:
   resumeButton: 0
   levelsButton: 1
   iButton: 0
+  optionsX: 0
+  optionsReset: 0
+  optionsCheckExit: 0
+  optionsXExit: 0
+  optionsCheckReset: 0
+  optionsXReset: 0
   destinationScene: Level Select
   buttonNormal: {fileID: 21300000, guid: 05a318bb0d090447685847b744637a37, type: 3}
   buttonHighlight: {fileID: 21300000, guid: ade533a66b4c74866a0b7485e470be0a, type: 3}
@@ -11461,6 +11546,7 @@ GameObject:
   - component: {fileID: 1404187080}
   - component: {fileID: 1404187083}
   - component: {fileID: 1404187082}
+  - component: {fileID: 1404187084}
   m_Layer: 0
   m_Name: +
   m_TagString: Untagged
@@ -11579,6 +11665,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1404187084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404187079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1415504900
 GameObject:
   m_ObjectHideFlags: 0
@@ -13190,6 +13288,7 @@ GameObject:
   - component: {fileID: 1578183468}
   - component: {fileID: 1578183471}
   - component: {fileID: 1578183470}
+  - component: {fileID: 1578183472}
   m_Layer: 0
   m_Name: I
   m_TagString: Untagged
@@ -13308,6 +13407,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1578183472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578183467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1587855617
 GameObject:
   m_ObjectHideFlags: 0
@@ -14185,6 +14296,7 @@ GameObject:
   - component: {fileID: 1745984548}
   - component: {fileID: 1745984551}
   - component: {fileID: 1745984550}
+  - component: {fileID: 1745984552}
   m_Layer: 0
   m_Name: E
   m_TagString: Untagged
@@ -14303,6 +14415,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1745984552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745984547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1754178027
 GameObject:
   m_ObjectHideFlags: 0
@@ -15135,6 +15259,7 @@ GameObject:
   - component: {fileID: 1871937619}
   - component: {fileID: 1871937622}
   - component: {fileID: 1871937621}
+  - component: {fileID: 1871937623}
   m_Layer: 0
   m_Name: C
   m_TagString: Untagged
@@ -15253,6 +15378,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1871937623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871937618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1893839313
 GameObject:
   m_ObjectHideFlags: 0
@@ -15598,6 +15735,12 @@ MonoBehaviour:
   resumeButton: 0
   levelsButton: 0
   iButton: 1
+  optionsX: 0
+  optionsReset: 0
+  optionsCheckExit: 0
+  optionsXExit: 0
+  optionsCheckReset: 0
+  optionsXReset: 0
   destinationScene: 
   buttonNormal: {fileID: 21300000, guid: 2b4016bb3fcd14d19a1ea7908afea3e4, type: 3}
   buttonHighlight: {fileID: 21300000, guid: 8edabdfef2d75453fa5a00b75d194c65, type: 3}
@@ -16931,8 +17074,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 1
-  background: {fileID: 0}
-  monitorFinalOff: {fileID: 0}
 --- !u!1 &2116981947
 GameObject:
   m_ObjectHideFlags: 0

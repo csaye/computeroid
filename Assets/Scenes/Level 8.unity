@@ -539,8 +539,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 8
-  background: {fileID: 0}
-  monitorFinalOff: {fileID: 0}
 --- !u!95 &79636054
 Animator:
   serializedVersion: 3
@@ -2864,6 +2862,12 @@ MonoBehaviour:
   resumeButton: 0
   levelsButton: 1
   iButton: 0
+  optionsX: 0
+  optionsReset: 0
+  optionsCheckExit: 0
+  optionsXExit: 0
+  optionsCheckReset: 0
+  optionsXReset: 0
   destinationScene: Level Select
   buttonNormal: {fileID: 21300000, guid: 05a318bb0d090447685847b744637a37, type: 3}
   buttonHighlight: {fileID: 21300000, guid: ade533a66b4c74866a0b7485e470be0a, type: 3}
@@ -3321,6 +3325,7 @@ GameObject:
   - component: {fileID: 403363513}
   - component: {fileID: 403363512}
   - component: {fileID: 403363514}
+  - component: {fileID: 403363515}
   m_Layer: 0
   m_Name: Pushable Box
   m_TagString: Untagged
@@ -3451,6 +3456,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &403363515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403363509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &405003222
 GameObject:
   m_ObjectHideFlags: 0
@@ -7576,7 +7593,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b1b1e1307ad43af84b9d50103360f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 1932257412}
   resumeButton: {fileID: 1056599802}
   levelsButton: {fileID: 338463769}
   iButton: {fileID: 1942091560}
@@ -9776,6 +9792,12 @@ MonoBehaviour:
   resumeButton: 1
   levelsButton: 0
   iButton: 0
+  optionsX: 0
+  optionsReset: 0
+  optionsCheckExit: 0
+  optionsXExit: 0
+  optionsCheckReset: 0
+  optionsXReset: 0
   destinationScene: 
   buttonNormal: {fileID: 21300000, guid: 0ab87bde1157f4955a0676b20490998d, type: 3}
   buttonHighlight: {fileID: 21300000, guid: f720e7d51b02447ff9b19205d37a8632, type: 3}
@@ -10661,6 +10683,7 @@ GameObject:
   - component: {fileID: 1111519140}
   - component: {fileID: 1111519139}
   - component: {fileID: 1111519138}
+  - component: {fileID: 1111519141}
   m_Layer: 0
   m_Name: Pushable Box
   m_TagString: Untagged
@@ -10789,6 +10812,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7c4143cf4eb64e108d4771b4c2c26df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1111519141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111519135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1113843725
@@ -11021,7 +11056,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0e240d9f46b6459992a540eb280c48e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 1932257412}
 --- !u!61 &1169915769
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15076,7 +15110,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1686461317}
-  skipFadeEnd: 0
   fadeStartWhite: 1
 --- !u!212 &1686461319
 SpriteRenderer:
@@ -15227,7 +15260,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7e5255b99cf145608d25e5c63cd3df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 1932257412}
   rb: {fileID: 1693871490}
   animator: {fileID: 1693871488}
   walkSpeed: 2
@@ -15702,6 +15734,7 @@ GameObject:
   - component: {fileID: 1762473254}
   - component: {fileID: 1762473257}
   - component: {fileID: 1762473256}
+  - component: {fileID: 1762473258}
   m_Layer: 0
   m_Name: Mirror Box
   m_TagString: MirrorBox
@@ -15820,6 +15853,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.98, y: 0.98}
   m_EdgeRadius: 0
+--- !u!114 &1762473258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762473253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1798033771
 GameObject:
   m_ObjectHideFlags: 0
@@ -17313,7 +17358,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58663e755a3ae47a9a9ada5884320c37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelComplete: 0
   animator: {fileID: 79636054}
 --- !u!4 &1932257414
 Transform:
@@ -17778,6 +17822,12 @@ MonoBehaviour:
   resumeButton: 0
   levelsButton: 0
   iButton: 1
+  optionsX: 0
+  optionsReset: 0
+  optionsCheckExit: 0
+  optionsXExit: 0
+  optionsCheckReset: 0
+  optionsXReset: 0
   destinationScene: 
   buttonNormal: {fileID: 21300000, guid: 2b4016bb3fcd14d19a1ea7908afea3e4, type: 3}
   buttonHighlight: {fileID: 21300000, guid: 8edabdfef2d75453fa5a00b75d194c65, type: 3}

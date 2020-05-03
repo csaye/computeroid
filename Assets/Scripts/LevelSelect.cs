@@ -15,6 +15,10 @@ public class LevelSelect : MonoBehaviour
 
     void Start()
     {
+
+        // Reset the level complete status
+        LevelController.levelComplete = false;
+
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         levelManagerScript = levelManager.GetComponent<LevelManager>();

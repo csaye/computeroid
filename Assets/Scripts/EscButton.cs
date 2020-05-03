@@ -28,7 +28,7 @@ public class EscButton : MonoBehaviour
     void Update()
     {
         // If game not paused, check highlight
-        if (!PauseMenu.isPaused && !FadeManager.fading && !ControlsMenu.isPaused && !OptionsPopupExit.isPaused && !OptionsPopupReset.isPaused) {
+        if (!PauseMenu.isPaused && !FadeManager.fading && !ControlsMenu.isPaused && !OptionsPopupExit.isPaused && !OptionsPopupReset.isPaused && !LevelController.levelComplete) {
             if (levelManager != null) {
                 
                 // Only if level select button

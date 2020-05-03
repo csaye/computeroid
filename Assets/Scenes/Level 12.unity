@@ -1099,6 +1099,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7e875d691b27443a8d443fc7c6a7f9c, type: 3}
+--- !u!1 &83304509 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1374109582787165199, guid: f7e875d691b27443a8d443fc7c6a7f9c,
+    type: 3}
+  m_PrefabInstance: {fileID: 83304508}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &83304510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83304509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &86777342
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3097,7 +3115,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58663e755a3ae47a9a9ada5884320c37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelComplete: 0
   animator: {fileID: 87658678}
 --- !u!4 &299007156
 Transform:
@@ -5532,7 +5549,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b1b1e1307ad43af84b9d50103360f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 299007154}
   resumeButton: {fileID: 1449046232}
   levelsButton: {fileID: 1482246069}
   iButton: {fileID: 1127511000}
@@ -5869,6 +5885,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7e875d691b27443a8d443fc7c6a7f9c, type: 3}
+--- !u!1 &605622475 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1374109582787165199, guid: f7e875d691b27443a8d443fc7c6a7f9c,
+    type: 3}
+  m_PrefabInstance: {fileID: 605622474}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &605622476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605622475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &610327160
 GameObject:
   m_ObjectHideFlags: 0
@@ -6790,7 +6824,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7e5255b99cf145608d25e5c63cd3df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 299007154}
   rb: {fileID: 704142725}
   animator: {fileID: 704142723}
   walkSpeed: 2
@@ -10911,6 +10944,12 @@ MonoBehaviour:
   resumeButton: 0
   levelsButton: 0
   iButton: 1
+  optionsX: 0
+  optionsReset: 0
+  optionsCheckExit: 0
+  optionsXExit: 0
+  optionsCheckReset: 0
+  optionsXReset: 0
   destinationScene: 
   buttonNormal: {fileID: 21300000, guid: 2b4016bb3fcd14d19a1ea7908afea3e4, type: 3}
   buttonHighlight: {fileID: 21300000, guid: 8edabdfef2d75453fa5a00b75d194c65, type: 3}
@@ -11840,7 +11879,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd7a7d870812b4da9b9fda0413b93119, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 299007154}
   powerButtonNormal: {fileID: 21300000, guid: e8fd4fc8b426a4eaf9c1b7baa80a182e, type: 3}
   powerButtonHighlight: {fileID: 21300000, guid: 656d5f52d49b84fc8a80ba0790befed6,
     type: 3}
@@ -13037,6 +13075,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1042261348}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1306515691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306515690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1322000519
 GameObject:
   m_ObjectHideFlags: 0
@@ -14251,6 +14301,12 @@ MonoBehaviour:
   resumeButton: 1
   levelsButton: 0
   iButton: 0
+  optionsX: 0
+  optionsReset: 0
+  optionsCheckExit: 0
+  optionsXExit: 0
+  optionsCheckReset: 0
+  optionsXReset: 0
   destinationScene: 
   buttonNormal: {fileID: 21300000, guid: 0ab87bde1157f4955a0676b20490998d, type: 3}
   buttonHighlight: {fileID: 21300000, guid: f720e7d51b02447ff9b19205d37a8632, type: 3}
@@ -14666,6 +14722,12 @@ MonoBehaviour:
   resumeButton: 0
   levelsButton: 1
   iButton: 0
+  optionsX: 0
+  optionsReset: 0
+  optionsCheckExit: 0
+  optionsXExit: 0
+  optionsCheckReset: 0
+  optionsXReset: 0
   destinationScene: Level Select
   buttonNormal: {fileID: 21300000, guid: 05a318bb0d090447685847b744637a37, type: 3}
   buttonHighlight: {fileID: 21300000, guid: ade533a66b4c74866a0b7485e470be0a, type: 3}
@@ -17681,6 +17743,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 771059985}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1819068025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819068024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1826578051 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6217719752697366484, guid: ce656ca17e7ed4d3b9fd5e9457617519,
@@ -18106,6 +18180,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1226322268}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1888993167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888993166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1889775922
 PrefabInstance:
   m_ObjectHideFlags: 0

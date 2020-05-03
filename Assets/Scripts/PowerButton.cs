@@ -5,16 +5,12 @@ using UnityEngine;
 public class PowerButton : MonoBehaviour
 {
 
-    public GameObject levelController;
-
     public Sprite powerButtonNormal;
     public Sprite powerButtonHighlight;
 
     private SpriteRenderer spriteRenderer;
 
     private GameObject player = null;
-
-    private LevelController levelControllerScript;
 
     private float maxInteractDistance = 1.5f;
 
@@ -25,14 +21,12 @@ public class PowerButton : MonoBehaviour
         if (player == null) player = GameObject.FindGameObjectWithTag("Player");
 
         spriteRenderer = GetComponent<SpriteRenderer>();
-
-        levelControllerScript = levelController.GetComponent<LevelController>();
     }
 
     void Update()
     {
-        // If game not paused, check highlight
-        if (!PauseMenu.isPaused && !FadeManager.fading) {
+        // If game not paused or over, check highlight
+        if (!PauseMenu.isPaused && !FadeManager.fading && !LevelController.levelComplete) {
             CheckHighlight();
         } else {
             spriteRenderer.sprite = powerButtonNormal;
@@ -85,6 +79,6 @@ public class PowerButton : MonoBehaviour
 
         // Activate end game sequence
         MusicManager.stopMusic = true;
-        levelControllerScript.levelComplete = true;
+        LevelController.levelComplete = true;
     }
 }

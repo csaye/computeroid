@@ -2643,7 +2643,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58663e755a3ae47a9a9ada5884320c37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelComplete: 0
   animator: {fileID: 807698879}
 --- !u!4 &334796455
 Transform:
@@ -3227,6 +3226,12 @@ MonoBehaviour:
   resumeButton: 0
   levelsButton: 1
   iButton: 0
+  optionsX: 0
+  optionsReset: 0
+  optionsCheckExit: 0
+  optionsXExit: 0
+  optionsCheckReset: 0
+  optionsXReset: 0
   destinationScene: Level Select
   buttonNormal: {fileID: 21300000, guid: 05a318bb0d090447685847b744637a37, type: 3}
   buttonHighlight: {fileID: 21300000, guid: ade533a66b4c74866a0b7485e470be0a, type: 3}
@@ -4236,6 +4241,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 125391602}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &544658068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 544658067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &561569768
 GameObject:
   m_ObjectHideFlags: 0
@@ -4428,6 +4445,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7e875d691b27443a8d443fc7c6a7f9c, type: 3}
+--- !u!1 &562890709 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1374109582787165199, guid: f7e875d691b27443a8d443fc7c6a7f9c,
+    type: 3}
+  m_PrefabInstance: {fileID: 562890708}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &562890710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562890709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &563996781
 GameObject:
   m_ObjectHideFlags: 0
@@ -5848,6 +5883,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1495695849}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &796713061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796713060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &797364221
 GameObject:
   m_ObjectHideFlags: 0
@@ -10590,6 +10637,12 @@ MonoBehaviour:
   resumeButton: 1
   levelsButton: 0
   iButton: 0
+  optionsX: 0
+  optionsReset: 0
+  optionsCheckExit: 0
+  optionsXExit: 0
+  optionsCheckReset: 0
+  optionsXReset: 0
   destinationScene: 
   buttonNormal: {fileID: 21300000, guid: 0ab87bde1157f4955a0676b20490998d, type: 3}
   buttonHighlight: {fileID: 21300000, guid: f720e7d51b02447ff9b19205d37a8632, type: 3}
@@ -13996,6 +14049,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7e875d691b27443a8d443fc7c6a7f9c, type: 3}
+--- !u!1 &1704409056 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1374109582787165199, guid: f7e875d691b27443a8d443fc7c6a7f9c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1704409055}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1704409057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704409056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1709841901
 GameObject:
   m_ObjectHideFlags: 0
@@ -14220,6 +14291,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7e875d691b27443a8d443fc7c6a7f9c, type: 3}
+--- !u!1 &1731326735 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1374109582787165199, guid: f7e875d691b27443a8d443fc7c6a7f9c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1731326734}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1731326736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731326735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1737096089 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6797119277382710963, guid: 2764484a69e6048489cfdb3779f1edfe,
@@ -15765,7 +15854,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b1b1e1307ad43af84b9d50103360f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 334796453}
   resumeButton: {fileID: 1324849684}
   levelsButton: {fileID: 408490155}
   iButton: {fileID: 2017738246}
@@ -17514,6 +17602,12 @@ MonoBehaviour:
   resumeButton: 0
   levelsButton: 0
   iButton: 1
+  optionsX: 0
+  optionsReset: 0
+  optionsCheckExit: 0
+  optionsXExit: 0
+  optionsCheckReset: 0
+  optionsXReset: 0
   destinationScene: 
   buttonNormal: {fileID: 21300000, guid: 2b4016bb3fcd14d19a1ea7908afea3e4, type: 3}
   buttonHighlight: {fileID: 21300000, guid: 8edabdfef2d75453fa5a00b75d194c65, type: 3}
@@ -18236,7 +18330,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7e5255b99cf145608d25e5c63cd3df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 334796453}
   rb: {fileID: 2106432955}
   animator: {fileID: 2106432953}
   walkSpeed: 2

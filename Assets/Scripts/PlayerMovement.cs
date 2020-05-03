@@ -5,8 +5,6 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    public GameObject levelController;
-
     public Rigidbody2D rb;
 
     public Animator animator;
@@ -17,18 +15,16 @@ public class PlayerMovement : MonoBehaviour
     // How quickly the player moves while sprinting
     public float sprintSpeed = 3;
 
-    private LevelController levelControllerScript;
-
     Vector2 movement;
 
     void Start()
     {
-        levelControllerScript = levelController.GetComponent<LevelController>();
+
     }
 
     void Update()
     {
-        if (!levelControllerScript.levelComplete && !PauseMenu.isPaused && !ControlsMenu.isPaused && !FadeManager.fading) {
+        if (!LevelController.levelComplete && !PauseMenu.isPaused && !ControlsMenu.isPaused && !FadeManager.fading) {
             UpdateMovement();
         } else {
 
@@ -40,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate() {
         
         // Update player based on player input
-        if (!levelControllerScript.levelComplete && !PauseMenu.isPaused && !ControlsMenu.isPaused && !FadeManager.fading) {
+        if (!LevelController.levelComplete && !PauseMenu.isPaused && !ControlsMenu.isPaused && !FadeManager.fading) {
 
             // If sprinting
             if (Input.GetKey("left shift") || Input.GetKey("right shift")) {

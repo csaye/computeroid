@@ -40,7 +40,7 @@ public class PaintBucket : MonoBehaviour
     void Update()
     {
         UpdatePaintLevel();
-        if (!PauseMenu.isPaused && !FadeManager.fading) CheckClick();
+        if (!PauseMenu.isPaused && !FadeManager.fading && !LevelController.levelComplete) CheckClick();
     }
 
     // Check if paint bucket is clicked and player is clean, and if so, transfer color to player
@@ -51,7 +51,7 @@ public class PaintBucket : MonoBehaviour
             if (Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) {
             
                 // Raycast to mouse position
-                RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition));
+                RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(InputEx.mousePosition));
         
                 // If bucket hit by raycast, transfer paint
                 if (rayHit.collider != null && paintLevel > 0 && playerSpriteRenderer.color != paintColor && transform.position == rayHit.collider.gameObject.transform.position) {

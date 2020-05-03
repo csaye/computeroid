@@ -5,31 +5,27 @@ using UnityEngine;
 public class ControlsMenu : MonoBehaviour
 {
 
-    public GameObject levelController;
     public GameObject xButton;
 
     public static bool isPaused = false;
 
-    private LevelController levelControllerScript;
-
     void Start()
     {
         isPaused = true;
-        levelControllerScript = levelController.GetComponent<LevelController>();
     }
 
     void Update()
     {
         // If level not completed, check for pause
-        if (!levelControllerScript.levelComplete) CheckPause();
+        if (!LevelController.levelComplete) CheckPause();
         
-        if (levelControllerScript.levelComplete) {
+        if (LevelController.levelComplete) {
             isPaused = false;
             DeactivateControlsMenu();
         }
 
         if (!isPaused) DeactivateControlsMenu();
-        if (isPaused && !levelControllerScript.levelComplete) ActivateControlsMenu();
+        if (isPaused && !LevelController.levelComplete) ActivateControlsMenu();
     }
 
     void CheckPause() {

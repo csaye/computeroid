@@ -5,7 +5,8 @@ using UnityEngine;
 public class LevelController : MonoBehaviour
 {
 
-    public bool levelComplete = false;
+    // Whether the current level is completed or not — reset in level select
+    public static bool levelComplete = false;
 
     public Animator animator;
 

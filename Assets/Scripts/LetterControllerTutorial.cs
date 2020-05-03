@@ -5,13 +5,9 @@ using UnityEngine;
 public class LetterControllerTutorial : MonoBehaviour
 {
 
-    public GameObject levelController;
-
     public Animator animator;
 
     public static float corruptLevel;
-
-    private LevelController levelControllerScript;
 
     private float startY;
 
@@ -20,8 +16,6 @@ public class LetterControllerTutorial : MonoBehaviour
     void Start()
     {
         startY = transform.position.y;
-
-        levelControllerScript = levelController.GetComponent<LevelController>();
     }
 
     void Update()
@@ -39,6 +33,6 @@ public class LetterControllerTutorial : MonoBehaviour
     }
 
     void CheckCrash() {
-        if (corruptLevel > 2) levelControllerScript.levelComplete = true;
+        if (corruptLevel > 2) LevelController.levelComplete = true;
     }
 }

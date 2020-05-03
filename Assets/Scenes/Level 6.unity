@@ -235,7 +235,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0e240d9f46b6459992a540eb280c48e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 2127353794}
 --- !u!61 &7842175
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -593,7 +592,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7e5255b99cf145608d25e5c63cd3df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 2127353794}
   rb: {fileID: 40093331}
   animator: {fileID: 40093329}
   walkSpeed: 2
@@ -1655,6 +1653,7 @@ GameObject:
   - component: {fileID: 185436371}
   - component: {fileID: 185436370}
   - component: {fileID: 185436372}
+  - component: {fileID: 185436373}
   m_Layer: 0
   m_Name: Pushable Box
   m_TagString: Untagged
@@ -1783,6 +1782,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7c4143cf4eb64e108d4771b4c2c26df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &185436373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185436367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &186067105
@@ -2040,7 +2051,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 219664411}
-  skipFadeEnd: 0
   fadeStartWhite: 1
 --- !u!212 &219664413
 SpriteRenderer:
@@ -3550,6 +3560,12 @@ MonoBehaviour:
   resumeButton: 0
   levelsButton: 1
   iButton: 0
+  optionsX: 0
+  optionsReset: 0
+  optionsCheckExit: 0
+  optionsXExit: 0
+  optionsCheckReset: 0
+  optionsXReset: 0
   destinationScene: Level Select
   buttonNormal: {fileID: 21300000, guid: 05a318bb0d090447685847b744637a37, type: 3}
   buttonHighlight: {fileID: 21300000, guid: ade533a66b4c74866a0b7485e470be0a, type: 3}
@@ -5887,6 +5903,7 @@ GameObject:
   - component: {fileID: 550420231}
   - component: {fileID: 550420230}
   - component: {fileID: 550420232}
+  - component: {fileID: 550420233}
   m_Layer: 0
   m_Name: Pushable Box
   m_TagString: Untagged
@@ -6015,6 +6032,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7c4143cf4eb64e108d4771b4c2c26df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &550420233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550420227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &561161005
@@ -8355,6 +8384,7 @@ GameObject:
   - component: {fileID: 793115286}
   - component: {fileID: 793115285}
   - component: {fileID: 793115287}
+  - component: {fileID: 793115288}
   m_Layer: 0
   m_Name: Pushable Box
   m_TagString: Untagged
@@ -8483,6 +8513,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7c4143cf4eb64e108d4771b4c2c26df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &793115288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793115282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &795850959
@@ -10146,8 +10188,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLevel: 6
-  background: {fileID: 0}
-  monitorFinalOff: {fileID: 0}
 --- !u!95 &998763420
 Animator:
   serializedVersion: 3
@@ -12943,6 +12983,12 @@ MonoBehaviour:
   resumeButton: 1
   levelsButton: 0
   iButton: 0
+  optionsX: 0
+  optionsReset: 0
+  optionsCheckExit: 0
+  optionsXExit: 0
+  optionsCheckReset: 0
+  optionsXReset: 0
   destinationScene: 
   buttonNormal: {fileID: 21300000, guid: 0ab87bde1157f4955a0676b20490998d, type: 3}
   buttonHighlight: {fileID: 21300000, guid: f720e7d51b02447ff9b19205d37a8632, type: 3}
@@ -17379,6 +17425,12 @@ MonoBehaviour:
   resumeButton: 0
   levelsButton: 0
   iButton: 1
+  optionsX: 0
+  optionsReset: 0
+  optionsCheckExit: 0
+  optionsXExit: 0
+  optionsCheckReset: 0
+  optionsXReset: 0
   destinationScene: 
   buttonNormal: {fileID: 21300000, guid: 2b4016bb3fcd14d19a1ea7908afea3e4, type: 3}
   buttonHighlight: {fileID: 21300000, guid: 8edabdfef2d75453fa5a00b75d194c65, type: 3}
@@ -17708,7 +17760,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b1b1e1307ad43af84b9d50103360f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelController: {fileID: 2127353794}
   resumeButton: {fileID: 1363905684}
   levelsButton: {fileID: 372642118}
   iButton: {fileID: 1795620654}
@@ -18184,6 +18235,7 @@ GameObject:
   - component: {fileID: 1893482751}
   - component: {fileID: 1893482750}
   - component: {fileID: 1893482752}
+  - component: {fileID: 1893482753}
   m_Layer: 0
   m_Name: Pushable Box
   m_TagString: Untagged
@@ -18312,6 +18364,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7c4143cf4eb64e108d4771b4c2c26df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1893482753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893482747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1913813986
@@ -18900,6 +18964,7 @@ GameObject:
   - component: {fileID: 1998441752}
   - component: {fileID: 1998441751}
   - component: {fileID: 1998441753}
+  - component: {fileID: 1998441754}
   m_Layer: 0
   m_Name: Pushable Box
   m_TagString: Untagged
@@ -19028,6 +19093,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7c4143cf4eb64e108d4771b4c2c26df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1998441754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998441748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573dccb3d8f44e36a6739571ea5e8cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2005206473
@@ -19794,7 +19871,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58663e755a3ae47a9a9ada5884320c37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelComplete: 0
   animator: {fileID: 998763420}
 --- !u!4 &2127353796
 Transform:

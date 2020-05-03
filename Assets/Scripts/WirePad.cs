@@ -39,7 +39,7 @@ public class WirePad : MonoBehaviour
     {
 
         // If game not paused, check for wire placement
-        if (!PauseMenu.isPaused) {
+        if (!PauseMenu.isPaused && !LevelController.levelComplete) {
             CheckWire();
         }
     }
@@ -54,7 +54,7 @@ public class WirePad : MonoBehaviour
             if (playerSpriteRenderer.color == orange && Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) {
                 
                 // Raycast to mouse position
-                RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition));
+                RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(InputEx.mousePosition));
 
                 // If hit collider in the position of the wire pad
                 if (rayHit.collider != null && transform.position == rayHit.collider.gameObject.transform.position) {
