@@ -72,6 +72,8 @@
      <Compile Include="Assets\Scripts\MusicManager.cs" />
      <Compile Include="Assets\Scripts\NetworkBox.cs" />
      <Compile Include="Assets\Scripts\Options.cs" />
+     <Compile Include="Assets\Scripts\OptionsPopupExit.cs" />
+     <Compile Include="Assets\Scripts\OptionsPopupReset.cs" />
      <Compile Include="Assets\Scripts\OptionsThumb.cs" />
      <Compile Include="Assets\Scripts\PaintBucket.cs" />
      <Compile Include="Assets\Scripts\PaintCleaner.cs" />

@@ -301,7 +301,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 993437566}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ec3786f614444480b99e1e553c0d185, type: 3}
+  m_Script: {fileID: 11500000, guid: 0510ddc16cfbc43b498ab61366f46245, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1270524365
@@ -664,6 +664,12 @@ MonoBehaviour:
   resumeButton: 0
   levelsButton: 0
   iButton: 0
+  optionsX: 0
+  optionsReset: 0
+  optionsCheckExit: 0
+  optionsXExit: 0
+  optionsCheckReset: 0
+  optionsXReset: 0
   destinationScene: Level Select
   buttonNormal: {fileID: 21300000, guid: f4659f0e9f68d40ccb97912690870027, type: 3}
   buttonHighlight: {fileID: 21300000, guid: 650cf325d55734adcaf2a229519f0f39, type: 3}
@@ -792,6 +798,12 @@ MonoBehaviour:
   resumeButton: 0
   levelsButton: 0
   iButton: 0
+  optionsX: 0
+  optionsReset: 0
+  optionsCheckExit: 0
+  optionsXExit: 0
+  optionsCheckReset: 0
+  optionsXReset: 0
   destinationScene: Options
   buttonNormal: {fileID: 21300000, guid: 39e73bcae1f064156a310385d73d9b9e, type: 3}
   buttonHighlight: {fileID: 21300000, guid: 384c9845c177d4b37b899277eb5584f4, type: 3}

@@ -13,35 +13,50 @@ public class OptionsThumb : MonoBehaviour
 
     private bool isThumb = false, isSlider = false; 
     private bool activated = false;
+    private bool delayFrame = false;
 
     void Start()
     {
         // Set the initial position of the slider to the initial volume setting
+
+        ProcessVolume();
+    }
+
+    void Update()
+    {
+        if (!FadeManager.fading && !OptionsPopupReset.isPaused && !OptionsPopupExit.isPaused) {
+            if (delayFrame) ProcessVolume();
+            if (!delayFrame) UpdateVolume();
+            delayFrame = false;
+        } else {
+            ProcessVolume();
+            delayFrame = true;
+        }
+
+        if (!FadeManager.fading && !OptionsPopupReset.isPaused && !OptionsPopupExit.isPaused && Input.GetMouseButtonDown(0)) CheckActivate();
+
+        if (FadeManager.fading || OptionsPopupReset.isPaused || OptionsPopupExit.isPaused) activated = false;
+
+        if (!FadeManager.fading && activated) ActivateThumb();
+    }
+
+    void UpdateVolume() {
+
+        // The x-position of the slider converted into a 0 to 1 range
+        float convertedX = (transform.localPosition.x + xExtent) / (2 * xExtent);
+
+        if (soundSlider) SoundManager.volume = convertedX;
+        if (musicSlider) MusicManager.volume = convertedX;
+    }
+
+    void ProcessVolume() {
 
         // The 0 to 1 range volume reverted to the x-position of the slider
         if (soundSlider) revertedX = SoundManager.volume * (2 * xExtent) - xExtent;
         if (musicSlider) revertedX = MusicManager.volume * (2 * xExtent) - xExtent;
 
         transform.localPosition = new Vector2(revertedX, transform.localPosition.y);
-    }
 
-    void Update()
-    {
-        if (!FadeManager.fading) UpdateVolume();
-        if (!FadeManager.fading && Input.GetMouseButtonDown(0)) CheckActivate();
-
-        if (FadeManager.fading) activated = false;
-
-        if (!FadeManager.fading && activated) ActivateThumb();
-    }
-
-    void UpdateVolume() {
-        
-        // The x-position of the slider converted into a 0 to 1 range
-        float convertedX = (transform.localPosition.x + xExtent) / (2 * xExtent);
-
-        if (soundSlider) SoundManager.volume = convertedX;
-        if (musicSlider) MusicManager.volume = convertedX;
     }
 
     // Checks if the mouse is clicked over the slider and held down and moves thumb accordingly

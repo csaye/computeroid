@@ -9,6 +9,7 @@ public class MenuButton : MonoBehaviour
     public bool resumeButton;
     public bool levelsButton;
     public bool iButton;
+    public bool optionsX, optionsReset, optionsCheckExit, optionsXExit, optionsCheckReset, optionsXReset;
 
     public string destinationScene;
 
@@ -26,13 +27,22 @@ public class MenuButton : MonoBehaviour
 
     void Update()
     {
+
+        // If button is not hidden
         if (GetComponent<Renderer>().enabled) {
 
-            // If fading to new scene, disable button
-            if (FadeManager.fading) {
-                spriteRenderer.sprite = buttonNormal;
+            // If not fading to a new scene or options popup active, check highlight
+            if (!FadeManager.fading) {
+                
+                // Special case for options menu buttons blocked by popups
+                if ((optionsX || optionsReset) && (OptionsPopupExit.isPaused || OptionsPopupReset.isPaused)) {
+                    spriteRenderer.sprite = buttonNormal;
+                } else {
+                    CheckHighlight();
+                }
+
             } else {
-                CheckHighlight();
+                spriteRenderer.sprite = buttonNormal;
             }
         }
     }
@@ -103,6 +113,33 @@ public class MenuButton : MonoBehaviour
 
         } else if (iButton) {
             PauseMenu.helpMenuActive = !PauseMenu.helpMenuActive;
+
+        } else if (optionsX) {
+            OptionsPopupExit.isPaused = true;
+
+        } else if (optionsReset) {
+            OptionsPopupReset.isPaused = true;
+
+        } else if (optionsCheckExit) {
+            Application.Quit();
+
+        } else if (optionsXExit) {
+            OptionsPopupExit.isPaused = false;
+
+        } else if (optionsCheckReset) {
+
+            PlayerPrefs.DeleteKey("LevelUnlocked");
+            PlayerPrefs.DeleteKey("CurrentLevel");
+            PlayerPrefs.DeleteKey("TutorialComplete");
+            PlayerPrefs.DeleteKey("MusicVolume");
+            PlayerPrefs.DeleteKey("SoundVolume");
+            SoundManager.volume = 0.5f;
+            MusicManager.volume = 0.5f;
+            PlayerPrefs.Save();
+            OptionsPopupReset.isPaused = false;
+
+        } else if (optionsXReset) {
+            OptionsPopupReset.isPaused = false;
 
         } else {
 

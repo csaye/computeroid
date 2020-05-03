@@ -25,27 +25,10 @@ public class MainMenu : MonoBehaviour
     void Update()
     {
         if (!FadeManager.fading) CheckQuit();
-        DevCommands();
     }
 
     void CheckQuit() {
         if (Input.GetKeyDown("escape")) Application.Quit();
     }
 
-    void DevCommands() {
-
-        // RESET
-        if (Input.GetKeyDown("p")) {
-            PlayerPrefs.DeleteAll();
-            SoundManager.volume = 0.5f;
-            MusicManager.volume = 0.5f;
-            PlayerPrefs.Save();
-        }
-
-        // DEBUG
-        if (Input.GetKeyDown("g")) {
-            Debug.Log("mouse position: " + Input.mousePosition);
-            Debug.Log("fixed mouse position: " + InputEx.mousePosition);
-        }
-    }
 }
