@@ -12,7 +12,7 @@ public class Options : MonoBehaviour
 
     void Update()
     {
-        if (!FadeManager.fading) CheckMainMenu();
+        if (!FadeManager.fading && !OptionsPopupExit.isPaused && !OptionsPopupReset.isPaused) CheckMainMenu();
     }
 
     // Checks if the player presses escape, and if so, takes them to the main menu

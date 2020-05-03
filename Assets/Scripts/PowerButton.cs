@@ -65,7 +65,14 @@ public class PowerButton : MonoBehaviour
             spriteRenderer.sprite = powerButtonHighlight;
 
             // If highlighted, mouse button down, and within player range, activate button function
-            if (Input.GetMouseButtonDown(0) && Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) ActivateButton();
+            if (Input.GetMouseButtonDown(0) && Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) {
+                
+                // Play button press sound
+                SoundManager.currentSound = "buttonPress";
+                SoundManager.updateSound = true;
+
+                ActivateButton();
+            }
 
         // If a button is not found, set it back to normal
         } else {

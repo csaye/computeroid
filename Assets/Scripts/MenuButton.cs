@@ -73,7 +73,14 @@ public class MenuButton : MonoBehaviour
             spriteRenderer.sprite = buttonHighlight;
 
             // If highlighted and mouse button down activate button function
-            if (Input.GetMouseButtonDown(0)) ActivateButton();
+            if (Input.GetMouseButtonDown(0)) {
+                
+                // Play button press sound
+                SoundManager.currentSound = "buttonPress";
+                SoundManager.updateSound = true;
+                
+                ActivateButton();
+            }
 
         // If a button is not found, set it back to normal
         } else {
@@ -83,7 +90,7 @@ public class MenuButton : MonoBehaviour
     }
 
     void ActivateButton() {
-        
+
         if (startButton) {
 
             // Take player to tutorial if they have not completed it yet

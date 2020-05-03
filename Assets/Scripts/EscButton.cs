@@ -28,7 +28,7 @@ public class EscButton : MonoBehaviour
     void Update()
     {
         // If game not paused, check highlight
-        if (!PauseMenu.isPaused && !FadeManager.fading && !ControlsMenu.isPaused) {
+        if (!PauseMenu.isPaused && !FadeManager.fading && !ControlsMenu.isPaused && !OptionsPopupExit.isPaused && !OptionsPopupReset.isPaused) {
             if (levelManager != null) {
                 
                 // Only if level select button
@@ -73,7 +73,14 @@ public class EscButton : MonoBehaviour
             spriteRenderer.sprite = escButtonHighlight;
 
             // If highlighted and mouse button down, activate button function
-            if (Input.GetMouseButtonDown(0)) ActivateButton();
+            if (Input.GetMouseButtonDown(0)) {
+                
+                // Play button press sound
+                SoundManager.currentSound = "buttonPress";
+                SoundManager.updateSound = true;
+
+                ActivateButton();
+            }
 
         // If a button is not found, set it back to normal
         } else {

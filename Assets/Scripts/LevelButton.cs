@@ -66,6 +66,11 @@ public class LevelButton : MonoBehaviour
 
     // Move the resultant object to the target location
     void ActivateButton() {
+
+        // Move target object to to target position
         buttonResult.transform.localPosition = resultLocation;
+
+        // Cancel velocity of target object
+        if (buttonResult.GetComponent<Rigidbody2D>() != null) buttonResult.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
     }
 }
