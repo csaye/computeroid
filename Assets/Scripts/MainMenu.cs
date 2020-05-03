@@ -7,46 +7,45 @@ public class MainMenu : MonoBehaviour
 
     public static bool fromMainMenu = true;
 
-    private bool fullResolution;
-
     void Start()
     {
+
         fromMainMenu = true;
 
-        PlayerPrefs.SetInt("Screenmanager Resolution Width", 1024);
-        PlayerPrefs.SetInt("Screenmanager Resolution Height", 576);
+        // Loads the current level unlocked
+        LevelManager.level = PlayerPrefs.GetFloat("LevelUnlocked", 0);
 
-        fullResolution = Screen.fullScreen;
+        // Loads the current level
+        LevelManager.currentLevel = PlayerPrefs.GetFloat("CurrentLevel", 0);
 
-        if (fullResolution) Screen.SetResolution(1024, 576, true);
-        if (!fullResolution) Screen.SetResolution(1024, 576, false);
+        // Loads whether the tutorial has been completed
+        if (PlayerPrefs.GetInt("TutorialComplete", 0) == 1) LevelManager.tutorialComplete = true;
     }
 
     void Update()
     {
-        UpdateResolution();
         if (!FadeManager.fading) CheckQuit();
-    }
-
-    void OnApplicationQuit() {
-
-        PlayerPrefs.SetInt("Screenmanager Resolution Width", 1024);
-        PlayerPrefs.SetInt("Screenmanager Resolution Height", 576);
-    }
-
-    void UpdateResolution() {
-        
-        if (!Screen.fullScreen && fullResolution) {
-            fullResolution = false;
-            Screen.SetResolution(1024, 576, false);
-        }
-
-        if (Screen.fullScreen) {
-            fullResolution = true;
-        }
+        DevCommands();
     }
 
     void CheckQuit() {
         if (Input.GetKeyDown("escape")) Application.Quit();
+    }
+
+    void DevCommands() {
+
+        // RESET
+        if (Input.GetKeyDown("p")) {
+            PlayerPrefs.DeleteAll();
+            SoundManager.volume = 0.5f;
+            MusicManager.volume = 0.5f;
+            PlayerPrefs.Save();
+        }
+
+        // DEBUG
+        if (Input.GetKeyDown("g")) {
+            Debug.Log("mouse position: " + Input.mousePosition);
+            Debug.Log("fixed mouse position: " + InputEx.mousePosition);
+        }
     }
 }

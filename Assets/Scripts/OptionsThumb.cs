@@ -52,7 +52,7 @@ public class OptionsThumb : MonoBehaviour
         isSlider = false;
 
         // For each hit overlapped with the mouse position
-        foreach (RaycastHit2D rayHit in (Physics2D.GetRayIntersectionAll(Camera.main.ScreenPointToRay(Input.mousePosition)))) {
+        foreach (RaycastHit2D rayHit in (Physics2D.GetRayIntersectionAll(Camera.main.ScreenPointToRay(InputEx.mousePosition)))) {
 
             // If found collider, check for thumb
             if (rayHit.collider != null) {
@@ -76,7 +76,7 @@ public class OptionsThumb : MonoBehaviour
         // If thumb is found, activate thumb
         if (isThumb) {
             float thumbX = transform.position.x;
-            float mouseX = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 7.8f)).x;
+            float mouseX = Camera.main.ScreenToWorldPoint(new Vector3(InputEx.mousePosition.x, InputEx.mousePosition.y, 7.8f)).x;
 
             // Offset slider based on original mouse click
             xOffset = thumbX - mouseX;
@@ -100,7 +100,7 @@ public class OptionsThumb : MonoBehaviour
         if (!Input.GetMouseButton(0)) activated = false;
 
         // Get the x position of the mouse
-        float mouseX = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, (Camera.main.transform.position.z * -1))).x;
+        float mouseX = Camera.main.ScreenToWorldPoint(new Vector3(InputEx.mousePosition.x, InputEx.mousePosition.y, (Camera.main.transform.position.z * -1))).x;
 
         // Adjust for offset
         mouseX = mouseX + xOffset;

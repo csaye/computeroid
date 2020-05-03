@@ -8,7 +8,7 @@ public class MusicManager : MonoBehaviour
 
     static GameObject instance;
 
-    public static bool updateMusic = false;
+    public static bool updateMusic = false, stopMusic = false;
 
     public static float volume = 0.5f;
 
@@ -25,6 +25,7 @@ public class MusicManager : MonoBehaviour
 
         // If music manager instance not created, set instance to music manager
         } else {
+            volume = PlayerPrefs.GetFloat("MusicVolume", 0.5f);
             instance = gameObject;
             audioSource = GetComponent<AudioSource>();
             UpdateMusic();
@@ -39,11 +40,21 @@ public class MusicManager : MonoBehaviour
             UpdateMusic();
         }
 
+        if (stopMusic) {
+            stopMusic = false;
+            StopMusic();
+        }
+
         UpdateVolume();
+    }
+
+    void StopMusic() {
+        audioSource.Stop();
     }
 
     void UpdateVolume() {
         audioSource.volume = volume;
+        PlayerPrefs.SetFloat("MusicVolume", volume);
     }
 
     void UpdateMusic() {

@@ -39,10 +39,8 @@ public class PaintBucket : MonoBehaviour
 
     void Update()
     {
-        if (!PauseMenu.isPaused && !FadeManager.fading) {
-            CheckClick();
-            UpdatePaintLevel();
-        }
+        UpdatePaintLevel();
+        if (!PauseMenu.isPaused && !FadeManager.fading) CheckClick();
     }
 
     // Check if paint bucket is clicked and player is clean, and if so, transfer color to player

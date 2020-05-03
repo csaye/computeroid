@@ -47,8 +47,8 @@ public class LevelSelector : MonoBehaviour
     {
         if (!levelManagerScript.levelSelected && !FadeManager.fading) {
             UpdatePosition();
-            UpdateColor();
         }
+        UpdateColor();
     }
 
     // Updates the position of the level selector based on player input and levels unlocked

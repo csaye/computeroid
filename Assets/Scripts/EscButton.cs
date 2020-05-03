@@ -54,7 +54,7 @@ public class EscButton : MonoBehaviour
         isButton = false;
 
         // For each hit overlapped with the mouse position
-        foreach (RaycastHit2D rayHit in (Physics2D.GetRayIntersectionAll(Camera.main.ScreenPointToRay(Input.mousePosition)))) {
+        foreach (RaycastHit2D rayHit in (Physics2D.GetRayIntersectionAll(Camera.main.ScreenPointToRay(InputEx.mousePosition)))) {
 
             // If found collider, check for button
             if (rayHit.collider != null) {
@@ -72,7 +72,7 @@ public class EscButton : MonoBehaviour
         if (isButton) {
             spriteRenderer.sprite = escButtonHighlight;
 
-            // If highlighted and mouse button down activate button function
+            // If highlighted and mouse button down, activate button function
             if (Input.GetMouseButtonDown(0)) ActivateButton();
 
         // If a button is not found, set it back to normal

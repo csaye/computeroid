@@ -46,7 +46,7 @@ public class PowerButton : MonoBehaviour
         isButton = false;
 
         // For each hit overlapped with the mouse position
-        foreach (RaycastHit2D rayHit in (Physics2D.GetRayIntersectionAll(Camera.main.ScreenPointToRay(Input.mousePosition)))) {
+        foreach (RaycastHit2D rayHit in (Physics2D.GetRayIntersectionAll(Camera.main.ScreenPointToRay(InputEx.mousePosition)))) {
 
             // If found collider, check for button
             if (rayHit.collider != null) {
@@ -77,6 +77,7 @@ public class PowerButton : MonoBehaviour
     void ActivateButton() {
 
         // Activate end game sequence
+        MusicManager.stopMusic = true;
         levelControllerScript.levelComplete = true;
     }
 }

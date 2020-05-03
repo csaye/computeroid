@@ -26,6 +26,7 @@ public class SoundManager : MonoBehaviour
 
         // If sound manager instance not created, set instance to sound manager
         } else {
+            volume = PlayerPrefs.GetFloat("SoundVolume", 0.5f);
             instance = gameObject;
             audioSource = GetComponent<AudioSource>();
             UpdateSound();
@@ -45,6 +46,7 @@ public class SoundManager : MonoBehaviour
 
     void UpdateVolume() {
         audioSource.volume = volume;
+        PlayerPrefs.SetFloat("SoundVolume", volume);
     }
 
     void UpdateSound() {

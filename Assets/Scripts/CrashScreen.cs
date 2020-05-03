@@ -7,15 +7,9 @@ public class CrashScreen : MonoBehaviour
 
     public float currentLevel;
 
-    public GameObject background;
-
-    public Sprite monitorFinalOff;
-
-    private SpriteRenderer backgroundSpriteRenderer;
-
     void Start()
     {
-        if (background != null) backgroundSpriteRenderer = background.GetComponent<SpriteRenderer>();
+
     }
 
     void Update()
@@ -41,9 +35,4 @@ public class CrashScreen : MonoBehaviour
         FadeManager.fading = true;
     }
 
-    void MonitorOff() {
-
-        // Turns the monitor off after the fade sequence
-        backgroundSpriteRenderer.sprite = monitorFinalOff;
-    }
 }

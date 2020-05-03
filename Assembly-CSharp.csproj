@@ -45,6 +45,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\ResolutionManager.cs" />
      <Compile Include="Assets\Scripts\BackgroundTile.cs" />
      <Compile Include="Assets\Scripts\BarrierEmitter.cs" />
      <Compile Include="Assets\Scripts\Charge.cs" />
@@ -55,6 +56,7 @@
      <Compile Include="Assets\Scripts\FadeManager.cs" />
      <Compile Include="Assets\Scripts\FolderSelect.cs" />
      <Compile Include="Assets\Scripts\HelpMenu.cs" />
+     <Compile Include="Assets\Scripts\InputEx.cs" />
      <Compile Include="Assets\Scripts\LaserEmitter.cs" />
      <Compile Include="Assets\Scripts\LaserReceiver.cs" />
      <Compile Include="Assets\Scripts\LetterControllerLevel2.cs" />
