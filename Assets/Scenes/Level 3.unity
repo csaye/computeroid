@@ -288,8 +288,8 @@ GameObject:
   - component: {fileID: 49160778}
   - component: {fileID: 49160777}
   - component: {fileID: 49160776}
-  - component: {fileID: 49160775}
   - component: {fileID: 49160779}
+  - component: {fileID: 49160775}
   m_Layer: 0
   m_Name: Mirror Box
   m_TagString: MirrorBox
@@ -297,8 +297,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &49160775
-BoxCollider2D:
+--- !u!60 &49160775
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -320,9 +320,16 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.98, y: 0.98}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.38, y: 0.48}
+      - {x: -0.38, y: 0.48}
+      - {x: -0.48, y: 0.38}
+      - {x: -0.48, y: -0.38}
+      - {x: -0.38, y: -0.48}
+      - {x: 0.38, y: -0.48}
+      - {x: 0.48, y: -0.38}
+      - {x: 0.48, y: 0.38}
 --- !u!50 &49160776
 Rigidbody2D:
   serializedVersion: 4
@@ -1945,8 +1952,8 @@ GameObject:
   - component: {fileID: 330332987}
   - component: {fileID: 330332986}
   - component: {fileID: 330332989}
-  - component: {fileID: 330332988}
   - component: {fileID: 330332990}
+  - component: {fileID: 330332988}
   m_Layer: 0
   m_Name: Mirror Box
   m_TagString: MirrorBox
@@ -2018,8 +2025,8 @@ Transform:
   m_Father: {fileID: 882446610}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &330332988
-BoxCollider2D:
+--- !u!60 &330332988
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2041,9 +2048,16 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.98, y: 0.98}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.38, y: 0.48}
+      - {x: -0.38, y: 0.48}
+      - {x: -0.48, y: 0.38}
+      - {x: -0.48, y: -0.38}
+      - {x: -0.38, y: -0.48}
+      - {x: 0.38, y: -0.48}
+      - {x: 0.48, y: -0.38}
+      - {x: 0.48, y: 0.38}
 --- !u!50 &330332989
 Rigidbody2D:
   serializedVersion: 4
@@ -6196,10 +6210,10 @@ GameObject:
   m_Component:
   - component: {fileID: 713783331}
   - component: {fileID: 713783334}
-  - component: {fileID: 713783333}
   - component: {fileID: 713783332}
   - component: {fileID: 713783335}
   - component: {fileID: 713783336}
+  - component: {fileID: 713783333}
   m_Layer: 0
   m_Name: '-'
   m_TagString: Untagged
@@ -6242,8 +6256,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &713783333
-BoxCollider2D:
+--- !u!60 &713783333
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -6265,9 +6279,16 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.875, y: 0.875}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.3375, y: 0.4375}
+      - {x: -0.4375, y: 0.3375}
+      - {x: -0.4375, y: -0.3375}
+      - {x: -0.3375, y: -0.4375}
+      - {x: 0.3375, y: -0.4375}
+      - {x: 0.4375, y: -0.3375}
+      - {x: 0.4375, y: 0.3375}
+      - {x: 0.3375, y: 0.4375}
 --- !u!212 &713783334
 SpriteRenderer:
   m_ObjectHideFlags: 0

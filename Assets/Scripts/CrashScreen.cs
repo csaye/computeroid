@@ -28,8 +28,8 @@ public class CrashScreen : MonoBehaviour
 
     void GoCredits() {
 
-        // If the current level is one not previously completed, increment level value
-        if (currentLevel >= LevelManager.level) LevelManager.level = currentLevel + 1;
+        // Signify all level completion (in credits)
+        LevelManager.level = 13;
         
         FadeManager.nextScene = "Credits";
         FadeManager.fading = true;

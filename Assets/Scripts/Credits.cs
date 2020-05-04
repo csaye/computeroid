@@ -7,6 +7,7 @@ public class Credits : MonoBehaviour
 
     void Start()
     {
+        LevelController.levelComplete = false;
         MusicManager.updateMusic = true;
     }
 

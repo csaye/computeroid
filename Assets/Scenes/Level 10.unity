@@ -1000,10 +1000,10 @@ GameObject:
   m_Component:
   - component: {fileID: 90256466}
   - component: {fileID: 90256465}
-  - component: {fileID: 90256468}
   - component: {fileID: 90256467}
   - component: {fileID: 90256469}
   - component: {fileID: 90256470}
+  - component: {fileID: 90256468}
   m_Layer: 0
   m_Name: Pi
   m_TagString: Untagged
@@ -1096,8 +1096,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &90256468
-BoxCollider2D:
+--- !u!60 &90256468
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1119,9 +1119,16 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.875, y: 0.875}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.3375, y: 0.4375}
+      - {x: -0.4375, y: 0.3375}
+      - {x: -0.4375, y: -0.3375}
+      - {x: -0.3375, y: -0.4375}
+      - {x: 0.3375, y: -0.4375}
+      - {x: 0.4375, y: -0.3375}
+      - {x: 0.4375, y: 0.3375}
+      - {x: 0.3375, y: 0.4375}
 --- !u!114 &90256469
 MonoBehaviour:
   m_ObjectHideFlags: 0

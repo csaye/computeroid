@@ -120,12 +120,12 @@ public class MusicManager : MonoBehaviour
         }
 
         if (SceneManager.GetActiveScene().name == "Level 9") {
-            audioSource.clip = middle;
+            audioSource.clip = later;
             audioSource.Play();
         }
 
         if (SceneManager.GetActiveScene().name == "Level 10") {
-            audioSource.clip = middle;
+            audioSource.clip = later;
             audioSource.Play();
         }
 

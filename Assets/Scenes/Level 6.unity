@@ -1650,10 +1650,10 @@ GameObject:
   m_Component:
   - component: {fileID: 185436369}
   - component: {fileID: 185436368}
-  - component: {fileID: 185436371}
   - component: {fileID: 185436370}
   - component: {fileID: 185436372}
   - component: {fileID: 185436373}
+  - component: {fileID: 185436371}
   m_Layer: 0
   m_Name: Pushable Box
   m_TagString: Untagged
@@ -1746,8 +1746,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &185436371
-BoxCollider2D:
+--- !u!60 &185436371
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1769,9 +1769,16 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.98, y: 0.98}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.38, y: 0.48}
+      - {x: -0.38, y: 0.48}
+      - {x: -0.48, y: 0.38}
+      - {x: -0.48, y: -0.38}
+      - {x: -0.38, y: -0.48}
+      - {x: 0.38, y: -0.48}
+      - {x: 0.48, y: -0.38}
+      - {x: 0.48, y: 0.38}
 --- !u!114 &185436372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5900,10 +5907,10 @@ GameObject:
   m_Component:
   - component: {fileID: 550420229}
   - component: {fileID: 550420228}
-  - component: {fileID: 550420231}
   - component: {fileID: 550420230}
   - component: {fileID: 550420232}
   - component: {fileID: 550420233}
+  - component: {fileID: 550420231}
   m_Layer: 0
   m_Name: Pushable Box
   m_TagString: Untagged
@@ -5996,8 +6003,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &550420231
-BoxCollider2D:
+--- !u!60 &550420231
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -6019,9 +6026,16 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.98, y: 0.98}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.38, y: 0.48}
+      - {x: -0.38, y: 0.48}
+      - {x: -0.48, y: 0.38}
+      - {x: -0.48, y: -0.38}
+      - {x: -0.38, y: -0.48}
+      - {x: 0.38, y: -0.48}
+      - {x: 0.48, y: -0.38}
+      - {x: 0.48, y: 0.38}
 --- !u!114 &550420232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8381,10 +8395,10 @@ GameObject:
   m_Component:
   - component: {fileID: 793115284}
   - component: {fileID: 793115283}
-  - component: {fileID: 793115286}
   - component: {fileID: 793115285}
   - component: {fileID: 793115287}
   - component: {fileID: 793115288}
+  - component: {fileID: 793115286}
   m_Layer: 0
   m_Name: Pushable Box
   m_TagString: Untagged
@@ -8477,8 +8491,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &793115286
-BoxCollider2D:
+--- !u!60 &793115286
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -8500,9 +8514,16 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.98, y: 0.95}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.38, y: 0.48}
+      - {x: -0.38, y: 0.48}
+      - {x: -0.48, y: 0.38}
+      - {x: -0.48, y: -0.38}
+      - {x: -0.38, y: -0.48}
+      - {x: 0.38, y: -0.48}
+      - {x: 0.48, y: -0.38}
+      - {x: 0.48, y: 0.38}
 --- !u!114 &793115287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14748,7 +14769,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.98, y: 0.98}
+  m_Size: {x: 0.96, y: 0.96}
   m_EdgeRadius: 0
 --- !u!60 &1462161876
 PolygonCollider2D:
@@ -18232,10 +18253,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1893482749}
   - component: {fileID: 1893482748}
-  - component: {fileID: 1893482751}
   - component: {fileID: 1893482750}
   - component: {fileID: 1893482752}
   - component: {fileID: 1893482753}
+  - component: {fileID: 1893482751}
   m_Layer: 0
   m_Name: Pushable Box
   m_TagString: Untagged
@@ -18328,8 +18349,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &1893482751
-BoxCollider2D:
+--- !u!60 &1893482751
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -18351,9 +18372,16 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.98, y: 0.98}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.38, y: 0.48}
+      - {x: -0.38, y: 0.48}
+      - {x: -0.48, y: 0.38}
+      - {x: -0.48, y: -0.38}
+      - {x: -0.38, y: -0.48}
+      - {x: 0.38, y: -0.48}
+      - {x: 0.48, y: -0.38}
+      - {x: 0.48, y: 0.38}
 --- !u!114 &1893482752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18961,10 +18989,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1998441750}
   - component: {fileID: 1998441749}
-  - component: {fileID: 1998441752}
   - component: {fileID: 1998441751}
   - component: {fileID: 1998441753}
   - component: {fileID: 1998441754}
+  - component: {fileID: 1998441752}
   m_Layer: 0
   m_Name: Pushable Box
   m_TagString: Untagged
@@ -19057,8 +19085,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &1998441752
-BoxCollider2D:
+--- !u!60 &1998441752
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -19080,9 +19108,16 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.98, y: 0.98}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.38, y: 0.48}
+      - {x: -0.38, y: 0.48}
+      - {x: -0.48, y: 0.38}
+      - {x: -0.48, y: -0.38}
+      - {x: -0.38, y: -0.48}
+      - {x: 0.38, y: -0.48}
+      - {x: 0.48, y: -0.38}
+      - {x: 0.48, y: 0.38}
 --- !u!114 &1998441753
 MonoBehaviour:
   m_ObjectHideFlags: 0
