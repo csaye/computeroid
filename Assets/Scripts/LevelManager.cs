@@ -13,11 +13,6 @@ public class LevelManager : MonoBehaviour
 
     void Start()
     {
-        
-    }
-
-    void Update()
-    {
         // Saves the current level unlocked
         PlayerPrefs.SetFloat("LevelUnlocked", level);
 
@@ -25,5 +20,10 @@ public class LevelManager : MonoBehaviour
         PlayerPrefs.SetFloat("CurrentLevel", currentLevel);
 
         if (tutorialComplete) PlayerPrefs.SetInt("TutorialComplete", 1);
+    }
+
+    void Update()
+    {
+
     }
 }

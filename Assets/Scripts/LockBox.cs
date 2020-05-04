@@ -54,6 +54,10 @@ public class LockBox : MonoBehaviour
     void Unlock() {
         animator.SetBool("Unlocked", true);
         playerSpriteRenderer.color = white;
+    }
+
+    // Turns off the box collider of the lock box — called after opening animation
+    void ColliderOff() {
         boxCollider.enabled = false;
     }
 }

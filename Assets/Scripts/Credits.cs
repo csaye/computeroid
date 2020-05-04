@@ -9,6 +9,12 @@ public class Credits : MonoBehaviour
     {
         LevelController.levelComplete = false;
         MusicManager.updateMusic = true;
+
+        // Saves the current level unlocked
+        PlayerPrefs.SetFloat("LevelUnlocked", LevelManager.level);
+
+        // Saves the current level
+        PlayerPrefs.SetFloat("CurrentLevel", LevelManager.currentLevel);
     }
 
     void Update()

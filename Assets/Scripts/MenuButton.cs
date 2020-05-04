@@ -136,12 +136,16 @@ public class MenuButton : MonoBehaviour
         } else if (optionsCheckReset) {
 
             PlayerPrefs.DeleteKey("LevelUnlocked");
+            LevelManager.level = 0;
             PlayerPrefs.DeleteKey("CurrentLevel");
+            LevelManager.currentLevel = 0;
             PlayerPrefs.DeleteKey("TutorialComplete");
+            LevelManager.tutorialComplete = false;
             PlayerPrefs.DeleteKey("MusicVolume");
+            MusicManager.volume = 0.5f;
             PlayerPrefs.DeleteKey("SoundVolume");
             SoundManager.volume = 0.5f;
-            MusicManager.volume = 0.5f;
+            
             PlayerPrefs.Save();
             OptionsPopupReset.isPaused = false;
 
