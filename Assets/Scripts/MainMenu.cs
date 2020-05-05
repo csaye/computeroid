@@ -12,6 +12,9 @@ public class MainMenu : MonoBehaviour
 
         fromMainMenu = true;
 
+        // Reset the level complete status
+        LevelController.levelComplete = false;
+
         // Loads the current level unlocked
         LevelManager.level = PlayerPrefs.GetFloat("LevelUnlocked", 0);
 
@@ -19,7 +22,11 @@ public class MainMenu : MonoBehaviour
         LevelManager.currentLevel = PlayerPrefs.GetFloat("CurrentLevel", 0);
 
         // Loads whether the tutorial has been completed
-        if (PlayerPrefs.GetInt("TutorialComplete", 0) == 1) LevelManager.tutorialComplete = true;
+        if (PlayerPrefs.GetInt("TutorialComplete", 0) == 0) {
+            LevelManager.tutorialComplete = false;
+        } else {
+            LevelManager.tutorialComplete = true;
+        }
     }
 
     void Update()

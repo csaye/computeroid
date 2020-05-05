@@ -78,6 +78,7 @@
      <Compile Include="Assets\Scripts\PaintBucket.cs" />
      <Compile Include="Assets\Scripts\PaintCleaner.cs" />
      <Compile Include="Assets\Scripts\Paper.cs" />
+     <Compile Include="Assets\Scripts\PauseFilterManager.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\PowerBox.cs" />

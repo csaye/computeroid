@@ -15,6 +15,10 @@ public class LetterControllerTutorial : MonoBehaviour
 
     void Start()
     {
+        // Reset corruption level
+        corrupt = false;
+        corruptLevel = 0;
+
         startY = transform.position.y;
     }
 

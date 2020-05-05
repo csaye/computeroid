@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -9,10 +10,27 @@ public class PauseMenu : MonoBehaviour
 
     public static bool isPaused = false;
     public static bool helpMenuActive = false;
+    public static bool iButtonPressed = false;
+    
+    // Pause the level initially in level 1 in order to introduce it to the player
+    public static bool initiallyPaused = false;
 
     void Start()
     {
 
+        // Update whether the pause menu has been triggered yet
+        if (PlayerPrefs.GetFloat("InitiallyPaused", 0) == 0) {
+            initiallyPaused = false;
+        } else {
+            initiallyPaused = true;
+        }
+
+        // Update whether the help menu has been triggered yet
+        if (PlayerPrefs.GetFloat("IButtonPressed", 0) == 0) {
+            iButtonPressed = false;
+        } else {
+            iButtonPressed = true;
+        }
     }
 
     void Update()
@@ -20,7 +38,9 @@ public class PauseMenu : MonoBehaviour
 
         // If level not completed, check for pause
         if (!LevelController.levelComplete && !FadeManager.fading) CheckPause();
-        
+
+        if (!initiallyPaused && SceneManager.GetActiveScene().name == ("Level 1")) InitialPause();
+
         if (LevelController.levelComplete) {
             isPaused = false;
             DeactivatePauseMenu();
@@ -29,6 +49,13 @@ public class PauseMenu : MonoBehaviour
         if (!isPaused) DeactivatePauseMenu();
         if (isPaused && !LevelController.levelComplete) ActivatePauseMenu();
         if (!LevelController.levelComplete) UpdateHelpMenu();
+    }
+
+    // Pause the level initially in level 1 in order to introduce it to the player
+    void InitialPause() {
+        PlayerPrefs.SetFloat("InitiallyPaused", 1);
+        initiallyPaused = true;
+        isPaused = true;
     }
 
     void CheckPause() {

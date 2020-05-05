@@ -119,6 +119,8 @@ public class MenuButton : MonoBehaviour
             FadeManager.fading = true;
 
         } else if (iButton) {
+            PauseMenu.iButtonPressed = true;
+            PlayerPrefs.SetFloat("IButtonPressed", 1);
             PauseMenu.helpMenuActive = !PauseMenu.helpMenuActive;
 
         } else if (optionsX) {
@@ -145,6 +147,10 @@ public class MenuButton : MonoBehaviour
             MusicManager.volume = 0.5f;
             PlayerPrefs.DeleteKey("SoundVolume");
             SoundManager.volume = 0.5f;
+            PlayerPrefs.DeleteKey("InitiallyPaused");
+            PauseMenu.initiallyPaused = false;
+            PlayerPrefs.DeleteKey("IButtonPressed");
+            PauseMenu.iButtonPressed = false;
             
             PlayerPrefs.Save();
             OptionsPopupReset.isPaused = false;

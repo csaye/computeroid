@@ -27,6 +27,9 @@ public class LaserEmitter : MonoBehaviour
 
     private Charge chargeScript;
 
+    // Whether the next laser spot has already been checked
+    private bool spotChecked = false;
+
     // Whether the laser will continue and whether the current laser is the first or second
     private bool willContinue = true, isFirstLaser = true, isSecondLaser = true;
 
@@ -137,8 +140,15 @@ public class LaserEmitter : MonoBehaviour
 
         // If the collider hits something, continuation will be based off of whether it is a reflective object
         if (willContinue && !isFirstLaser) {
+
+            // Whether the next laser spot has already been checked
+            spotChecked = false;
+
             foreach (Collider2D collider in (Physics2D.OverlapBoxAll(center, size, 0))) {
-                if (!collider.isTrigger) willContinue = prepReflect();
+                if (!collider.isTrigger && !spotChecked) {
+                    spotChecked = true;
+                    willContinue = prepReflect();
+                }
             }
         }
     }
@@ -176,7 +186,7 @@ public class LaserEmitter : MonoBehaviour
         if (Mathf.Abs(laser.transform.position.x - collider.gameObject.transform.position.x) > Mathf.Abs(laser.transform.position.y - collider.gameObject.transform.position.y)) {
             currentX = currentX + xChange;
             center = new Vector2(currentX, currentY);
-            
+
             if (xDirection == "bottomRight") bottomRight = true;
             if (xDirection == "bottomLeft") bottomLeft = true;
             if (xDirection == "topLeft") topLeft = true;
