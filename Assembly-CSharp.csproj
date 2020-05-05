@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\ControlsMenu.cs" />
      <Compile Include="Assets\Scripts\CrashScreen.cs" />
      <Compile Include="Assets\Scripts\Credits.cs" />
+     <Compile Include="Assets\Scripts\CursorManager.cs" />
      <Compile Include="Assets\Scripts\EscButton.cs" />
      <Compile Include="Assets\Scripts\FadeManager.cs" />
      <Compile Include="Assets\Scripts\FolderSelect.cs" />

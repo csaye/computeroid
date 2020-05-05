@@ -70,6 +70,11 @@ public class MenuButton : MonoBehaviour
 
         // If a button is found, highlight the button
         if (isButton) {
+
+            // Set cursor to hovering because over button
+            CursorManager.hovering = true;
+
+            // Set sprite to highlighted button
             spriteRenderer.sprite = buttonHighlight;
 
             // If highlighted and mouse button down activate button function

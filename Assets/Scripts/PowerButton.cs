@@ -56,6 +56,11 @@ public class PowerButton : MonoBehaviour
 
         // If a button is found, highlight the button
         if (isButton) {
+
+            // Set cursor to hovering because over button
+            CursorManager.hovering = true;
+
+            // Set sprite to highlighted button
             spriteRenderer.sprite = powerButtonHighlight;
 
             // If highlighted, mouse button down, and within player range, activate button function
