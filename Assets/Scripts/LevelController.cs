@@ -10,10 +10,10 @@ public class LevelController : MonoBehaviour
 
     public Animator animator;
 
-    private bool fullResolution;
-
     void Start()
     {
+        LevelManager.levelSelected = false;
+
         MusicManager.updateMusic = true;
         MainMenu.fromMainMenu = false;
     }

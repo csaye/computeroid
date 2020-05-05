@@ -54,6 +54,10 @@ public class LevelButton : MonoBehaviour
         
         // If button hit by raycast, highlight button
         if (rayHit.collider != null && transform.position == rayHit.collider.gameObject.transform.position) {
+            
+            // Set cursor to hovering because over button
+            CursorManager.hovering = true;
+
             spriteRenderer.sprite = buttonHighlight;
 
             // If highlighted, mouse button down, and within player range, activate button function

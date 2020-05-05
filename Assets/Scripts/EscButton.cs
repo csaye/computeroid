@@ -32,7 +32,7 @@ public class EscButton : MonoBehaviour
             if (levelManager != null) {
                 
                 // Only if level select button
-                if (!levelManagerScript.levelSelected) {
+                if (!LevelManager.levelSelected) {
                     CheckHighlight();
                 } else {
                     spriteRenderer.sprite = escButtonNormal;

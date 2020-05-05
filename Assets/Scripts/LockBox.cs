@@ -37,15 +37,20 @@ public class LockBox : MonoBehaviour
 
     void CheckUnlock() {
         
-        // If the player clicks, is colored yellow, and within range of the lockbox
-        if (Input.GetMouseButtonDown(0) && playerSpriteRenderer.color == yellow && Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) {
+        // If the player is colored yellow
+        if (playerSpriteRenderer.color == yellow) {
 
             // Raycast to mouse position
             RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(InputEx.mousePosition));
             
             // If lock box hit by raycast, unlock lock
             if (rayHit.collider != null && transform.position == rayHit.collider.gameObject.transform.position) {
-                Unlock();
+                
+                // Set cursor to hovering over lock box
+                CursorManager.hovering = true;
+
+                // If left mouse button clicked and player within range, unlock lock
+                if (Input.GetMouseButtonDown(0) && Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) Unlock();
             }
         }
     }

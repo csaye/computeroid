@@ -22,8 +22,8 @@ public class FolderSelect : MonoBehaviour
     void Update()
     {
 
-        // If left mouse button clicked, check for folder
-        if (Input.GetMouseButtonDown(0) && !FadeManager.fading) CheckFolder();
+        // If not fading or level already selected, check for folder
+        if (!FadeManager.fading && !LevelManager.levelSelected) CheckFolder();
     }
 
     // Checks if the mouse is over the folder
@@ -48,7 +48,14 @@ public class FolderSelect : MonoBehaviour
         }
 
         // If a foler is found, check and move the selector
-        if (isFolder) MoveSelector();
+        if (isFolder) {
+
+            // Set cursor to hovering if folder unlocked
+            if (folderNumber <= LevelManager.level) CursorManager.hovering = true;
+
+            // If left mouse button pressed while over folder
+            if (Input.GetMouseButtonDown(0)) MoveSelector();
+        }
         
     }
 
@@ -56,6 +63,13 @@ public class FolderSelect : MonoBehaviour
     void MoveSelector() {
 
         // If folder unlocked, set level selector position to folder position
-        if (folderNumber <= LevelManager.level) levelSelectorScript.currentPos = folderNumber;
+        if (folderNumber <= LevelManager.level) {
+            
+            // Play button press sound
+            SoundManager.currentSound = "buttonPress";
+            SoundManager.updateSound = true;
+
+            levelSelectorScript.currentPos = folderNumber;
+        }
     }
 }

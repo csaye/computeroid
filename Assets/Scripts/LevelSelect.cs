@@ -5,13 +5,9 @@ using UnityEngine;
 public class LevelSelect : MonoBehaviour
 {
 
-    public GameObject levelManager;
-
     public Sprite levelSelect1, levelSelect2, levelSelect3, levelSelect4, levelSelect5, levelSelect6, levelSelect7, levelSelect8, levelSelect9, levelSelect10, levelSelect11, levelSelect12, levelSelectComplete;
 
     private SpriteRenderer spriteRenderer;
-
-    private LevelManager levelManagerScript;
 
     void Start()
     {
@@ -21,15 +17,13 @@ public class LevelSelect : MonoBehaviour
 
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        levelManagerScript = levelManager.GetComponent<LevelManager>();
-
         if (!MainMenu.fromMainMenu) MusicManager.updateMusic = true;
     }
 
     void Update()
     {
         UpdateBackground();
-        if (!levelManagerScript.levelSelected && !FadeManager.fading) CheckMainMenu();
+        if (!LevelManager.levelSelected && !FadeManager.fading) CheckMainMenu();
     }
 
     // Updates the level select screen based on the current level unlocked

@@ -34,21 +34,22 @@ public class PaintCleaner : MonoBehaviour
     // Cleans the player of any paint they might have
     void CheckClean() {
 
-        // If player left clicks, is not colored white, and within interaction distance, change player to white
-        if (Input.GetMouseButtonDown(0)) {
-            if (playerSpriteRenderer.color != white && Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) {
+        // If player is not colored white
+        if (playerSpriteRenderer.color != white) {
 
-                // Raycast to mouse position
-                RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(InputEx.mousePosition));
-        
-                // If paint cleaner hit by raycast, change player color to white
-                if (rayHit.collider != null && transform.position == rayHit.collider.gameObject.transform.position) {
-                    
-                    // Set player color to white
-                    playerSpriteRenderer.color = white;
-                }
+            // Raycast to mouse position
+            RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(InputEx.mousePosition));
+    
+            // If paint cleaner hit by raycast, change player color to white
+            if (rayHit.collider != null && transform.position == rayHit.collider.gameObject.transform.position) {
+                
+                // Set cursor to hovering because over button
+                CursorManager.hovering = true;
+
+                // If left mouse button clicked and player within range, set player color to white
+                if (Input.GetMouseButtonDown(0) && Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) playerSpriteRenderer.color = white;
             }
-
         }
+
     }
 }

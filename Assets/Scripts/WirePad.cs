@@ -47,20 +47,23 @@ public class WirePad : MonoBehaviour
     // Places the wire if there is no obstruction in place
     void CheckWire() {
 
-        // If left mouse button pressed
-        if (Input.GetMouseButtonDown(0)) {
+        // If player is colored orange
+        if (playerSpriteRenderer.color == orange) {
+            
+            // Raycast to mouse position
+            RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(InputEx.mousePosition));
 
-            // If player is colored orange and within range of the wire pad
-            if (playerSpriteRenderer.color == orange && Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) {
-                
-                // Raycast to mouse position
-                RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(InputEx.mousePosition));
+            // If hit collider in the position of the wire pad
+            if (rayHit.collider != null && transform.position == rayHit.collider.gameObject.transform.position) {
 
-                // If hit collider in the position of the wire pad
-                if (rayHit.collider != null && transform.position == rayHit.collider.gameObject.transform.position) {
+                // If a wire pad not obstructed
+                if (!Obstructed()) {
 
-                    // If a wire is not already in the location of the wire pad, place a wire
-                    if (!Obstructed()) PlaceWire();
+                    // Set cursor to hovering because over wire pad
+                    CursorManager.hovering = true;
+                    
+                    // If left mouse button pressed and player within range of the wire pad, place wire
+                    if (Input.GetMouseButtonDown(0) && Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) PlaceWire();
                 }
             }
         }

@@ -39,21 +39,24 @@ public class TeleportPad : MonoBehaviour
     }
 
     void CheckTeleport() {
-
-        // If left mouse button pressed
-        if (Input.GetMouseButtonDown(0)) {
             
-            // If player is colored purple
-            if (playerSpriteRenderer.color == purple) {
+        // If player is colored purple
+        if (playerSpriteRenderer.color == purple) {
 
-                // Raycast to mouse position
-                RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(InputEx.mousePosition));
+            // Raycast to mouse position
+            RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(InputEx.mousePosition));
 
-                // If hit collider in the position of the teleport pad, teleport
-                if (rayHit.collider != null && transform.position == rayHit.collider.gameObject.transform.position) {
+            // If hit collider in the position of the teleport pad, teleport
+            if (rayHit.collider != null && transform.position == rayHit.collider.gameObject.transform.position) {
+                
+                // If teleport pad not obstructed
+                if (!Obstructed()) {
                     
-                    // If teleport pad not obstructed, teleport
-                    if (!Obstructed()) Teleport();
+                    // Set cursor to hovering because over teleport pad
+                    CursorManager.hovering = true;
+
+                    // If left mouse button pressed, teleport
+                    if (Input.GetMouseButtonDown(0)) Teleport();
                 }
             }
         }

@@ -11,8 +11,6 @@ public class LevelSelector : MonoBehaviour
 
     public float currentPos = 1;
 
-    private LevelManager levelManagerScript;
-
     private SpriteRenderer spriteRenderer;
 
     private Color black = new Color(0, 0, 0, 1);
@@ -24,8 +22,6 @@ public class LevelSelector : MonoBehaviour
 
     void Start()
     {
-        levelManagerScript = levelManager.GetComponent<LevelManager>();
-
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         // Set level selector position to the last level played
@@ -45,7 +41,7 @@ public class LevelSelector : MonoBehaviour
 
     void Update()
     {
-        if (!levelManagerScript.levelSelected) UpdatePosition();
+        if (!LevelManager.levelSelected) UpdatePosition();
         UpdateColor();
     }
 
@@ -58,8 +54,9 @@ public class LevelSelector : MonoBehaviour
             // If not fading, process player input
             if (!FadeManager.fading) {
                 if (Input.GetKeyDown("return") || overFolder(currentPos)) {
+                    if (overFolder(currentPos)) PlayButtonPress();
                     LevelManager.currentLevel = 1;
-                    levelManagerScript.levelSelected = true;
+                    LevelManager.levelSelected = true;
                     animator.SetBool("LevelSelected", true);
                 }
                 if ((Input.GetKeyDown("d") || Input.GetKeyDown("right")) && LevelManager.level >= 2) {
@@ -75,8 +72,9 @@ public class LevelSelector : MonoBehaviour
             // If not fading, process player input
             if (!FadeManager.fading) {
                 if (Input.GetKeyDown("return") || overFolder(currentPos)) {
+                    if (overFolder(currentPos)) PlayButtonPress();
                     LevelManager.currentLevel = 2;
-                    levelManagerScript.levelSelected = true;
+                    LevelManager.levelSelected = true;
                     animator.SetBool("LevelSelected", true);
                 }
                 if ((Input.GetKeyDown("d") || Input.GetKeyDown("right")) && LevelManager.level >= 3) {
@@ -93,8 +91,9 @@ public class LevelSelector : MonoBehaviour
             // If not fading, process player input
             if (!FadeManager.fading) {
                 if (Input.GetKeyDown("return") || overFolder(currentPos)) {
+                    if (overFolder(currentPos)) PlayButtonPress();
                     LevelManager.currentLevel = 3;
-                    levelManagerScript.levelSelected = true;
+                    LevelManager.levelSelected = true;
                     animator.SetBool("LevelSelected", true);
                 }
                 if ((Input.GetKeyDown("d") || Input.GetKeyDown("right")) && LevelManager.level >= 4) {
@@ -111,8 +110,9 @@ public class LevelSelector : MonoBehaviour
             // If not fading, process player input
             if (!FadeManager.fading) {
                 if (Input.GetKeyDown("return") || overFolder(currentPos)) {
+                    if (overFolder(currentPos)) PlayButtonPress();
                     LevelManager.currentLevel = 4;
-                    levelManagerScript.levelSelected = true;
+                    LevelManager.levelSelected = true;
                     animator.SetBool("LevelSelected", true);
                 }
                 if ((Input.GetKeyDown("w") || Input.GetKeyDown("up")) && LevelManager.level >= 5) {
@@ -129,8 +129,9 @@ public class LevelSelector : MonoBehaviour
             // If not fading, process player input
             if (!FadeManager.fading) {
                 if (Input.GetKeyDown("return") || overFolder(currentPos)) {
+                    if (overFolder(currentPos)) PlayButtonPress();
                     LevelManager.currentLevel = 5;
-                    levelManagerScript.levelSelected = true;
+                    LevelManager.levelSelected = true;
                     animator.SetBool("LevelSelected", true);
                 }
                 if ((Input.GetKeyDown("a") || Input.GetKeyDown("left")) && LevelManager.level >= 6) {
@@ -147,8 +148,9 @@ public class LevelSelector : MonoBehaviour
             // If not fading, process player input
             if (!FadeManager.fading) {
                 if (Input.GetKeyDown("return") || overFolder(currentPos)) {
+                    if (overFolder(currentPos)) PlayButtonPress();
                     LevelManager.currentLevel = 6;
-                    levelManagerScript.levelSelected = true;
+                    LevelManager.levelSelected = true;
                     animator.SetBool("LevelSelected", true);
                 }
                 if ((Input.GetKeyDown("a") || Input.GetKeyDown("left")) && LevelManager.level >= 7) {
@@ -165,8 +167,9 @@ public class LevelSelector : MonoBehaviour
             // If not fading, process player input
             if (!FadeManager.fading) {
                 if (Input.GetKeyDown("return") || overFolder(currentPos)) {
+                    if (overFolder(currentPos)) PlayButtonPress();
                     LevelManager.currentLevel = 7;
-                    levelManagerScript.levelSelected = true;
+                    LevelManager.levelSelected = true;
                     animator.SetBool("LevelSelected", true);
                 }
                 if ((Input.GetKeyDown("a") || Input.GetKeyDown("left")) && LevelManager.level >= 8) {
@@ -183,8 +186,9 @@ public class LevelSelector : MonoBehaviour
             // If not fading, process player input
             if (!FadeManager.fading) {
                 if (Input.GetKeyDown("return") || overFolder(currentPos)) {
+                    if (overFolder(currentPos)) PlayButtonPress();
                     LevelManager.currentLevel = 8;
-                    levelManagerScript.levelSelected = true;
+                    LevelManager.levelSelected = true;
                     animator.SetBool("LevelSelected", true);
                 }
                 if ((Input.GetKeyDown("w") || Input.GetKeyDown("up")) && LevelManager.level >= 9) {
@@ -201,8 +205,9 @@ public class LevelSelector : MonoBehaviour
             // If not fading, process player input
             if (!FadeManager.fading) {
                 if (Input.GetKeyDown("return") || overFolder(currentPos)) {
+                    if (overFolder(currentPos)) PlayButtonPress();
                     LevelManager.currentLevel = 9;
-                    levelManagerScript.levelSelected = true;
+                    LevelManager.levelSelected = true;
                     animator.SetBool("LevelSelected", true);
                 }
                 if ((Input.GetKeyDown("d") || Input.GetKeyDown("right")) && LevelManager.level >= 10) {
@@ -219,8 +224,9 @@ public class LevelSelector : MonoBehaviour
             // If not fading, process player input
             if (!FadeManager.fading) {
                 if (Input.GetKeyDown("return") || overFolder(currentPos)) {
+                    if (overFolder(currentPos)) PlayButtonPress();
                     LevelManager.currentLevel = 10;
-                    levelManagerScript.levelSelected = true;
+                    LevelManager.levelSelected = true;
                     animator.SetBool("LevelSelected", true);
                 }
                 if ((Input.GetKeyDown("d") || Input.GetKeyDown("right")) && LevelManager.level >= 11) {
@@ -237,8 +243,9 @@ public class LevelSelector : MonoBehaviour
             // If not fading, process player input
             if (!FadeManager.fading) {
                 if (Input.GetKeyDown("return") || overFolder(currentPos)) {
+                    if (overFolder(currentPos)) PlayButtonPress();
                     LevelManager.currentLevel = 11;
-                    levelManagerScript.levelSelected = true;
+                    LevelManager.levelSelected = true;
                     animator.SetBool("LevelSelected", true);
                 }
                 if ((Input.GetKeyDown("d") || Input.GetKeyDown("right")) && LevelManager.level >= 12) {
@@ -255,8 +262,9 @@ public class LevelSelector : MonoBehaviour
             // If not fading, process player input
             if (!FadeManager.fading) {
                 if (Input.GetKeyDown("return") || overFolder(currentPos)) {
+                    if (overFolder(currentPos)) PlayButtonPress();
                     LevelManager.currentLevel = 12;
-                    levelManagerScript.levelSelected = true;
+                    LevelManager.levelSelected = true;
                     animator.SetBool("LevelSelected", true);
                 }
                 if (Input.GetKeyDown("a") || Input.GetKeyDown("left")) currentPos--;
@@ -303,5 +311,13 @@ public class LevelSelector : MonoBehaviour
         
         // If mouse position and folder do not meet requirements, return false
         return false;
+    }
+
+    // Plays the button press sound when a level is selected
+    void PlayButtonPress() {
+        
+        // Play button press sound
+        SoundManager.currentSound = "buttonPress";
+        SoundManager.updateSound = true;
     }
 }

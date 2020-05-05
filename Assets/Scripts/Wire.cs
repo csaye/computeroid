@@ -55,41 +55,68 @@ public class Wire : MonoBehaviour
     // Checks if wire is shorted out, and if so, sends signal to short wire
     void CheckShort() {
 
-        // If player left clicks, is colored red, and within interaction distance, short out wire
-        if (Input.GetMouseButtonDown(0)) {
-            if (playerSpriteRenderer.color == red && Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) {
+        // If player left clicks, is colored red
+        if (playerSpriteRenderer.color == red) {
 
-                // Raycast to mouse position
-                RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(InputEx.mousePosition));
-        
-                // If wire hit by raycast, short out
-                if (((GetComponent<BoxCollider2D>() != null && !GetComponent<BoxCollider2D>().isTrigger) || (GetComponent<PolygonCollider2D>() != null && !GetComponent<PolygonCollider2D>().isTrigger))
-                && rayHit.collider != null && transform.position == rayHit.collider.gameObject.transform.position) {
+            // Raycast to mouse position
+            RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(InputEx.mousePosition));
+    
+            // If wire hit by raycast, short out
+            if (((GetComponent<BoxCollider2D>() != null && !GetComponent<BoxCollider2D>().isTrigger) || (GetComponent<PolygonCollider2D>() != null && !GetComponent<PolygonCollider2D>().isTrigger))
+            && rayHit.collider != null && transform.position == rayHit.collider.gameObject.transform.position) {
 
-                    // If wires free to short, short wire
-                    if (!horizontalExclusion && !verticalExclusion) {
+                // If wires free to short
+                if (!horizontalExclusion && !verticalExclusion) {
+                    
+                    // Set cursor to hovering because over wire
+                    CursorManager.hovering = true;
+
+                    // If left mouse button pressed and player within range, short wire
+                    if (Input.GetMouseButtonDown(0) && Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) {
                         ShortWire();
                     }
+                }
 
-                    // If horizontally excluded, add Y value to no-short list
-                    if (horizontalExclusion && !verticalExclusion && !excludedY.Contains(transform.position.y)) {
+                // If horizontally excluded
+                if (horizontalExclusion && !verticalExclusion && !excludedY.Contains(transform.position.y)) {
+                    
+                    // Set cursor to hovering because over wire
+                    CursorManager.hovering = true;
+
+                    // If left mouse button pressed and player within range, short wire and add Y value to no-short list
+                    if (Input.GetMouseButtonDown(0) && Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) {
                         excludedY.Add(transform.position.y);
                         ShortWire();
                     }
+                }
 
-                    // If vertically excluded, add X value to no-short list
-                    if (verticalExclusion && !horizontalExclusion && !excludedX.Contains(transform.position.x)) {
+                // If vertically excluded
+                if (verticalExclusion && !horizontalExclusion && !excludedX.Contains(transform.position.x)) {
+                    
+                    // Set cursor to hovering because over wire
+                    CursorManager.hovering = true;
+                    
+                    // If left mouse button pressed and player within range, short wire and add X value to no-short list
+                    if (Input.GetMouseButtonDown(0) && Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) {
                         excludedX.Add(transform.position.x);
                         ShortWire();
                     }
+                }
 
-                    // If excluded horizontally and vertically, add X and Y values to no-short list
-                    if (verticalExclusion && horizontalExclusion && !excludedY.Contains(transform.position.y) && !excludedX.Contains(transform.position.x)) {
+                // If excluded horizontally and vertically
+                if (verticalExclusion && horizontalExclusion && !excludedY.Contains(transform.position.y) && !excludedX.Contains(transform.position.x)) {
+                    
+                    // Set cursor to hovering because over wire
+                    CursorManager.hovering = true;
+                    
+                    // If left mouse button pressed and player within range, short wire and add X and Y values to no-short list
+                    if (Input.GetMouseButtonDown(0) && Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) {
                         excludedY.Add(transform.position.y);
                         excludedX.Add(transform.position.x);
                         ShortWire();
                     }
                 }
+
             }
         }
     }

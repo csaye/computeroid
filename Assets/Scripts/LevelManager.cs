@@ -9,10 +9,12 @@ public class LevelManager : MonoBehaviour
 
     public static bool tutorialComplete = false;
 
-    public bool levelSelected = false;
+    public static bool levelSelected = false;
 
     void Start()
     {
+        levelSelected = false;
+
         // Saves the current level unlocked
         PlayerPrefs.SetFloat("LevelUnlocked", level);
 

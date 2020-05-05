@@ -45,16 +45,21 @@ public class PaintBucket : MonoBehaviour
 
     // Check if paint bucket is clicked and player is clean, and if so, transfer color to player
     void CheckClick() {
-        if (Input.GetMouseButtonDown(0) && playerSpriteRenderer.color == white) {
 
-            // Check if player is close enough to the paint bucket
-            if (Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) {
+        // If player is colored white
+        if (playerSpriteRenderer.color == white) {
             
-                // Raycast to mouse position
-                RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(InputEx.mousePosition));
-        
-                // If bucket hit by raycast, transfer paint
-                if (rayHit.collider != null && paintLevel > 0 && playerSpriteRenderer.color != paintColor && transform.position == rayHit.collider.gameObject.transform.position) {
+            // Raycast to mouse position
+            RaycastHit2D rayHit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(InputEx.mousePosition));
+    
+            // If bucket hit by raycast
+            if (rayHit.collider != null && paintLevel > 0 && playerSpriteRenderer.color != paintColor && transform.position == rayHit.collider.gameObject.transform.position) {
+                
+                // Set cursor to hovering because over bucket
+                CursorManager.hovering = true;
+                
+                // If left mouse button clicked and player is within range, transfer paint
+                if (Input.GetMouseButtonDown(0) && Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) {
                     if (!infinite) paintLevel--;
                     playerSpriteRenderer.color = paintColor;
                 }

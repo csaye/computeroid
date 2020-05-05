@@ -58,10 +58,16 @@ public class CursorManager : MonoBehaviour
 
     // Updates the cursor based on the current state of the game
     void UpdateCursor() {
-        if (hovering) {
-            Cursor.SetCursor(cursorHover, cursorPosition, CursorMode.Auto);
-        } else if (FadeManager.fading) {
+
+        // Wait cursor takes first priority
+        if (FadeManager.fading || LevelManager.levelSelected || LevelController.levelComplete) {
             Cursor.SetCursor(cursorWait, cursorPosition, CursorMode.Auto);
+
+        // Hover cursor takes second priority
+        } else if (hovering) {
+            Cursor.SetCursor(cursorHover, cursorPosition, CursorMode.Auto);
+
+        // Normal cursor takes last priority
         } else {
             Cursor.SetCursor(cursorNormal, cursorPosition, CursorMode.Auto);
         }
