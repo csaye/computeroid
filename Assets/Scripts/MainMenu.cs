@@ -35,7 +35,11 @@ public class MainMenu : MonoBehaviour
     }
 
     void CheckQuit() {
-        if (Input.GetKeyDown("escape")) Application.Quit();
+        if (Input.GetKeyDown("escape")) {
+            
+            // Trigger exit confirm menu
+            OptionsPopupExit.isPaused = !OptionsPopupExit.isPaused;
+        }
     }
 
 }

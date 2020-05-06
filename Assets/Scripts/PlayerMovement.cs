@@ -42,12 +42,12 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKey("left shift") || Input.GetKey("right shift")) {
 
                 // Sprint
-                rb.MovePosition(rb.position + movement.normalized * sprintSpeed * Time.fixedDeltaTime);
+                rb.MovePosition(rb.position + movement * sprintSpeed * Time.fixedDeltaTime);
             
             } else {
 
                 // Walk
-                rb.MovePosition(rb.position + movement.normalized * walkSpeed * Time.fixedDeltaTime);
+                rb.MovePosition(rb.position + movement * walkSpeed * Time.fixedDeltaTime);
             }
         }
     }
@@ -55,8 +55,11 @@ public class PlayerMovement : MonoBehaviour
     void UpdateMovement() {
         
         // Get player input
-        if (movement.y == 0) movement.x = Input.GetAxisRaw("Horizontal");
-        if (movement.x == 0) movement.y = Input.GetAxisRaw("Vertical");
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+
+        // Normalize movement to prevent extra diagonal speed
+        movement = movement.normalized;
 
         // Set animator values to player values
         if (movement != Vector2.zero)

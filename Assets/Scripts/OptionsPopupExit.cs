@@ -17,7 +17,7 @@ public class OptionsPopupExit : MonoBehaviour
     void Update()
     {
         if (isPaused) ActivatePopup();
-        if (!isPaused || OptionsPopupReset.isPaused) DeactivatePopup();
+        if (!isPaused) DeactivatePopup();
     }
 
     void ActivatePopup() {

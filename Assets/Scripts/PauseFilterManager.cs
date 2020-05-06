@@ -7,19 +7,9 @@ public class PauseFilterManager : MonoBehaviour
 
     public GameObject arrow;
 
-    static GameObject instance;
-
     void Start()
     {
-        // If the music manager instance is already created, do not create another one
-        if (instance != null) {
-            Destroy(gameObject);
 
-        // If music manager instance not created, set instance to music manager
-        } else {
-            instance = gameObject;
-            DontDestroyOnLoad(gameObject);
-        }
     }
 
     void Update()

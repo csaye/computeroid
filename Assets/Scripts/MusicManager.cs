@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 public class MusicManager : MonoBehaviour
 {
 
-    static GameObject instance;
-
     public static bool updateMusic = false, stopMusic = false;
 
     public static float volume = 0.5f;
@@ -18,19 +16,9 @@ public class MusicManager : MonoBehaviour
 
     void Start()
     {
-        
-        // If the music manager instance is already created, do not create another one
-        if (instance != null) {
-            Destroy(gameObject);
-
-        // If music manager instance not created, set instance to music manager
-        } else {
-            volume = PlayerPrefs.GetFloat("MusicVolume", 0.5f);
-            instance = gameObject;
-            audioSource = GetComponent<AudioSource>();
-            UpdateMusic();
-            DontDestroyOnLoad(gameObject);
-        }
+        volume = PlayerPrefs.GetFloat("MusicVolume", 0.5f);
+        audioSource = GetComponent<AudioSource>();
+        UpdateMusic();
     }
 
     void Update()

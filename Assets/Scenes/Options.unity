@@ -220,12 +220,13 @@ MonoBehaviour:
   resumeButton: 0
   levelsButton: 0
   iButton: 0
-  optionsX: 0
+  optionsFullscreen: 0
   optionsReset: 0
-  optionsCheckExit: 0
-  optionsXExit: 0
   optionsCheckReset: 0
   optionsXReset: 1
+  exitButton: 0
+  xExit: 0
+  checkExit: 0
   destinationScene: 
   buttonNormal: {fileID: 21300000, guid: 13528a6d3335a4eaea3f4507e802c505, type: 3}
   buttonHighlight: {fileID: 21300000, guid: 72cb3ea27036d44df9aac54bc437f127, type: 3}
@@ -282,7 +283,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1791642532}
   - {fileID: 745593258}
   m_Father: {fileID: 734391781}
   m_RootOrder: 2
@@ -724,7 +724,7 @@ Transform:
   - {fileID: 1684829225}
   - {fileID: 76363960}
   m_Father: {fileID: 282783254}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &745593259
 SpriteRenderer:
@@ -790,140 +790,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checkButton: {fileID: 1684829224}
   xButton: {fileID: 76363959}
---- !u!1 &759985491
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 759985493}
-  - component: {fileID: 759985492}
-  - component: {fileID: 759985494}
-  - component: {fileID: 759985495}
-  m_Layer: 0
-  m_Name: Options Popup Check
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &759985492
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 759985491}
-  m_Enabled: 0
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 3c8ddeb14fee641be95f71746c495583, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1.25, y: 1.5}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &759985493
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 759985491}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.875, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1791642532}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &759985494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 759985491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0db84074e20c74268b9ae04b1f712a36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startButton: 0
-  resumeButton: 0
-  levelsButton: 0
-  iButton: 0
-  optionsX: 0
-  optionsReset: 0
-  optionsCheckExit: 1
-  optionsXExit: 0
-  optionsCheckReset: 0
-  optionsXReset: 0
-  destinationScene: 
-  buttonNormal: {fileID: 21300000, guid: 3c8ddeb14fee641be95f71746c495583, type: 3}
-  buttonHighlight: {fileID: 21300000, guid: acc7684fbf4da475a98b22fd28f64116, type: 3}
---- !u!61 &759985495
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 759985491}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.25, y: 1.5}
-    newSize: {x: 1.25, y: 1.5}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.25, y: 1.5}
-  m_EdgeRadius: 0
 --- !u!1 &857135403
 GameObject:
   m_ObjectHideFlags: 0
@@ -1092,7 +958,7 @@ GameObject:
   - component: {fileID: 994034011}
   - component: {fileID: 994034012}
   m_Layer: 0
-  m_Name: Options X
+  m_Name: Options Fullscreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1137,7 +1003,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1af7f73ddbda149b682d5b289d12b318, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6e09292aede7147bfa0e429831ecd3b3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1178,15 +1044,16 @@ MonoBehaviour:
   resumeButton: 0
   levelsButton: 0
   iButton: 0
-  optionsX: 1
+  optionsFullscreen: 1
   optionsReset: 0
-  optionsCheckExit: 0
-  optionsXExit: 0
   optionsCheckReset: 0
   optionsXReset: 0
+  exitButton: 0
+  xExit: 0
+  checkExit: 0
   destinationScene: 
-  buttonNormal: {fileID: 21300000, guid: 1af7f73ddbda149b682d5b289d12b318, type: 3}
-  buttonHighlight: {fileID: 21300000, guid: 8d4945a79a624482d88c4e3465eab8c9, type: 3}
+  buttonNormal: {fileID: 21300000, guid: 6e09292aede7147bfa0e429831ecd3b3, type: 3}
+  buttonHighlight: {fileID: 21300000, guid: e8e540595661e41b99d766b38e9ae26a, type: 3}
 --- !u!61 &994034012
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1212,140 +1079,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1.25, y: 1.25}
-  m_EdgeRadius: 0
---- !u!1 &1251182950
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1251182952}
-  - component: {fileID: 1251182951}
-  - component: {fileID: 1251182953}
-  - component: {fileID: 1251182954}
-  m_Layer: 0
-  m_Name: Options Popup X
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &1251182951
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1251182950}
-  m_Enabled: 0
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 13528a6d3335a4eaea3f4507e802c505, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1.25, y: 1.5}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &1251182952
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1251182950}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.875, y: -1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1791642532}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1251182953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1251182950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0db84074e20c74268b9ae04b1f712a36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startButton: 0
-  resumeButton: 0
-  levelsButton: 0
-  iButton: 0
-  optionsX: 0
-  optionsReset: 0
-  optionsCheckExit: 0
-  optionsXExit: 1
-  optionsCheckReset: 0
-  optionsXReset: 0
-  destinationScene: 
-  buttonNormal: {fileID: 21300000, guid: 13528a6d3335a4eaea3f4507e802c505, type: 3}
-  buttonHighlight: {fileID: 21300000, guid: 72cb3ea27036d44df9aac54bc437f127, type: 3}
---- !u!61 &1251182954
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1251182950}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.25, y: 1.5}
-    newSize: {x: 1.25, y: 1.5}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.25, y: 1.5}
   m_EdgeRadius: 0
 --- !u!1 &1506737760
 GameObject:
@@ -1587,12 +1320,13 @@ MonoBehaviour:
   resumeButton: 0
   levelsButton: 0
   iButton: 0
-  optionsX: 0
+  optionsFullscreen: 0
   optionsReset: 0
-  optionsCheckExit: 0
-  optionsXExit: 0
   optionsCheckReset: 1
   optionsXReset: 0
+  exitButton: 0
+  xExit: 0
+  checkExit: 0
   destinationScene: 
   buttonNormal: {fileID: 21300000, guid: 3c8ddeb14fee641be95f71746c495583, type: 3}
   buttonHighlight: {fileID: 21300000, guid: acc7684fbf4da475a98b22fd28f64116, type: 3}
@@ -1622,104 +1356,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.25, y: 1.5}
   m_EdgeRadius: 0
---- !u!1 &1791642531
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1791642532}
-  - component: {fileID: 1791642533}
-  - component: {fileID: 1791642534}
-  m_Layer: 0
-  m_Name: Options Popup Exit
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1791642532
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1791642531}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 759985493}
-  - {fileID: 1251182952}
-  m_Father: {fileID: 282783254}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1791642533
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1791642531}
-  m_Enabled: 0
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: c5a6d8d4c59534f51a1e3a71a97b7d06, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 8, y: 4.5}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!114 &1791642534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1791642531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5195b5eda9f7f4f43bec2d346db7a672, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  checkButton: {fileID: 759985491}
-  xButton: {fileID: 1251182950}
 --- !u!1 &1888283736
 GameObject:
   m_ObjectHideFlags: 0
@@ -2058,12 +1694,13 @@ MonoBehaviour:
   resumeButton: 0
   levelsButton: 0
   iButton: 0
-  optionsX: 0
+  optionsFullscreen: 0
   optionsReset: 1
-  optionsCheckExit: 0
-  optionsXExit: 0
   optionsCheckReset: 0
   optionsXReset: 0
+  exitButton: 0
+  xExit: 0
+  checkExit: 0
   destinationScene: 
   buttonNormal: {fileID: 21300000, guid: 8d562bdf899504ab8a414bc7dc857e5d, type: 3}
   buttonHighlight: {fileID: 21300000, guid: 5011091712c82495a850d332bfe32b6a, type: 3}

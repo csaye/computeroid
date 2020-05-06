@@ -9,8 +9,6 @@ public class CursorManager : MonoBehaviour
     public Texture2D cursorHover;
     public Texture2D cursorWait;
 
-    static GameObject instance;
-
     public static bool hovering = false;
 
     private Vector2 cursorPosition;
@@ -21,19 +19,8 @@ public class CursorManager : MonoBehaviour
 
     void Start()
     {
-
-        // If the music manager instance is already created, do not create another one
-        if (instance != null) {
-            Destroy(gameObject);
-
-        // If music manager instance not created, set instance to music manager
-        } else {
-            instance = gameObject;
-            cursorPosition = new Vector2(0, 0);
-            hoveringDelay = hoveringDelayDefault;
-            DontDestroyOnLoad(gameObject);
-        }
-        
+        cursorPosition = new Vector2(0, 0);
+        hoveringDelay = hoveringDelayDefault;   
     }
 
     void Update()

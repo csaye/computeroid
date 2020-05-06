@@ -5,11 +5,12 @@ using UnityEngine;
 public class MenuButton : MonoBehaviour
 {
 
-    public bool startButton;
+    public bool startButton, optionsButton;
     public bool resumeButton;
     public bool levelsButton;
     public bool iButton;
-    public bool optionsX, optionsReset, optionsCheckExit, optionsXExit, optionsCheckReset, optionsXReset;
+    public bool optionsFullscreen, optionsReset, optionsCheckReset, optionsXReset;
+    public bool exitButton, xExit, checkExit;
 
     public string destinationScene;
 
@@ -34,8 +35,8 @@ public class MenuButton : MonoBehaviour
             // If not fading to a new scene or options popup active, check highlight
             if (!FadeManager.fading) {
                 
-                // Special case for options menu buttons blocked by popups
-                if ((optionsX || optionsReset) && (OptionsPopupExit.isPaused || OptionsPopupReset.isPaused)) {
+                // Special case for menu buttons blocked by popups
+                if (((exitButton || startButton || optionsButton) && OptionsPopupExit.isPaused) || (optionsReset && OptionsPopupReset.isPaused)) {
                     spriteRenderer.sprite = buttonNormal;
                 } else {
                     CheckHighlight();
@@ -128,20 +129,34 @@ public class MenuButton : MonoBehaviour
             PlayerPrefs.SetFloat("IButtonPressed", 1);
             PauseMenu.helpMenuActive = !PauseMenu.helpMenuActive;
 
-        } else if (optionsX) {
-            OptionsPopupExit.isPaused = true;
+        } else if (optionsFullscreen) {
+            
+            // Toggle fullscreen
+            Screen.fullScreen = !Screen.fullScreen;
 
         } else if (optionsReset) {
+
+            // Trigger options reset screen
             OptionsPopupReset.isPaused = true;
 
-        } else if (optionsCheckExit) {
+        } else if (exitButton) {
+
+            // Confirm game exit
+            OptionsPopupExit.isPaused = true;
+
+        } else if (checkExit) {
+
+            // Quit application
             Application.Quit();
 
-        } else if (optionsXExit) {
+        } else if (xExit) {
+
+            // Quit confirm game exit screen
             OptionsPopupExit.isPaused = false;
 
         } else if (optionsCheckReset) {
 
+            // Reset all player data
             PlayerPrefs.DeleteKey("LevelUnlocked");
             LevelManager.level = 0;
             PlayerPrefs.DeleteKey("CurrentLevel");

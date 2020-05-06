@@ -5,8 +5,6 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
 
-    static GameObject instance;
-
     public static bool updateSound = false;
 
     public static float volume = 0.5f;
@@ -19,19 +17,9 @@ public class SoundManager : MonoBehaviour
 
     void Start()
     {
-
-        // If the sound manager instance is already created, do not create another one
-        if (instance != null) {
-            Destroy(gameObject);
-
-        // If sound manager instance not created, set instance to sound manager
-        } else {
-            volume = PlayerPrefs.GetFloat("SoundVolume", 0.5f);
-            instance = gameObject;
-            audioSource = GetComponent<AudioSource>();
-            UpdateSound();
-            DontDestroyOnLoad(gameObject);
-        }
+        volume = PlayerPrefs.GetFloat("SoundVolume", 0.5f);
+        audioSource = GetComponent<AudioSource>();
+        UpdateSound();
     }
 
     void Update()
