@@ -157,6 +157,8 @@ public class MenuButton : MonoBehaviour
             PlayerPrefs.DeleteKey("IButtonPressed");
             PauseMenu.iButtonPressed = false;
             
+            PauseMenu.helpMenuActive = false;
+            
             PlayerPrefs.Save();
             OptionsPopupReset.isPaused = false;
 
