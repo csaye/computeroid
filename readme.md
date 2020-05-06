@@ -2,7 +2,7 @@
 
 A top-down puzzle game with a retro computer theme.
 
-Alpha out now for windows and mac at: https://qwa.la/h2y7q7
+Beta out now for windows and mac at: https://qwa.la/w4r5q8
 
 ![](Images/StartMenu.png)
 ![](Images/Level1.png)
