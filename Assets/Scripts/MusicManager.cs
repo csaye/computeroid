@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class MusicManager : MonoBehaviour
 {
 
-    public static bool updateMusic = false, stopMusic = false;
+    public static bool updateMusic = false, stopMusic = false, fadeMusic = false;
 
     public static float volume = 0.5f;
 
@@ -33,11 +33,20 @@ public class MusicManager : MonoBehaviour
             StopMusic();
         }
 
+        if (fadeMusic) {
+            fadeMusic = false;
+            FadeMusic();
+        }
+
         UpdateVolume();
     }
 
     void StopMusic() {
         audioSource.Stop();
+    }
+
+    void FadeMusic() {
+
     }
 
     void UpdateVolume() {

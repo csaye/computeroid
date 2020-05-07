@@ -39,7 +39,7 @@ public class WirePad : MonoBehaviour
     {
 
         // If game not paused, check for wire placement
-        if (!PauseMenu.isPaused && !LevelController.levelComplete) {
+        if (!PauseMenu.isPaused && !FadeManager.fading && !LevelController.levelComplete && !OrderScreen.active) {
             CheckWire();
         }
     }

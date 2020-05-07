@@ -33,7 +33,7 @@ public class MenuButton : MonoBehaviour
         if (GetComponent<Renderer>().enabled) {
 
             // If not fading to a new scene or options popup active, check highlight
-            if (!FadeManager.fading) {
+            if (!FadeManager.fading && !OrderScreen.active) {
                 
                 // Special case for menu buttons blocked by popups
                 if (((exitButton || startButton || optionsButton) && OptionsPopupExit.isPaused) || (optionsReset && OptionsPopupReset.isPaused)) {

@@ -37,7 +37,7 @@ public class PauseMenu : MonoBehaviour
     {
 
         // If level not completed, check for pause
-        if (!LevelController.levelComplete && !FadeManager.fading) CheckPause();
+        if (!LevelController.levelComplete && !FadeManager.fading && !OrderScreen.active) CheckPause();
 
         if (!initiallyPaused && SceneManager.GetActiveScene().name == ("Level 1")) InitialPause();
 

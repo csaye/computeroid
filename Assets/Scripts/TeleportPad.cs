@@ -31,7 +31,7 @@ public class TeleportPad : MonoBehaviour
 
     void Update()
     {
-        if (!PauseMenu.isPaused && !FadeManager.fading && !LevelController.levelComplete) {
+        if (!PauseMenu.isPaused && !FadeManager.fading && !LevelController.levelComplete && !OrderScreen.active) {
             CheckTeleport();
         }
 

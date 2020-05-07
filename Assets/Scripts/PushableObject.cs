@@ -15,7 +15,7 @@ public class PushableObject : MonoBehaviour
     void Update()
     {
         // If game paused or level complete
-        if (PauseMenu.isPaused || ControlsMenu.isPaused || LevelController.levelComplete) MakeStatic();
+        if (PauseMenu.isPaused || ControlsMenu.isPaused || LevelController.levelComplete || OrderScreen.active) MakeStatic();
     }
 
 

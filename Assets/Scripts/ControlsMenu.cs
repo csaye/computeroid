@@ -17,7 +17,7 @@ public class ControlsMenu : MonoBehaviour
     void Update()
     {
         // If level not completed, check for pause
-        if (!LevelController.levelComplete) CheckPause();
+        if (!LevelController.levelComplete && !FadeManager.fading && !OrderScreen.active) CheckPause();
         
         if (LevelController.levelComplete) {
             isPaused = false;

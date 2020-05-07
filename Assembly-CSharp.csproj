@@ -77,6 +77,7 @@
      <Compile Include="Assets\Scripts\OptionsPopupExit.cs" />
      <Compile Include="Assets\Scripts\OptionsPopupReset.cs" />
      <Compile Include="Assets\Scripts\OptionsThumb.cs" />
+     <Compile Include="Assets\Scripts\OrderScreen.cs" />
      <Compile Include="Assets\Scripts\PaintBucket.cs" />
      <Compile Include="Assets\Scripts\PaintCleaner.cs" />
      <Compile Include="Assets\Scripts\Paper.cs" />

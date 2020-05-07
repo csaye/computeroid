@@ -32,7 +32,7 @@ public class LockBox : MonoBehaviour
     void Update()
     {
         // If not paused and button is charged
-        if (!PauseMenu.isPaused && !FadeManager.fading && !LevelController.levelComplete) CheckUnlock();
+        if (!PauseMenu.isPaused && !FadeManager.fading && !LevelController.levelComplete && !OrderScreen.active) CheckUnlock();
     }
 
     void CheckUnlock() {

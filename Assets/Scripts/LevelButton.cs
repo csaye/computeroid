@@ -32,7 +32,7 @@ public class LevelButton : MonoBehaviour
     void Update()
     {
         // If not paused and button is charged
-        if (!PauseMenu.isPaused && !FadeManager.fading && !LevelController.levelComplete) {
+        if (!PauseMenu.isPaused && !FadeManager.fading && !LevelController.levelComplete && !OrderScreen.active) {
 
             // If not charged, default button to unpressed
             if (chargeScript.charged) {
