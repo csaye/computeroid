@@ -63,7 +63,14 @@ public class WirePad : MonoBehaviour
                     CursorManager.hovering = true;
                     
                     // If left mouse button pressed and player within range of the wire pad, place wire
-                    if (Input.GetMouseButtonDown(0) && Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) PlaceWire();
+                    if (Input.GetMouseButtonDown(0) && Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) {
+                        
+                        // Play level object sound
+                        SoundManager.currentSound = "levelObject";
+                        SoundManager.updateSound = true;
+
+                        PlaceWire();
+                    }
                 }
             }
         }

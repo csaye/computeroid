@@ -12,6 +12,7 @@ public class SoundManager : MonoBehaviour
     public static string currentSound;
 
     public AudioClip buttonPress;
+    public AudioClip levelObject;
 
     private AudioSource audioSource;
 
@@ -41,6 +42,11 @@ public class SoundManager : MonoBehaviour
 
         if (currentSound == "buttonPress") {
             audioSource.clip = buttonPress;
+            audioSource.Play();
+        }
+
+        if (currentSound == "levelObject") {
+            audioSource.clip = levelObject;
             audioSource.Play();
         }
     }

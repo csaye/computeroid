@@ -14,6 +14,9 @@ public class MusicManager : MonoBehaviour
 
     private AudioSource audioSource;
 
+    // The volume should be controlled by the fade while music is fading
+    private bool fadeOverride;
+
     void Start()
     {
         volume = PlayerPrefs.GetFloat("MusicVolume", 0.5f);
@@ -25,6 +28,7 @@ public class MusicManager : MonoBehaviour
     {
         if (updateMusic) {
             updateMusic = false;
+            fadeOverride = false;
             UpdateMusic();
         }
 
@@ -35,18 +39,24 @@ public class MusicManager : MonoBehaviour
 
         if (fadeMusic) {
             fadeMusic = false;
-            FadeMusic();
+            fadeOverride = true;
+            StartCoroutine(FadeMusic());
         }
 
-        UpdateVolume();
+        if (!fadeOverride) UpdateVolume();
     }
 
     void StopMusic() {
         audioSource.Stop();
     }
 
-    void FadeMusic() {
+    IEnumerator FadeMusic() {
 
+        // Fade out music over a second
+        for (int i = 100; i >= 0; i--) {
+            audioSource.volume = volume * (i/100.0f);
+            yield return new WaitForSeconds(0.01f);
+        }
     }
 
     void UpdateVolume() {

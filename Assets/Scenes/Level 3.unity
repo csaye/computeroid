@@ -2791,15 +2791,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startButton: 0
+  optionsButton: 0
   resumeButton: 0
   levelsButton: 0
   iButton: 1
-  optionsX: 0
+  optionsFullscreen: 0
   optionsReset: 0
-  optionsCheckExit: 0
-  optionsXExit: 0
   optionsCheckReset: 0
   optionsXReset: 0
+  exitButton: 0
+  xExit: 0
+  checkExit: 0
   destinationScene: 
   buttonNormal: {fileID: 21300000, guid: 2b4016bb3fcd14d19a1ea7908afea3e4, type: 3}
   buttonHighlight: {fileID: 21300000, guid: 8edabdfef2d75453fa5a00b75d194c65, type: 3}
@@ -2951,15 +2953,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startButton: 0
+  optionsButton: 0
   resumeButton: 0
   levelsButton: 1
   iButton: 0
-  optionsX: 0
+  optionsFullscreen: 0
   optionsReset: 0
-  optionsCheckExit: 0
-  optionsXExit: 0
   optionsCheckReset: 0
   optionsXReset: 0
+  exitButton: 0
+  xExit: 0
+  checkExit: 0
   destinationScene: Level Select
   buttonNormal: {fileID: 21300000, guid: 05a318bb0d090447685847b744637a37, type: 3}
   buttonHighlight: {fileID: 21300000, guid: ade533a66b4c74866a0b7485e470be0a, type: 3}
@@ -5938,6 +5942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58663e755a3ae47a9a9ada5884320c37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasOrderScreen: 0
   animator: {fileID: 1779294799}
 --- !u!4 &674573348
 Transform:
@@ -12154,15 +12159,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startButton: 0
+  optionsButton: 0
   resumeButton: 1
   levelsButton: 0
   iButton: 0
-  optionsX: 0
+  optionsFullscreen: 0
   optionsReset: 0
-  optionsCheckExit: 0
-  optionsXExit: 0
   optionsCheckReset: 0
   optionsXReset: 0
+  exitButton: 0
+  xExit: 0
+  checkExit: 0
   destinationScene: 
   buttonNormal: {fileID: 21300000, guid: 0ab87bde1157f4955a0676b20490998d, type: 3}
   buttonHighlight: {fileID: 21300000, guid: f720e7d51b02447ff9b19205d37a8632, type: 3}
@@ -14334,6 +14341,7 @@ GameObject:
   - component: {fileID: 1779294800}
   - component: {fileID: 1779294799}
   - component: {fileID: 1779294798}
+  - component: {fileID: 1779294802}
   m_Layer: 0
   m_Name: Crash Screen
   m_TagString: Untagged
@@ -14353,6 +14361,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23a3a082493dd4497ab31c851a534201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volumeOverride: 1
+  lastFrameOverride: 1
   currentLevel: 3
 --- !u!95 &1779294799
 Animator:
@@ -14437,6 +14447,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1779294802
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779294797}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2c2aa682ee3494bbeaea1cfef614bbde, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1782037791
 GameObject:
   m_ObjectHideFlags: 0

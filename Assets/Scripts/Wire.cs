@@ -73,6 +73,11 @@ public class Wire : MonoBehaviour
 
                     // If left mouse button pressed and player within range, short wire
                     if (Input.GetMouseButtonDown(0) && Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) {
+                        
+                        // Play level object sound
+                        SoundManager.currentSound = "levelObject";
+                        SoundManager.updateSound = true;
+
                         ShortWire();
                     }
                 }
@@ -86,6 +91,11 @@ public class Wire : MonoBehaviour
                     // If left mouse button pressed and player within range, short wire and add Y value to no-short list
                     if (Input.GetMouseButtonDown(0) && Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) {
                         excludedY.Add(transform.position.y);
+
+                        // Play level object sound
+                        SoundManager.currentSound = "levelObject";
+                        SoundManager.updateSound = true;
+
                         ShortWire();
                     }
                 }
@@ -99,6 +109,11 @@ public class Wire : MonoBehaviour
                     // If left mouse button pressed and player within range, short wire and add X value to no-short list
                     if (Input.GetMouseButtonDown(0) && Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) {
                         excludedX.Add(transform.position.x);
+                        
+                        // Play level object sound
+                        SoundManager.currentSound = "levelObject";
+                        SoundManager.updateSound = true;
+                        
                         ShortWire();
                     }
                 }
@@ -113,6 +128,11 @@ public class Wire : MonoBehaviour
                     if (Input.GetMouseButtonDown(0) && Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) {
                         excludedY.Add(transform.position.y);
                         excludedX.Add(transform.position.x);
+                        
+                        // Play level object sound
+                        SoundManager.currentSound = "levelObject";
+                        SoundManager.updateSound = true;
+
                         ShortWire();
                     }
                 }

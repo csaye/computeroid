@@ -5,6 +5,9 @@ using UnityEngine;
 public class EscButton : MonoBehaviour
 {
 
+    // Whether the esc button has been pressed to trigger a scene transition yet
+    public static bool pressed;
+
     public Sprite escButtonNormal;
     public Sprite escButtonHighlight;
 
@@ -21,6 +24,13 @@ public class EscButton : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        // Loads whether the esc button has been triggered
+        if (PlayerPrefs.GetInt("EscPressed", 0) == 0) {
+            pressed = false;
+        } else {
+            pressed = true;
+        }
 
         if (levelManager != null) levelManagerScript = levelManager.GetComponent<LevelManager>();
     }
@@ -98,6 +108,13 @@ public class EscButton : MonoBehaviour
     void ActivateButton() {
 
         if (toMainMenu) {
+
+            // If scene transition button not pressed yet, set to pressed
+            if (!pressed) {
+                PlayerPrefs.SetInt("EscPressed", 1);
+                pressed = true;
+            }
+
             FadeManager.nextScene = "Main Menu";
             FadeManager.fading = true;
         }

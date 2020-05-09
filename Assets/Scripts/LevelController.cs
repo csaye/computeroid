@@ -13,6 +13,9 @@ public class LevelController : MonoBehaviour
 
     public Animator animator;
 
+    // Whether the music has already been faded
+    private bool musicFaded = false;
+
     void Start()
     {
         LevelManager.levelSelected = false;
@@ -27,6 +30,13 @@ public class LevelController : MonoBehaviour
     }
 
     void Crash() {
+
+        // If the music has not already been faded, fade music
+        if (!musicFaded) {
+            musicFaded = true;
+            MusicManager.fadeMusic = true;
+        }
+        
         animator.SetBool("LevelComplete", true);
     }
 }

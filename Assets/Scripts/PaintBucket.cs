@@ -60,6 +60,11 @@ public class PaintBucket : MonoBehaviour
                 
                 // If left mouse button clicked and player is within range, transfer paint
                 if (Input.GetMouseButtonDown(0) && Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) {
+                    
+                    // Play level object sound
+                    SoundManager.currentSound = "levelObject";
+                    SoundManager.updateSound = true;
+
                     if (!infinite) paintLevel--;
                     playerSpriteRenderer.color = paintColor;
                 }

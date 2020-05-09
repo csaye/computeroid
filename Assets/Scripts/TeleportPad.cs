@@ -56,7 +56,14 @@ public class TeleportPad : MonoBehaviour
                     CursorManager.hovering = true;
 
                     // If left mouse button pressed, teleport
-                    if (Input.GetMouseButtonDown(0)) Teleport();
+                    if (Input.GetMouseButtonDown(0)) {
+                        
+                        // Play level object sound
+                        SoundManager.currentSound = "levelObject";
+                        SoundManager.updateSound = true;
+
+                        Teleport();
+                    }
                 }
             }
         }

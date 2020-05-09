@@ -50,7 +50,14 @@ public class LockBox : MonoBehaviour
                 CursorManager.hovering = true;
 
                 // If left mouse button clicked and player within range, unlock lock
-                if (Input.GetMouseButtonDown(0) && Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) Unlock();
+                if (Input.GetMouseButtonDown(0) && Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) {
+                    
+                    // Play level object sound
+                    SoundManager.currentSound = "levelObject";
+                    SoundManager.updateSound = true;
+                    
+                    Unlock();
+                }
             }
         }
     }

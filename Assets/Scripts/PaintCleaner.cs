@@ -47,7 +47,14 @@ public class PaintCleaner : MonoBehaviour
                 CursorManager.hovering = true;
 
                 // If left mouse button clicked and player within range, set player color to white
-                if (Input.GetMouseButtonDown(0) && Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) playerSpriteRenderer.color = white;
+                if (Input.GetMouseButtonDown(0) && Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) {
+
+                    // Play level object sound
+                    SoundManager.currentSound = "levelObject";
+                    SoundManager.updateSound = true;
+
+                    playerSpriteRenderer.color = white;
+                }
             }
         }
 

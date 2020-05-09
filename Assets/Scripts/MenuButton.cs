@@ -171,6 +171,8 @@ public class MenuButton : MonoBehaviour
             PauseMenu.initiallyPaused = false;
             PlayerPrefs.DeleteKey("IButtonPressed");
             PauseMenu.iButtonPressed = false;
+            PlayerPrefs.DeleteKey("EscPressed");
+            EscButton.pressed = false;
             
             PauseMenu.helpMenuActive = false;
             

@@ -61,7 +61,14 @@ public class LevelButton : MonoBehaviour
             spriteRenderer.sprite = buttonHighlight;
 
             // If highlighted, mouse button down, and within player range, activate button function
-            if (Input.GetMouseButtonDown(0) && Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) ActivateButton();
+            if (Input.GetMouseButtonDown(0) && Vector2.Distance(transform.position, player.transform.position) < maxInteractDistance) {
+                
+                // Play level object sound
+                SoundManager.currentSound = "levelObject";
+                SoundManager.updateSound = true;
+
+                ActivateButton();
+            }
 
         } else {
             spriteRenderer.sprite = buttonNormal;
