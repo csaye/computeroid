@@ -325,7 +325,7 @@ GameObject:
   - component: {fileID: 335968508}
   - component: {fileID: 335968507}
   m_Layer: 0
-  m_Name: Menu Popup Check
+  m_Name: Menu Popup Yes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -339,7 +339,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 335968505}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.875, y: 1, z: 0}
+  m_LocalPosition: {x: -1.6875, y: -1.0625, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1352952937}
@@ -352,7 +352,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 335968505}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -362,14 +362,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.25, y: 1.5}
-    newSize: {x: 1.25, y: 1.5}
+    oldSize: {x: 2.625, y: 1.375}
+    newSize: {x: 0.42, y: 0.22}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.25, y: 1.5}
+  m_Size: {x: 2.625, y: 1.375}
   m_EdgeRadius: 0
 --- !u!114 &335968508
 MonoBehaviour:
@@ -390,14 +390,14 @@ MonoBehaviour:
   iButton: 0
   optionsFullscreen: 0
   optionsReset: 0
-  optionsCheckReset: 0
-  optionsXReset: 0
+  optionsYesReset: 0
+  optionsNoReset: 0
   exitButton: 0
-  xExit: 0
-  checkExit: 1
+  noExit: 0
+  yesExit: 1
   destinationScene: 
-  buttonNormal: {fileID: 21300000, guid: 3c8ddeb14fee641be95f71746c495583, type: 3}
-  buttonHighlight: {fileID: 21300000, guid: acc7684fbf4da475a98b22fd28f64116, type: 3}
+  buttonNormal: {fileID: 21300000, guid: 99fe0596da51643c3aeb4ef32b5c470f, type: 3}
+  buttonHighlight: {fileID: 21300000, guid: a420ef00c482c48bab4a348cefb53a9b, type: 3}
 --- !u!212 &335968509
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -437,12 +437,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 3c8ddeb14fee641be95f71746c495583, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 99fe0596da51643c3aeb4ef32b5c470f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.25, y: 1.5}
+  m_Size: {x: 0.42, y: 0.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -734,8 +734,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5195b5eda9f7f4f43bec2d346db7a672, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkButton: {fileID: 335968505}
-  xButton: {fileID: 1612196020}
+  yesButton: {fileID: 335968505}
+  noButton: {fileID: 1612196020}
 --- !u!212 &1352952939
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -780,7 +780,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 8, y: 4.5}
+  m_Size: {x: 1.28, y: 0.72}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -960,11 +960,11 @@ MonoBehaviour:
   iButton: 0
   optionsFullscreen: 0
   optionsReset: 0
-  optionsCheckReset: 0
-  optionsXReset: 0
+  optionsYesReset: 0
+  optionsNoReset: 0
   exitButton: 1
-  xExit: 0
-  checkExit: 0
+  noExit: 0
+  yesExit: 0
   destinationScene: 
   buttonNormal: {fileID: 21300000, guid: 06668a365771f42db9e9b17ccff63eda, type: 3}
   buttonHighlight: {fileID: 21300000, guid: 5746070f3c4d44837ac89887587c33fe, type: 3}
@@ -1043,7 +1043,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1460123457}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -1156,7 +1156,7 @@ GameObject:
   - component: {fileID: 1612196023}
   - component: {fileID: 1612196022}
   m_Layer: 0
-  m_Name: Menu Popup X
+  m_Name: Menu Popup No
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1170,7 +1170,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1612196020}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.875, y: -1, z: 0}
+  m_LocalPosition: {x: 1.6875, y: -1.0625, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1352952937}
@@ -1183,7 +1183,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1612196020}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -1193,14 +1193,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.25, y: 1.5}
-    newSize: {x: 1.25, y: 1.5}
+    oldSize: {x: 2.625, y: 1.375}
+    newSize: {x: 2.625, y: 1.375}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.25, y: 1.5}
+  m_Size: {x: 2.625, y: 1.375}
   m_EdgeRadius: 0
 --- !u!114 &1612196023
 MonoBehaviour:
@@ -1221,14 +1221,14 @@ MonoBehaviour:
   iButton: 0
   optionsFullscreen: 0
   optionsReset: 0
-  optionsCheckReset: 0
-  optionsXReset: 0
+  optionsYesReset: 0
+  optionsNoReset: 0
   exitButton: 0
-  xExit: 1
-  checkExit: 0
+  noExit: 1
+  yesExit: 0
   destinationScene: 
-  buttonNormal: {fileID: 21300000, guid: 13528a6d3335a4eaea3f4507e802c505, type: 3}
-  buttonHighlight: {fileID: 21300000, guid: 72cb3ea27036d44df9aac54bc437f127, type: 3}
+  buttonNormal: {fileID: 21300000, guid: 20d923e98e4e94fbdb067a4bbe5982ae, type: 3}
+  buttonHighlight: {fileID: 21300000, guid: 2f3e74e3233dc492595e0478b7dfbafb, type: 3}
 --- !u!212 &1612196024
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1268,12 +1268,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 13528a6d3335a4eaea3f4507e802c505, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 20d923e98e4e94fbdb067a4bbe5982ae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.25, y: 1.5}
+  m_Size: {x: 2.625, y: 1.375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1398,11 +1398,11 @@ MonoBehaviour:
   iButton: 0
   optionsFullscreen: 0
   optionsReset: 0
-  optionsCheckReset: 0
-  optionsXReset: 0
+  optionsYesReset: 0
+  optionsNoReset: 0
   exitButton: 0
-  xExit: 0
-  checkExit: 0
+  noExit: 0
+  yesExit: 0
   destinationScene: Level Select
   buttonNormal: {fileID: 21300000, guid: f4659f0e9f68d40ccb97912690870027, type: 3}
   buttonHighlight: {fileID: 21300000, guid: 650cf325d55734adcaf2a229519f0f39, type: 3}
@@ -1534,11 +1534,11 @@ MonoBehaviour:
   iButton: 0
   optionsFullscreen: 0
   optionsReset: 0
-  optionsCheckReset: 0
-  optionsXReset: 0
+  optionsYesReset: 0
+  optionsNoReset: 0
   exitButton: 0
-  xExit: 0
-  checkExit: 0
+  noExit: 0
+  yesExit: 0
   destinationScene: Options
   buttonNormal: {fileID: 21300000, guid: 39e73bcae1f064156a310385d73d9b9e, type: 3}
   buttonHighlight: {fileID: 21300000, guid: 384c9845c177d4b37b899277eb5584f4, type: 3}

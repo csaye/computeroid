@@ -5,7 +5,7 @@ using UnityEngine;
 public class OptionsPopupExit : MonoBehaviour
 {
 
-    public GameObject checkButton, xButton;
+    public GameObject yesButton, noButton;
 
     public static bool isPaused = false;
 
@@ -22,17 +22,17 @@ public class OptionsPopupExit : MonoBehaviour
 
     void ActivatePopup() {
         GetComponent<SpriteRenderer>().enabled = true;
-        checkButton.GetComponent<SpriteRenderer>().enabled = true;
-        xButton.GetComponent<SpriteRenderer>().enabled = true;
-        checkButton.GetComponent<BoxCollider2D>().enabled = true;
-        xButton.GetComponent<BoxCollider2D>().enabled = true;
+        yesButton.GetComponent<SpriteRenderer>().enabled = true;
+        noButton.GetComponent<SpriteRenderer>().enabled = true;
+        yesButton.GetComponent<BoxCollider2D>().enabled = true;
+        noButton.GetComponent<BoxCollider2D>().enabled = true;
     }
 
     void DeactivatePopup() {
         GetComponent<SpriteRenderer>().enabled = false;
-        checkButton.GetComponent<SpriteRenderer>().enabled = false;
-        xButton.GetComponent<SpriteRenderer>().enabled = false;
-        checkButton.GetComponent<BoxCollider2D>().enabled = false;
-        xButton.GetComponent<BoxCollider2D>().enabled = false;
+        yesButton.GetComponent<SpriteRenderer>().enabled = false;
+        noButton.GetComponent<SpriteRenderer>().enabled = false;
+        yesButton.GetComponent<BoxCollider2D>().enabled = false;
+        noButton.GetComponent<BoxCollider2D>().enabled = false;
     }
 }

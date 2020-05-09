@@ -9,8 +9,8 @@ public class MenuButton : MonoBehaviour
     public bool resumeButton;
     public bool levelsButton;
     public bool iButton;
-    public bool optionsFullscreen, optionsReset, optionsCheckReset, optionsXReset;
-    public bool exitButton, xExit, checkExit;
+    public bool optionsFullscreen, optionsReset, optionsYesReset, optionsNoReset;
+    public bool exitButton, noExit, yesExit;
 
     public string destinationScene;
 
@@ -20,6 +20,8 @@ public class MenuButton : MonoBehaviour
     private SpriteRenderer spriteRenderer;
 
     private bool isButton = false;
+
+    private float popupDelay, popupDelayDefault = 1;
 
     void Start()
     {
@@ -37,9 +39,15 @@ public class MenuButton : MonoBehaviour
                 
                 // Special case for menu buttons blocked by popups
                 if (((exitButton || startButton || optionsButton) && OptionsPopupExit.isPaused) || (optionsReset && OptionsPopupReset.isPaused)) {
+                    
                     spriteRenderer.sprite = buttonNormal;
+                    popupDelay = popupDelayDefault;
+
                 } else {
-                    CheckHighlight();
+
+                    // Wait for popup delay to expire before pressing button
+                    if (popupDelay <= 0) CheckHighlight();
+                    if (popupDelay > 0) popupDelay--;
                 }
 
             } else {
@@ -144,17 +152,19 @@ public class MenuButton : MonoBehaviour
             // Confirm game exit
             OptionsPopupExit.isPaused = true;
 
-        } else if (checkExit) {
+        } else if (yesExit) {
 
             // Quit application
             Application.Quit();
 
-        } else if (xExit) {
+        } else if (noExit) {
 
             // Quit confirm game exit screen
             OptionsPopupExit.isPaused = false;
 
-        } else if (optionsCheckReset) {
+            spriteRenderer.sprite = buttonNormal;
+
+        } else if (optionsYesReset) {
 
             // Reset all player data
             PlayerPrefs.DeleteKey("LevelUnlocked");
@@ -179,8 +189,12 @@ public class MenuButton : MonoBehaviour
             PlayerPrefs.Save();
             OptionsPopupReset.isPaused = false;
 
-        } else if (optionsXReset) {
+        } else if (optionsNoReset) {
+
+            // Quit confirm reset all screen
             OptionsPopupReset.isPaused = false;
+
+            spriteRenderer.sprite = buttonNormal;
 
         } else {
 

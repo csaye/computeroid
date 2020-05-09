@@ -20,8 +20,8 @@ public class PauseFilterManager : MonoBehaviour
 
     void UpdateFilter() {
 
-        // If pause menu or controls menu active, show filter, otherwise do not
-        if (PauseMenu.isPaused || ControlsMenu.isPaused) {
+        // If pause menu or controls menu or popups active, show filter, otherwise do not
+        if (PauseMenu.isPaused || ControlsMenu.isPaused || OptionsPopupExit.isPaused || OptionsPopupReset.isPaused) {
             GetComponent<SpriteRenderer>().enabled = true;
         } else {
             GetComponent<SpriteRenderer>().enabled = false;
@@ -35,8 +35,8 @@ public class PauseFilterManager : MonoBehaviour
         // If button not pressed and filter triggered
         if (!PauseMenu.iButtonPressed && GetComponent<SpriteRenderer>().enabled) {
             
-            // If help menu and controls menu not active
-            if (!PauseMenu.helpMenuActive && !ControlsMenu.isPaused) {
+            // If help menu, controls menu, and popups not active
+            if (!PauseMenu.helpMenuActive && !ControlsMenu.isPaused && !OptionsPopupExit.isPaused && !OptionsPopupReset.isPaused) {
                 arrow.GetComponent<SpriteRenderer>().enabled = true;
             } else {
                 arrow.GetComponent<SpriteRenderer>().enabled = false;

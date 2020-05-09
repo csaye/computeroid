@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 76363962}
   - component: {fileID: 76363963}
   m_Layer: 0
-  m_Name: Options Popup X
+  m_Name: Options Popup No
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,7 +148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 76363959}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.875, y: -1, z: 0}
+  m_LocalPosition: {x: 1.6875, y: -1.0625, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 745593258}
@@ -193,12 +193,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 13528a6d3335a4eaea3f4507e802c505, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 20d923e98e4e94fbdb067a4bbe5982ae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.25, y: 1.5}
+  m_Size: {x: 2.625, y: 1.375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -217,19 +217,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startButton: 0
+  optionsButton: 0
   resumeButton: 0
   levelsButton: 0
   iButton: 0
   optionsFullscreen: 0
   optionsReset: 0
-  optionsCheckReset: 0
-  optionsXReset: 1
+  optionsYesReset: 0
+  optionsNoReset: 1
   exitButton: 0
-  xExit: 0
-  checkExit: 0
+  noExit: 0
+  yesExit: 0
   destinationScene: 
-  buttonNormal: {fileID: 21300000, guid: 13528a6d3335a4eaea3f4507e802c505, type: 3}
-  buttonHighlight: {fileID: 21300000, guid: 72cb3ea27036d44df9aac54bc437f127, type: 3}
+  buttonNormal: {fileID: 21300000, guid: 20d923e98e4e94fbdb067a4bbe5982ae, type: 3}
+  buttonHighlight: {fileID: 21300000, guid: 2f3e74e3233dc492595e0478b7dfbafb, type: 3}
 --- !u!61 &76363963
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -237,7 +238,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 76363959}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -247,14 +248,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.25, y: 1.5}
-    newSize: {x: 1.25, y: 1.5}
+    oldSize: {x: 2.625, y: 1.375}
+    newSize: {x: 2.625, y: 1.375}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.25, y: 1.5}
+  m_Size: {x: 2.625, y: 1.375}
   m_EdgeRadius: 0
 --- !u!1 &282783253
 GameObject:
@@ -788,8 +789,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb28134a1404b42baaa8a644c149dbe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkButton: {fileID: 1684829224}
-  xButton: {fileID: 76363959}
+  yesButton: {fileID: 1684829224}
+  noButton: {fileID: 76363959}
 --- !u!1 &857135403
 GameObject:
   m_ObjectHideFlags: 0
@@ -1041,16 +1042,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startButton: 0
+  optionsButton: 0
   resumeButton: 0
   levelsButton: 0
   iButton: 0
   optionsFullscreen: 1
   optionsReset: 0
-  optionsCheckReset: 0
-  optionsXReset: 0
+  optionsYesReset: 0
+  optionsNoReset: 0
   exitButton: 0
-  xExit: 0
-  checkExit: 0
+  noExit: 0
+  yesExit: 0
   destinationScene: 
   buttonNormal: {fileID: 21300000, guid: 6e09292aede7147bfa0e429831ecd3b3, type: 3}
   buttonHighlight: {fileID: 21300000, guid: e8e540595661e41b99d766b38e9ae26a, type: 3}
@@ -1234,7 +1236,7 @@ GameObject:
   - component: {fileID: 1684829227}
   - component: {fileID: 1684829228}
   m_Layer: 0
-  m_Name: Options Popup Check
+  m_Name: Options Popup Yes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1248,7 +1250,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1684829224}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.875, y: 1, z: 0}
+  m_LocalPosition: {x: -1.6875, y: -1.0625, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 745593258}
@@ -1293,12 +1295,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 3c8ddeb14fee641be95f71746c495583, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 99fe0596da51643c3aeb4ef32b5c470f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.25, y: 1.5}
+  m_Size: {x: 2.625, y: 1.375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1317,19 +1319,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startButton: 0
+  optionsButton: 0
   resumeButton: 0
   levelsButton: 0
   iButton: 0
   optionsFullscreen: 0
   optionsReset: 0
-  optionsCheckReset: 1
-  optionsXReset: 0
+  optionsYesReset: 1
+  optionsNoReset: 0
   exitButton: 0
-  xExit: 0
-  checkExit: 0
+  noExit: 0
+  yesExit: 0
   destinationScene: 
-  buttonNormal: {fileID: 21300000, guid: 3c8ddeb14fee641be95f71746c495583, type: 3}
-  buttonHighlight: {fileID: 21300000, guid: acc7684fbf4da475a98b22fd28f64116, type: 3}
+  buttonNormal: {fileID: 21300000, guid: 99fe0596da51643c3aeb4ef32b5c470f, type: 3}
+  buttonHighlight: {fileID: 21300000, guid: a420ef00c482c48bab4a348cefb53a9b, type: 3}
 --- !u!61 &1684829228
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1337,7 +1340,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1684829224}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -1347,14 +1350,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.25, y: 1.5}
-    newSize: {x: 1.25, y: 1.5}
+    oldSize: {x: 2.625, y: 1.375}
+    newSize: {x: 2.625, y: 1.375}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.25, y: 1.5}
+  m_Size: {x: 2.625, y: 1.375}
   m_EdgeRadius: 0
 --- !u!1 &1888283736
 GameObject:
@@ -1691,16 +1694,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startButton: 0
+  optionsButton: 0
   resumeButton: 0
   levelsButton: 0
   iButton: 0
   optionsFullscreen: 0
   optionsReset: 1
-  optionsCheckReset: 0
-  optionsXReset: 0
+  optionsYesReset: 0
+  optionsNoReset: 0
   exitButton: 0
-  xExit: 0
-  checkExit: 0
+  noExit: 0
+  yesExit: 0
   destinationScene: 
   buttonNormal: {fileID: 21300000, guid: 8d562bdf899504ab8a414bc7dc857e5d, type: 3}
   buttonHighlight: {fileID: 21300000, guid: 5011091712c82495a850d332bfe32b6a, type: 3}
