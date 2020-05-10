@@ -2,7 +2,7 @@
 
 A top-down puzzle game with a retro computer theme.
 
-Beta out now for windows and mac at: https://qwa.la/w4r5q8
+Full release out soon for windows and mac at: https://csaye.itch.io/
 
 ![](Images/StartMenu.png)
 ![](Images/Level1.png)
