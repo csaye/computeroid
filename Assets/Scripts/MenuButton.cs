@@ -11,6 +11,7 @@ public class MenuButton : MonoBehaviour
     public bool iButton;
     public bool optionsFullscreen, optionsReset, optionsYesReset, optionsNoReset;
     public bool exitButton, noExit, yesExit;
+    public bool okButton;
 
     public string destinationScene;
 
@@ -34,8 +35,8 @@ public class MenuButton : MonoBehaviour
         // If button is not hidden
         if (GetComponent<Renderer>().enabled) {
 
-            // If not fading to a new scene or options popup active, check highlight
-            if (!FadeManager.fading && !OrderScreen.active) {
+            // If not fading to a new scene or ok button with order screen inactive
+            if (!FadeManager.fading && ((okButton && OrderScreen.active) || (!okButton && !OrderScreen.active))) {
                 
                 // Special case for menu buttons blocked by popups
                 if (((exitButton || startButton || optionsButton) && OptionsPopupExit.isPaused) || (optionsReset && OptionsPopupReset.isPaused)) {
@@ -195,6 +196,10 @@ public class MenuButton : MonoBehaviour
             OptionsPopupReset.isPaused = false;
 
             spriteRenderer.sprite = buttonNormal;
+
+        } else if (okButton) {
+
+            OrderScreen.active = false;
 
         } else {
 

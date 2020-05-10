@@ -5,9 +5,9 @@ using UnityEngine;
 public class LevelButton : MonoBehaviour
 {
 
-    public GameObject buttonResult;
+    public GameObject buttonResult, buttonResult2;
 
-    public Vector2 resultLocation;
+    public Vector2 resultLocation, resultLocation2;
 
     public Sprite buttonNormal;
     public Sprite buttonHighlight;
@@ -78,10 +78,14 @@ public class LevelButton : MonoBehaviour
     // Move the resultant object to the target location
     void ActivateButton() {
 
-        // Move target object to to target position
+        // Move target object(s) to to target position(s)
         buttonResult.transform.localPosition = resultLocation;
+        if (buttonResult2 != null) buttonResult2.transform.localPosition = resultLocation2;
 
-        // Cancel velocity of target object
+        // Cancel velocity of target object(s)
         if (buttonResult.GetComponent<Rigidbody2D>() != null) buttonResult.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        if (buttonResult2 != null) {
+            if (buttonResult2.GetComponent<Rigidbody2D>() != null) buttonResult2.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        }
     }
 }

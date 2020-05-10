@@ -62,8 +62,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -1576,7 +1578,7 @@ ScriptsOnlyBuild:
     className: LaserReceiver
   - hash:
       serializedVersion: 2
-      Hash: 3288adf905571db5fc55579d046db97c
+      Hash: ac37269fd4327a88fb6cff3717c36091
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MenuButton
@@ -2032,7 +2034,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMesh
   - hash:
       serializedVersion: 2
-      Hash: 997045eb732bf4b4841624a165b94a5e
+      Hash: fad8aa34de1a1d310d7d5904eee21917
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LevelButton
@@ -2044,7 +2046,7 @@ ScriptsOnlyBuild:
     className: TestRunCallbackListener
   - hash:
       serializedVersion: 2
-      Hash: a3100b12eef3e7a80801f5ce21752af9
+      Hash: 42e6b4666973877a9caa88b4c88c2f1f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: OrderScreen

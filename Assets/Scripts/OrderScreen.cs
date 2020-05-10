@@ -8,9 +8,13 @@ public class OrderScreen : MonoBehaviour
     // Whether the order screen is currently active
     public static bool active;
 
+    public GameObject okButton;
+
     public bool volumeOverride = true;
 
     private AudioSource audioSource;
+
+    private Animator animator;
 
     void Awake()
     {
@@ -20,12 +24,17 @@ public class OrderScreen : MonoBehaviour
         MusicManager.fadeMusic = true;
 
         audioSource = GetComponent<AudioSource>();
+
+        animator = GetComponent<Animator>();
     }
 
     void Update() {
 
         // Update the volume of the typewriter sound
         UpdateVolume();
+
+        // Update the alpha of the ok button to match the order screen
+        UpdateOkAlpha();
     }
 
     void UpdateVolume() {
@@ -36,11 +45,24 @@ public class OrderScreen : MonoBehaviour
         } else {
             audioSource.volume = SoundManager.volume;
         }
+
+        // If ok button has been activated, fade out
+        if (!active) animator.SetBool("FadeOut", true);
     }
 
-    void Deactivate()
-    {
-        active = false;
+    void UpdateOkAlpha() {
+
+        // Set the alpha of the ok button to the alpha of the order screen
+        okButton.GetComponent<SpriteRenderer>().color = GetComponent<SpriteRenderer>().color;
+    }
+
+    void ActivateOk() {
+
+        // Activate ok button
+        okButton.GetComponent<SpriteRenderer>().enabled = true;
+    }
+
+    void Deactivate() {
 
         // Activate music because order sequence is done
         MusicManager.updateMusic = true;

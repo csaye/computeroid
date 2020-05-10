@@ -395,6 +395,7 @@ MonoBehaviour:
   exitButton: 0
   noExit: 0
   yesExit: 1
+  okButton: 0
   destinationScene: 
   buttonNormal: {fileID: 21300000, guid: 99fe0596da51643c3aeb4ef32b5c470f, type: 3}
   buttonHighlight: {fileID: 21300000, guid: a420ef00c482c48bab4a348cefb53a9b, type: 3}
@@ -965,6 +966,7 @@ MonoBehaviour:
   exitButton: 1
   noExit: 0
   yesExit: 0
+  okButton: 0
   destinationScene: 
   buttonNormal: {fileID: 21300000, guid: 06668a365771f42db9e9b17ccff63eda, type: 3}
   buttonHighlight: {fileID: 21300000, guid: 5746070f3c4d44837ac89887587c33fe, type: 3}
@@ -1074,7 +1076,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: cb2bd49deaeb9448697b142a717c9751, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1226,6 +1228,7 @@ MonoBehaviour:
   exitButton: 0
   noExit: 1
   yesExit: 0
+  okButton: 0
   destinationScene: 
   buttonNormal: {fileID: 21300000, guid: 20d923e98e4e94fbdb067a4bbe5982ae, type: 3}
   buttonHighlight: {fileID: 21300000, guid: 2f3e74e3233dc492595e0478b7dfbafb, type: 3}
@@ -1403,6 +1406,7 @@ MonoBehaviour:
   exitButton: 0
   noExit: 0
   yesExit: 0
+  okButton: 0
   destinationScene: Level Select
   buttonNormal: {fileID: 21300000, guid: f4659f0e9f68d40ccb97912690870027, type: 3}
   buttonHighlight: {fileID: 21300000, guid: 650cf325d55734adcaf2a229519f0f39, type: 3}
@@ -1539,6 +1543,7 @@ MonoBehaviour:
   exitButton: 0
   noExit: 0
   yesExit: 0
+  okButton: 0
   destinationScene: Options
   buttonNormal: {fileID: 21300000, guid: 39e73bcae1f064156a310385d73d9b9e, type: 3}
   buttonHighlight: {fileID: 21300000, guid: 384c9845c177d4b37b899277eb5584f4, type: 3}
