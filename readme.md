@@ -2,7 +2,7 @@
 
 A top-down puzzle game with a retro computer theme.
 
-Full release out soon for windows and mac at: https://csaye.itch.io/
+Full release out for windows and mac: https://csaye.itch.io/computeroid
 
 ![](Images/StartMenu.png)
 ![](Images/Level1.png)
